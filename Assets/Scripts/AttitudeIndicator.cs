@@ -158,6 +158,23 @@ public sealed class AttitudeIndicator : System.IDisposable
         if (RollScale) DrawRollScale(roll, slip);
         DrawSymbol();
 
+        // Вся отрисовка выше ведётся в координатах
+        // "y = 0 сверху", а Texture2D ждёт строку
+        // y = 0 снизу. Один раз отражаем готовый
+        // растр по вертикали — чинится всё сразу.
+        for (int y = 0; y < size / 2; y++)
+        {
+            int top = y * size;
+            int bottom = (size - 1 - y) * size;
+            for (int x = 0; x < size; x++)
+            {
+                Color32 tmp = px[top + x];
+                px[top + x] = px[bottom + x];
+                px[bottom + x] = tmp;
+            }
+        }
+
+        // дальше ваши существующие строки:
         tex.SetPixels32(px);
         tex.Apply(false);
     }

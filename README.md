@@ -7843,3 +7843,3055 @@ using Debug = UnityEngine.Debug;
 - **FPS**: в билде IMGUI заметно дешевле, чем в редакторе — телеметрия будет идти легче.
 
 После переноса файла в `Assets/Editor/` сборка должна пройти. Если появятся новые ошибки уже от других файлов — присылай список, разберём.
+
+### USER
+Прямо при запуске билда проекта в .exe сразу происходит вылет с ошибкой в первую же секунду, вот логи этой ошибки, помоги разобрать что поправить в проекте чтобы билд прошел успешно!  
+логи:
+Found 3 interfaces on host : 0) 192.168.0.103 1) 172.24.228.220 2) 10.6.7.1
+Player connection [50544]  Target information:
+
+Player connection [50544]  * "[IP] 192.168.0.103 [Port] 55000 [Flags] 2 [Guid] 3752700166 [EditorId] 1826496200 [Version] 1048832 [Id] WindowsPlayer(2,Home-PC) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] MyDroneA" 
+
+Player connection [50544]  * "[IP] 172.24.228.220 [Port] 55000 [Flags] 2 [Guid] 3752700166 [EditorId] 1826496200 [Version] 1048832 [Id] WindowsPlayer(2,Home-PC) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] MyDroneA" 
+
+Player connection [50544]  * "[IP] 10.6.7.1 [Port] 55000 [Flags] 2 [Guid] 3752700166 [EditorId] 1826496200 [Version] 1048832 [Id] WindowsPlayer(2,Home-PC) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] MyDroneA" 
+
+Player connection [50544] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Loading player data from C:/WorkProject/WarDroneB/TestBuild01/MyDroneA_Data/data.unity3d
+Initialize engine version: 6000.3.28f1 (8f082d2fe476)
+[Subsystems] Discovering subsystems at path C:/WorkProject/WarDroneB/TestBuild01/MyDroneA_Data/UnitySubsystems
+[D3D12 Device Filter] Vendor Name: NVIDIA
+[D3D12 Device Filter] Device Name: NVIDIA GeForce RTX 3090
+[D3D12 Device Filter] Driver Version: 32.0.15.8108
+[D3D12 Device Filter] Feature Level: 12.2
+[D3D12 Device Filter] Graphics Memory: 24326 MB
+[D3D12 Device Filter] Processor Count: 48
+[D3D12 Device Filter] Device Type: Discrete
+GfxDevice: creating device client; kGfxThreadingModeSplitJobs
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 3090 (ID=0x2204)
+    Vendor:          NVIDIA
+    VRAM:            24326 MB
+    App VRAM Budget: 23558 MB
+    Driver:          32.0.15.8108
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+<RI> Initializing input.
+
+Using Windows.Gaming.Input
+<RI> Input initialized.
+
+The file 'C:/WorkProject/WarDroneB/TestBuild01/MyDroneA_Data/level0' is corrupted! Remove it and launch unity again!
+[Position out of bounds!]
+Crash!!!
+SymInit: Symbol-SearchPath: '.;C:\WorkProject\WarDroneB\TestBuild01;C:/WorkProject/WarDroneB/TestBuild01/MyDroneA_Data/Plugins\x86_64;C:/WorkProject/WarDroneB/TestBuild01/MyDroneA_Data/Plugins;C:\WorkProject\WarDroneB\TestBuild01;C:\Windows;C:\Windows\system32;', symOptions: 534, UserName: 'KirikDK'
+OS-Version: 10.0.0
+C:\WorkProject\WarDroneB\TestBuild01\MyDroneA.exe:MyDroneA.exe (00007FF7D9180000), size: 679936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6000.3.28.2093
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FF867030000), size: 2064384 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FF865080000), size: 774144 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1889
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FF864860000), size: 2957312 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\WorkProject\WarDroneB\TestBuild01\UnityPlayer.dll:UnityPlayer.dll (00007FFF91720000), size: 92344320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6000.3.28.2093
+C:\Windows\System32\USER32.dll:USER32.dll (00007FF8657A0000), size: 1691648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\win32u.dll:win32u.dll (00007FF864FA0000), size: 139264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FF8652C0000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FF864D90000), size: 1110016 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FF864730000), size: 643072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.789
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FF864EA0000), size: 1048576 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.789
+C:\Windows\System32\ole32.dll:ole32.dll (00007FF865B80000), size: 1220608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FF865410000), size: 1200128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1806
+C:\Windows\System32\combase.dll:combase.dll (00007FF865E20000), size: 3489792 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FF85E580000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (00007FF865B20000), size: 348160 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FF865140000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.546
+C:\Windows\System32\SETUPAPI.dll:SETUPAPI.dll (00007FF866230000), size: 4620288 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\cfgmgr32.dll:cfgmgr32.dll (00007FF864BB0000), size: 319488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1620
+C:\Windows\System32\bcrypt.dll:bcrypt.dll (00007FF864D60000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1023
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FF866180000), size: 712704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\sechost.dll:sechost.dll (00007FF865220000), size: 638976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FF866820000), size: 7614464 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (00007FF866750000), size: 839680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.985
+C:\Windows\System32\IMM32.dll:IMM32.dll (00007FF8651E0000), size: 204800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FF8174C0000), size: 1200128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FF8552A0000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FF864C00000), size: 1400832 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1889
+C:\Windows\System32\WS2_32.dll:WS2_32.dll (00007FF865730000), size: 438272 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FF863B30000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FF85D2A0000), size: 1097728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\HID.DLL:HID.DLL (00007FF862AB0000), size: 53248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\d3d11.dll:d3d11.dll (00007FF8627F0000), size: 2502656 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\dxgi.dll:dxgi.dll (00007FF862B10000), size: 995328 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\UIAutomationCore.DLL:UIAutomationCore.DLL (00007FF8113E0000), size: 3100672 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.2.19041.1741
+C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FF818AB0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\Secur32.dll:Secur32.dll (00007FF84A270000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FF861040000), size: 192512 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.746
+C:\Windows\SYSTEM32\PROPSYS.dll:PROPSYS.dll (00007FF85E9F0000), size: 1007616 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.1741
+C:\Windows\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FF864620000), size: 204800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpcrypt.dll:cpcrypt.dll (00007FF864200000), size: 135168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.16728.0
+C:\Windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FF862AC0000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FF8647D0000), size: 532480 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1415
+C:\Windows\system32\uxtheme.dll:uxtheme.dll (00007FF860D70000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\shcore.dll:shcore.dll (00007FF865D70000), size: 708608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\System32\clbcatq.dll:clbcatq.dll (00007FF8666A0000), size: 716800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2001.12.10941.16384
+C:\Windows\system32\wbem\wbemprox.dll:wbemprox.dll (00007FF84B4D0000), size: 69632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1320
+C:\Windows\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FF84B0D0000), size: 589824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1566
+C:\Windows\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FF84A350000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1320
+C:\Windows\system32\wbem\fastprox.dll:fastprox.dll (00007FF84A440000), size: 1093632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\amsi.dll:amsi.dll (00007FF849910000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\WorkProject\WarDroneB\TestBuild01\WinPixEventRuntime.dll:WinPixEventRuntime.dll (00007FF85E710000), size: 57344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.0.2403.8001
+C:\Windows\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FF847190000), size: 643072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FF847260000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FF847230000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FF861510000), size: 7933952 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\Wldp.dll:Wldp.dll (00007FF864160000), size: 196608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\profapi.dll:profapi.dll (00007FF864670000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.844
+C:\WorkProject\WarDroneB\TestBuild01\GameAssembly.dll:GameAssembly.dll (00007FFF98B50000), size: 30552064 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\SYSTEM32\wintypes.dll:wintypes.dll (00007FF85FBA0000), size: 1392640 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FF862600000), size: 1982464 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.867
+C:\WorkProject\WarDroneB\TestBuild01\baselib.dll:baselib.dll (00007FF8476B0000), size: 245760 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\system32\mswsock.dll:mswsock.dll (00007FF863E90000), size: 434176 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\NSI.dll:NSI.dll (00007FF865960000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.610
+C:\Windows\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FF85E590000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FF85E4F0000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FF863B70000), size: 827392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\System32\CoreMessaging.dll:CoreMessaging.dll (00007FF860A40000), size: 991232 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\system32\napinsp.dll:napinsp.dll (00007FF83A9E0000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\system32\pnrpnsp.dll:pnrpnsp.dll (00007FF83A9C0000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\system32\wshbth.dll:wshbth.dll (00007FF83A9A0000), size: 86016 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\system32\NLAapi.dll:NLAapi.dll (00007FF85FA30000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\winrnr.dll:winrnr.dll (00007FF83A980000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Program Files\Bonjour\mdnsNSP.dll:mdnsNSP.dll (00000000632E0000), size: 155648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.0.0.10
+C:\Windows\System32\MSCTF.dll:MSCTF.dll (00007FF8652F0000), size: 1134592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\d3d12.dll:d3d12.dll (00007FF855260000), size: 131072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1266
+C:\WorkProject\WarDroneB\TestBuild01\D3D12\D3D12Core.dll:D3D12Core.dll (00007FFF9B680000), size: 4780032 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.618.1.0
+C:\Windows\SYSTEM32\dxcore.dll:dxcore.dll (00007FF85B520000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\msasn1.dll:msasn1.dll (00007FF864320000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\cryptnet.dll:cryptnet.dll (00007FF85E540000), size: 200704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.906
+C:\Windows\SYSTEM32\cryptbase.dll:cryptbase.dll (00007FF8640D0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\drvstore.dll:drvstore.dll (00007FF85DEF0000), size: 1343488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1949
+C:\Windows\SYSTEM32\devobj.dll:devobj.dll (00007FF8644E0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1620
+C:\Windows\System32\wintrust.dll:wintrust.dll (0000022D93300000), size: 434176 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\imagehlp.dll:imagehlp.dll (00007FF865940000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1415
+C:\Windows\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FF8640B0000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpadvai.dll:cpadvai.dll (00007FF864090000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.16639.0
+C:\Program Files\Crypto Pro\CSP\cpcsp.dll:cpcsp.dll (00007FF8634A0000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.14960.0
+C:\Program Files\Crypto Pro\CSP\cpcspi.dll:cpcspi.dll (00007FF863280000), size: 2187264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.18680.0
+C:\Program Files\Crypto Pro\CSP\cpsuprt.dll:cpsuprt.dll (00007FF8631E0000), size: 634880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.15962.0
+C:\Windows\system32\nvspcap64.dll:nvspcap64.dll (00007FF81A2E0000), size: 1339392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.5.420
+C:\Windows\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FF863860000), size: 208896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvppex.dll:nvppex.dll (00007FFFF4690000), size: 1798144 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\SYSTEM32\D3DSCache.dll:D3DSCache.dll (00007FFF3FFF0000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.746
+C:\Windows\SYSTEM32\USERENV.dll:USERENV.dll (00007FF8645F0000), size: 188416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.572
+C:\Windows\SYSTEM32\twinapi.appcore.dll:twinapi.appcore.dll (00007FF85DC80000), size: 2097152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvldumdx.dll:nvldumdx.dll (00007FF85AFD0000), size: 802816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvgpucomp64.dll:nvgpucomp64.dll (00007FF8558C0000), size: 64565248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\NvMemMapStoragex.dll:NvMemMapStoragex.dll (00007FF8552D0000), size: 909312 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\SYSTEM32\POWRPROF.dll:POWRPROF.dll (00007FF863C50000), size: 307200 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FF863B10000), size: 73728 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvwgf2umx.dll:nvwgf2umx.dll (00007FF84DF90000), size: 92487680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\SYSTEM32\DirectML.dll:DirectML.dll (00007FFF9CDB0000), size: 1282048 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.0.2007.1310
+C:\Windows\SYSTEM32\Cabinet.dll:Cabinet.dll (00007FF854570000), size: 167936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.1.1
+C:\Windows\SYSTEM32\d3d11on12.dll:d3d11on12.dll (00007FFF40060000), size: 618496 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1081
+C:\Windows\SYSTEM32\dxilconv.dll:dxilconv.dll (00007FFF3F140000), size: 1282048 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1
+C:\Windows\SYSTEM32\DXGIDebug.dll:DXGIDebug.dll (00007FFF40100000), size: 356352 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1
+C:\Windows\System32\MMDevApi.dll:MMDevApi.dll (00007FF85D150000), size: 544768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1503
+C:\Windows\SYSTEM32\AUDIOSES.DLL:AUDIOSES.DLL (00007FF8220A0000), size: 1581056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\resourcepolicyclient.dll:resourcepolicyclient.dll (00007FF860F40000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\Windows.Gaming.Input.dll:Windows.Gaming.Input.dll (00007FF85C990000), size: 864256 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1566
+C:\Windows\SYSTEM32\inputhost.dll:inputhost.dll (00007FF85B170000), size: 1384448 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1741
+C:\Windows\System32\CoreUIComponents.dll:CoreUIComponents.dll (00007FF860360000), size: 3530752 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\Windows.Gaming.UI.GameBar.dll:Windows.Gaming.UI.GameBar.dll (00007FFF3B6F0000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.746
+C:\Windows\System32\WININET.dll:WININET.dll (00007FF83A250000), size: 5083136 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.19041.2193
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpwinet.dll:cpwinet.dll (00007FF8388E0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.15621.0
+C:\Windows\System32\appresolver.dll:appresolver.dll (00007FF8204B0000), size: 589824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1620
+C:\Windows\System32\SLC.dll:SLC.dll (00007FF862D90000), size: 167936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1682
+C:\Windows\System32\Bcp47Langs.dll:Bcp47Langs.dll (00007FF85B660000), size: 372736 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1566
+C:\Windows\System32\sppc.dll:sppc.dll (00007FF862D60000), size: 151552 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1682
+C:\Windows\SYSTEM32\xinput1_3.dll:xinput1_3.dll (0000000000400000), size: 122880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 9.18.944.0
+C:\Windows\SYSTEM32\dcomp.dll:dcomp.dll (00007FF860170000), size: 1978368 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\textinputframework.dll:textinputframework.dll (00007FF85B2D0000), size: 1019904 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+
+========== OUTPUTTING STACK TRACE ==================
+
+0x00007FFF93977DAD (UnityPlayer) UnityMain
+0x00007FFF939771C9 (UnityPlayer) UnityMain
+SymInit: Symbol-SearchPath: '.;C:\WorkProject\WarDroneB\TestBuild01;C:/WorkProject/WarDroneB/TestBuild01/MyDroneA_Data/Plugins\x86_64;C:/WorkProject/WarDroneB/TestBuild01/MyDroneA_Data/Plugins;C:\WorkProject\WarDroneB\TestBuild01;C:\Windows;C:\Windows\system32;', symOptions: 534, UserName: 'KirikDK'
+OS-Version: 10.0.0
+C:\WorkProject\WarDroneB\TestBuild01\MyDroneA.exe:MyDroneA.exe (00007FF7D9180000), size: 679936 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild01\MyDroneA.exe', fileVersion: 6000.3.28.2093
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FF867030000), size: 2064384 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\ntdll.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FF865080000), size: 774144 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\KERNEL32.DLL', fileVersion: 10.0.19041.1889
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FF864860000), size: 2957312 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\KERNELBASE.dll', fileVersion: 10.0.19041.2193
+C:\WorkProject\WarDroneB\TestBuild01\UnityPlayer.dll:UnityPlayer.dll (00007FFF91720000), size: 92344320 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild01\UnityPlayer.dll', fileVersion: 6000.3.28.2093
+C:\Windows\System32\USER32.dll:USER32.dll (00007FF8657A0000), size: 1691648 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\USER32.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\win32u.dll:win32u.dll (00007FF864FA0000), size: 139264 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\win32u.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FF8652C0000), size: 176128 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\GDI32.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FF864D90000), size: 1110016 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\gdi32full.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FF864730000), size: 643072 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\msvcp_win.dll', fileVersion: 10.0.19041.789
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FF864EA0000), size: 1048576 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ucrtbase.dll', fileVersion: 10.0.19041.789
+C:\Windows\System32\ole32.dll:ole32.dll (00007FF865B80000), size: 1220608 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ole32.dll', fileVersion: 10.0.19041.1202
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FF865410000), size: 1200128 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\RPCRT4.dll', fileVersion: 10.0.19041.1806
+C:\Windows\System32\combase.dll:combase.dll (00007FF865E20000), size: 3489792 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\combase.dll', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FF85E580000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\VERSION.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (00007FF865B20000), size: 348160 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SHLWAPI.dll', fileVersion: 10.0.19041.2075
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FF865140000), size: 647168 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\msvcrt.dll', fileVersion: 7.0.19041.546
+C:\Windows\System32\SETUPAPI.dll:SETUPAPI.dll (00007FF866230000), size: 4620288 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SETUPAPI.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\cfgmgr32.dll:cfgmgr32.dll (00007FF864BB0000), size: 319488 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\cfgmgr32.dll', fileVersion: 10.0.19041.1620
+C:\Windows\System32\bcrypt.dll:bcrypt.dll (00007FF864D60000), size: 159744 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\bcrypt.dll', fileVersion: 10.0.19041.1023
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FF866180000), size: 712704 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ADVAPI32.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\sechost.dll:sechost.dll (00007FF865220000), size: 638976 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\sechost.dll', fileVersion: 10.0.19041.1865
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FF866820000), size: 7614464 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SHELL32.dll', fileVersion: 10.0.19041.2075
+C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (00007FF866750000), size: 839680 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\OLEAUT32.dll', fileVersion: 10.0.19041.985
+C:\Windows\System32\IMM32.dll:IMM32.dll (00007FF8651E0000), size: 204800 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\IMM32.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FF8174C0000), size: 1200128 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\OPENGL32.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FF8552A0000), size: 159744 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\WINMM.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FF864C00000), size: 1400832 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\CRYPT32.dll', fileVersion: 10.0.19041.1889
+C:\Windows\System32\WS2_32.dll:WS2_32.dll (00007FF865730000), size: 438272 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\WS2_32.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FF863B30000), size: 241664 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\IPHLPAPI.DLL', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FF85D2A0000), size: 1097728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\WINHTTP.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\HID.DLL:HID.DLL (00007FF862AB0000), size: 53248 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\HID.DLL', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\d3d11.dll:d3d11.dll (00007FF8627F0000), size: 2502656 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\d3d11.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\dxgi.dll:dxgi.dll (00007FF862B10000), size: 995328 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dxgi.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\UIAutomationCore.DLL:UIAutomationCore.DLL (00007FF8113E0000), size: 3100672 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\UIAutomationCore.DLL', fileVersion: 7.2.19041.1741
+C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FF818AB0000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\GLU32.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\Secur32.dll:Secur32.dll (00007FF84A270000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\Secur32.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FF861040000), size: 192512 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dwmapi.dll', fileVersion: 10.0.19041.746
+C:\Windows\SYSTEM32\PROPSYS.dll:PROPSYS.dll (00007FF85E9F0000), size: 1007616 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\PROPSYS.dll', fileVersion: 7.0.19041.1741
+C:\Windows\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FF864620000), size: 204800 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\SSPICLI.DLL', fileVersion: 10.0.19041.2130
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpcrypt.dll:cpcrypt.dll (00007FF864200000), size: 135168 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Common Files\Crypto Pro\AppCompat\cpcrypt.dll', fileVersion: 5.0.16728.0
+C:\Windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FF862AC0000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\kernel.appcore.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FF8647D0000), size: 532480 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\bcryptPrimitives.dll', fileVersion: 10.0.19041.1415
+C:\Windows\system32\uxtheme.dll:uxtheme.dll (00007FF860D70000), size: 647168 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\uxtheme.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\shcore.dll:shcore.dll (00007FF865D70000), size: 708608 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\shcore.dll', fileVersion: 10.0.19041.1865
+C:\Windows\System32\clbcatq.dll:clbcatq.dll (00007FF8666A0000), size: 716800 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\clbcatq.dll', fileVersion: 2001.12.10941.16384
+C:\Windows\system32\wbem\wbemprox.dll:wbemprox.dll (00007FF84B4D0000), size: 69632 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wbem\wbemprox.dll', fileVersion: 10.0.19041.1320
+C:\Windows\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FF84B0D0000), size: 589824 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\wbemcomn.dll', fileVersion: 10.0.19041.1566
+C:\Windows\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FF84A350000), size: 81920 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wbem\wbemsvc.dll', fileVersion: 10.0.19041.1320
+C:\Windows\system32\wbem\fastprox.dll:fastprox.dll (00007FF84A440000), size: 1093632 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wbem\fastprox.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\amsi.dll:amsi.dll (00007FF849910000), size: 126976 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\amsi.dll', fileVersion: 10.0.19041.2075
+C:\WorkProject\WarDroneB\TestBuild01\WinPixEventRuntime.dll:WinPixEventRuntime.dll (00007FF85E710000), size: 57344 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild01\WinPixEventRuntime.dll', fileVersion: 1.0.2403.8001
+C:\Windows\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FF847190000), size: 643072 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\MSVCP140.dll', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FF847260000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\VCRUNTIME140_1.dll', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FF847230000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\VCRUNTIME140.dll', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FF861510000), size: 7933952 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\windows.storage.dll', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\Wldp.dll:Wldp.dll (00007FF864160000), size: 196608 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\Wldp.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\profapi.dll:profapi.dll (00007FF864670000), size: 126976 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\SYSTEM32\profapi.dll', fileVersion: 10.0.19041.844
+d3d12: upload buffer was too small for the requested resource! Size: 16777216. Requested: 33307392.
+Detected one or more triangles where the distance between any 2 vertices is greater than 500 units. The resulting Triangle Mesh can impact simulation and query stability. It is recommended to tessellate meshes that have large triangles. Source mesh name: extrudeFront
+Detected one or more triangles where the distance between any 2 vertices is greater than 500 units. The resulting Triangle Mesh can impact simulation and query stability. It is recommended to tessellate meshes that have large triangles. Source mesh name: FonBuildings
+C:\WorkProject\WarDroneB\TestBuild01\GameAssembly.dll:GameAssembly.dll (00007FFF98B50000), size: 30552064 (result: 0), SymType: 'PDB', PDB: 'C:\WorkProject\WarDroneB\Library\Bee\artifacts\WinPlayerBuildProgram\cmv89\GameAssembly.pdb'
+C:\Windows\SYSTEM32\wintypes.dll:wintypes.dll (00007FF85FBA0000), size: 1392640 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\wintypes.dll', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FF862600000), size: 1982464 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dbghelp.dll', fileVersion: 10.0.19041.867
+C:\WorkProject\WarDroneB\TestBuild01\baselib.dll:baselib.dll (00007FF8476B0000), size: 245760 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild01\baselib.dll'
+C:\Windows\system32\mswsock.dll:mswsock.dll (00007FF863E90000), size: 434176 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\mswsock.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\NSI.dll:NSI.dll (00007FF865960000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\NSI.dll', fileVersion: 10.0.19041.610
+C:\Windows\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FF85E590000), size: 94208 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dhcpcsvc6.DLL', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FF85E4F0000), size: 118784 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dhcpcsvc.DLL', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FF863B70000), size: 827392 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\DNSAPI.dll', fileVersion: 10.0.19041.1865
+C:\Windows\System32\CoreMessaging.dll:CoreMessaging.dll (00007FF860A40000), size: 991232 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\CoreMessaging.dll', fileVersion: 10.0.19041.2193
+C:\Windows\system32\napinsp.dll:napinsp.dll (00007FF83A9E0000), size: 94208 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\napinsp.dll', fileVersion: 10.0.19041.546
+C:\Windows\system32\pnrpnsp.dll:pnrpnsp.dll (00007FF83A9C0000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\pnrpnsp.dll', fileVersion: 10.0.19041.546
+C:\Windows\system32\wshbth.dll:wshbth.dll (00007FF83A9A0000), size: 86016 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wshbth.dll', fileVersion: 10.0.19041.546
+C:\Windows\system32\NLAapi.dll:NLAapi.dll (00007FF85FA30000), size: 118784 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\NLAapi.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\winrnr.dll:winrnr.dll (00007FF83A980000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\winrnr.dll', fileVersion: 10.0.19041.546
+C:\Program Files\Bonjour\mdnsNSP.dll:mdnsNSP.dll (00000000632E0000), size: 155648 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Bonjour\mdnsNSP.dll', fileVersion: 3.0.0.10
+C:\Windows\System32\MSCTF.dll:MSCTF.dll (00007FF8652F0000), size: 1134592 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\MSCTF.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\d3d12.dll:d3d12.dll (00007FF855260000), size: 131072 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\d3d12.dll', fileVersion: 10.0.19041.1266
+C:\WorkProject\WarDroneB\TestBuild01\D3D12\D3D12Core.dll:D3D12Core.dll (00007FFF9B680000), size: 4780032 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild01\D3D12\D3D12Core.dll', fileVersion: 1.618.1.0
+C:\Windows\SYSTEM32\dxcore.dll:dxcore.dll (00007FF85B520000), size: 241664 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dxcore.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\msasn1.dll:msasn1.dll (00007FF864320000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\msasn1.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\cryptnet.dll:cryptnet.dll (00007FF85E540000), size: 200704 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\cryptnet.dll', fileVersion: 10.0.19041.906
+C:\Windows\SYSTEM32\cryptbase.dll:cryptbase.dll (00007FF8640D0000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\cryptbase.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\drvstore.dll:drvstore.dll (00007FF85DEF0000), size: 1343488 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\drvstore.dll', fileVersion: 10.0.19041.1949
+C:\Windows\SYSTEM32\devobj.dll:devobj.dll (00007FF8644E0000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\devobj.dll', fileVersion: 10.0.19041.1620
+C:\Windows\System32\wintrust.dll:wintrust.dll (0000022D93300000), size: 434176 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\wintrust.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\imagehlp.dll:imagehlp.dll (00007FF865940000), size: 118784 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\imagehlp.dll', fileVersion: 10.0.19041.1415
+C:\Windows\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FF8640B0000), size: 98304 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\CRYPTSP.dll', fileVersion: 10.0.19041.546
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpadvai.dll:cpadvai.dll (00007FF864090000), size: 94208 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Common Files\Crypto Pro\AppCompat\cpadvai.dll', fileVersion: 5.0.16639.0
+C:\Program Files\Crypto Pro\CSP\cpcsp.dll:cpcsp.dll (00007FF8634A0000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Crypto Pro\CSP\cpcsp.dll', fileVersion: 5.0.14960.0
+C:\Program Files\Crypto Pro\CSP\cpcspi.dll:cpcspi.dll (00007FF863280000), size: 2187264 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Crypto Pro\CSP\cpcspi.dll', fileVersion: 5.0.18680.0
+C:\Program Files\Crypto Pro\CSP\cpsuprt.dll:cpsuprt.dll (00007FF8631E0000), size: 634880 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Crypto Pro\CSP\cpsuprt.dll', fileVersion: 5.0.15962.0
+C:\Windows\system32\nvspcap64.dll:nvspcap64.dll (00007FF81A2E0000), size: 1339392 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\nvspcap64.dll', fileVersion: 11.0.5.420
+C:\Windows\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FF863860000), size: 208896 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\ntmarta.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvppex.dll:nvppex.dll (00007FFFF4690000), size: 1798144 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvppex.dll', fileVersion: 32.0.15.8108
+C:\Windows\SYSTEM32\D3DSCache.dll:D3DSCache.dll (00007FFF3FFF0000), size: 176128 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\D3DSCache.dll', fileVersion: 10.0.19041.746
+C:\Windows\SYSTEM32\USERENV.dll:USERENV.dll (00007FF8645F0000), size: 188416 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\USERENV.dll', fileVersion: 10.0.19041.572
+C:\Windows\SYSTEM32\twinapi.appcore.dll:twinapi.appcore.dll (00007FF85DC80000), size: 2097152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\twinapi.appcore.dll', fileVersion: 10.0.19041.1865
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvldumdx.dll:nvldumdx.dll (00007FF85AFD0000), size: 802816 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvldumdx.dll', fileVersion: 32.0.15.8108
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvgpucomp64.dll:nvgpucomp64.dll (00007FF8558C0000), size: 64565248 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvgpucomp64.dll', fileVersion: 32.0.15.8108
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\NvMemMapStoragex.dll:NvMemMapStoragex.dll (00007FF8552D0000), size: 909312 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\NvMemMapStoragex.dll'
+C:\Windows\SYSTEM32\POWRPROF.dll:POWRPROF.dll (00007FF863C50000), size: 307200 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\POWRPROF.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FF863B10000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\UMPDC.dll'
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvwgf2umx.dll:nvwgf2umx.dll (00007FF84DF90000), size: 92487680 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvwgf2umx.dll', fileVersion: 32.0.15.8108
+C:\Windows\SYSTEM32\DirectML.dll:DirectML.dll (00007FFF9CDB0000), size: 1282048 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\DirectML.dll', fileVersion: 1.0.2007.1310
+C:\Windows\SYSTEM32\Cabinet.dll:Cabinet.dll (00007FF854570000), size: 167936 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\Cabinet.dll', fileVersion: 5.0.1.1
+C:\Windows\SYSTEM32\d3d11on12.dll:d3d11on12.dll (00007FFF40060000), size: 618496 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\d3d11on12.dll', fileVersion: 10.0.19041.1081
+C:\Windows\SYSTEM32\dxilconv.dll:dxilconv.dll (00007FFF3F140000), size: 1282048 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dxilconv.dll', fileVersion: 10.0.19041.1
+C:\Windows\SYSTEM32\DXGIDebug.dll:DXGIDebug.dll (00007FFF40100000), size: 356352 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\DXGIDebug.dll', fileVersion: 10.0.19041.1
+C:\Windows\System32\MMDevApi.dll:MMDevApi.dll (00007FF85D150000), size: 544768 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\MMDevApi.dll', fileVersion: 10.0.19041.1503
+C:\Windows\SYSTEM32\AUDIOSES.DLL:AUDIOSES.DLL (00007FF8220A0000), size: 1581056 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\AUDIOSES.DLL', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\resourcepolicyclient.dll:resourcepolicyclient.dll (00007FF860F40000), size: 81920 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\resourcepolicyclient.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\Windows.Gaming.Input.dll:Windows.Gaming.Input.dll (00007FF85C990000), size: 864256 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\Windows.Gaming.Input.dll', fileVersion: 10.0.19041.1566
+C:\Windows\SYSTEM32\inputhost.dll:inputhost.dll (00007FF85B170000), size: 1384448 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\inputhost.dll', fileVersion: 10.0.19041.1741
+C:\Windows\System32\CoreUIComponents.dll:CoreUIComponents.dll (00007FF860360000), size: 3530752 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\CoreUIComponents.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\Windows.Gaming.UI.GameBar.dll:Windows.Gaming.UI.GameBar.dll (00007FFF3B6F0000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\Windows.Gaming.UI.GameBar.dll', fileVersion: 10.0.19041.746
+C:\Windows\System32\WININET.dll:WININET.dll (00007FF83A250000), size: 5083136 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\WININET.dll', fileVersion: 11.0.19041.2193
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpwinet.dll:cpwinet.dll (00007FF8388E0000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Common Files\Crypto Pro\AppCompat\cpwinet.dll', fileVersion: 5.0.15621.0
+C:\Windows\System32\appresolver.dll:appresolver.dll (00007FF8204B0000), size: 589824 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\appresolver.dll', fileVersion: 10.0.19041.1620
+C:\Windows\System32\SLC.dll:SLC.dll (00007FF862D90000), size: 167936 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SLC.dll', fileVersion: 10.0.19041.1682
+C:\Windows\System32\Bcp47Langs.dll:Bcp47Langs.dll (00007FF85B660000), size: 372736 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\Bcp47Langs.dll', fileVersion: 10.0.19041.1566
+C:\Windows\System32\sppc.dll:sppc.dll (00007FF862D60000), size: 151552 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\sppc.dll', fileVersion: 10.0.19041.1682
+C:\Windows\SYSTEM32\xinput1_3.dll:xinput1_3.dll (0000000000400000), size: 122880 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\xinput1_3.dll', fileVersion: 9.18.944.0
+C:\Windows\SYSTEM32\dcomp.dll:dcomp.dll (00007FF860170000), size: 1978368 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dcomp.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\textinputframework.dll:textinputframework.dll (00007FF85B2D0000), size: 1019904 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\textinputframework.dll', fileVersion: 10.0.19041.2075
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF923AADBF)
+0x00007FFF923AADBF (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF923ADCE5)
+0x00007FFF923ADCE5 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF91BA5C8A)
+0x00007FFF91BA5C8A (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF9280FCD7)
+0x00007FFF9280FCD7 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF9282307E)
+0x00007FFF9282307E (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF928013D8)
+0x00007FFF928013D8 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF928158E2)
+0x00007FFF928158E2 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF92815952)
+0x00007FFF92815952 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF92836F94)
+0x00007FFF92836F94 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF92839837)
+0x00007FFF92839837 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF927FA5D6)
+0x00007FFF927FA5D6 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF92866002)
+0x00007FFF92866002 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF92863C36)
+0x00007FFF92863C36 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF92860868)
+0x00007FFF92860868 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF9230B703)
+0x00007FFF9230B703 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF92306626)
+0x00007FFF92306626 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF92306C01)
+0x00007FFF92306C01 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF92306C7A)
+0x00007FFF92306C7A (UnityPlayer) (function-name not available)
+0x00007FFF9363930F (UnityPlayer) UnityMain
+0x00007FF865097034 (KERNEL32) BaseThreadInitThunk
+0x00007FF8670826A1 (ntdll) RtlUserThreadStart
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/Users/KirikDK/AppData/Local/Temp/WarDrone/MyDroneA/Crashes
+
+
+### ASSISTANT
+Разберём лог — там три независимые проблемы, и главная не в скриптах дрона.
+
+## Что говорит лог
+
+| Строка | Что значит |
+|---|---|
+| `The file '...MyDroneA_Data/level0' is corrupted! [Position out of bounds!]` | Движок **не смог десериализовать первую сцену** билда. Это происходит **до** запуска любых наших скриптов — значит логика дрона тут ни при чём. |
+| `d3d12: upload buffer was too small for the requested resource! Size: 16777216. Requested: 33307392.` | D3D12 не смог загрузить ресурс на **33 МБ** (буфер 16 МБ). Прямая причина падения видеоподсистемы. |
+| `Detected one or more triangles ... Source mesh name: extrudeFront / FonBuildings` | В сцене есть **гигантские меши** (город/фон) с треугольниками >500 юнитов — PhysX предупреждает о нестабильности. Это не наши примитивы дрона. |
+| `GameAssembly.dll` в списке модулей | Сборка на **IL2CPP** (стриппинг кода). |
+| `kGfxThreadingModeSplitJobs` | Включены **Graphics Jobs** — в связке с D3D12 в Unity 6 это частый источник крашей. |
+| `cpcrypt.dll`, `cpcsp.dll`, `cpwinet.dll` (CryptoPro) в процессе | КриптоПро внедряется в процесс и перехватывает файловые операции — известны случаи порчи файлов сборки. |
+
+---
+
+## Шаг 1. Настройки плеера (это чинит краш в первую очередь)
+
+`Edit ▸ Project Settings ▸ Player ▸ Other Settings`:
+
+1. **Rendering ▸ Auto Graphics API for Windows** — снять галочку. В списке **Graphics APIs for Windows** удалить **Direct3D12**, оставить **Direct3D11** (перетащить наверх).
+2. **Rendering ▸ Graphics Jobs** — **выключить**.
+3. **Configuration ▸ Scripting Backend** — для теста поставь **Mono** (если с Mono запустится — виноват стриппинг IL2CPP, см. шаг 4).
+4. **Optimization ▸ Managed Stripping Level** — **Minimal** (если остаёшься на IL2CPP).
+
+В `File ▸ Build Profiles` (или Build Settings):
+5. **Compression Method = Disabled** (или LZ4). LZMA-архив при обрыве записи даёт именно «corrupted level0».
+6. Включи **Clean Build** и собирай в **новую пустую папку**, например `C:/WorkProject/WarDroneB/Build02`. Старую `TestBuild01` удали целиком — смешивать старые и новые данные нельзя.
+
+---
+
+## Шаг 2. Проверь, какая сцена вообще грузится
+
+`level0` — это **первая сцена** в списке Build Profiles/Build Settings.
+
+- Открой список сцен и убедись, что первой стоит **наша сцена с дроном**, а не тяжёлая городская.
+- Для изоляции проблемы: временно оставь в списке **только сцену дрона** (без города) и собери. Если запустилось — проблема в городской геометрии (шаг 3).
+
+Заодно посмотри размер файла `MyDroneA_Data/level0` в старой сборке:
+- **0 КБ / неестественно маленький** → сборка физически оборвалась (антивирус/диск);
+- **сотни МБ / ГБ** → сцена слишком тяжёлая, упирается в лимиты сериализации.
+
+---
+
+## Шаг 3. Городская геометрия (extrudeFront / FonBuildings)
+
+Это фон, ему не нужна физика и не нужны гигантские треугольники:
+
+1. Выдели объекты `extrudeFront`, `FonBuildings` → **удали Mesh Collider** (или замени на Box Collider). Оставь коллайдеры только там, где дрон реально может столкнуться.
+2. У мешей в импорте: **Read/Write Enabled = Off**, **Mesh Compression = Medium/High** — это заметно уменьшит и память, и размер билда.
+3. Если объект масштабирован до огромных размеров — лучше уменьшить масштаб и разбить меш на части, чем оставлять один треугольник на 500+ юнитов.
+4. Проверь текстуры: 33 МБ за одну загрузку — это обычно огромная текстура или меш. Уменьши Max Size у фоновых текстур до 2048.
+
+---
+
+## Шаг 4. Страховка для IL2CPP — `Assets/link.xml`
+
+Наши `JsonUtility`-типы (`CalibrationData`, `TelemetryData`, вложенный `UdpLink.RxPacket`) могут быть вырезаны стриппером. Создай файл **`Assets/link.xml`**:
+
+```xml
+<linker>
+  <assembly fullname="Assembly-CSharp" preserve="all"/>
+</linker>
+```
+
+Это полностью отключает стриппинг нашего кода — для симулятора размер не критичен, зато исчезает целый класс трудноуловимых багов в билде.
+
+---
+
+## Шаг 5. Антивирус / CryptoPro
+
+Добавь в исключения Защитника Windows и любого другого антивируса:
+- папку проекта `C:\WorkProject\WarDroneB\`
+- папку сборок
+- `Unity.exe`, `UnityShaderCompiler.exe`
+
+CryptoPro (`cpcrypt.dll` и компания) внедряется в процесс и лезет в файловые операции — на время сборки его лучше отключить, это известный источник повреждённых файлов.
+
+---
+
+## Шаг 6. Если всё ещё падает — чистая пересборка
+
+1. Закрой Unity.
+2. Удали в проекте: `Library/Bee`, `Library/PlayerDataCache`, `Library/StateCache` (весь `Library` удалять не обязательно — будет долгий реимпорт).
+3. Удали папку билда.
+4. Открой Unity, дай переимпортировать, собери **Clean Build** в новую папку.
+
+И полезно собрать **Development Build + Script Debugging** — тогда в логе будет больше деталей, а если краш всё-таки в нашем коде, появится читаемый стек.
+
+---
+
+## Порядок действий, если коротко
+
+1. D3D11 вместо D3D12 + Graphics Jobs off + Compression Disabled.
+2. Clean Build в **новую** папку.
+3. Не помогло → Scripting Backend = Mono + `link.xml`.
+4. Не помогло → собрать **только сцену дрона**, без города.
+5. Заработало без города → чинить меши/коллайдеры фона (шаг 3).
+
+Напиши, что получилось на каждом шаге, и заодно: **какой размер у файла `level0`** и **какая сцена стоит первой** в списке сборки. По этим двум ответам сразу станет ясно, битая это сборка или сцена не влезает в лимиты — и добьём точечно.
+
+### USER
+я сделал все что написано и все равно вылетает билд в .exe как это исправтиь? вот лог:
+Mono path[0] = 'C:/WorkProject/WarDroneB/TestBuild04/MyDroneA_Data/Managed'
+Mono config path = 'C:/WorkProject/WarDroneB/TestBuild04/MonoBleedingEdge/etc'
+Found 3 interfaces on host : 0) 192.168.0.103 1) 172.24.228.220 2) 10.6.7.1
+Player connection [34380]  Target information:
+
+Player connection [34380]  * "[IP] 192.168.0.103 [Port] 55000 [Flags] 2 [Guid] 3915590549 [EditorId] 1337524287 [Version] 1048832 [Id] WindowsPlayer(2,Home-PC) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] MyDroneA" 
+
+Player connection [34380]  * "[IP] 172.24.228.220 [Port] 55000 [Flags] 2 [Guid] 3915590549 [EditorId] 1337524287 [Version] 1048832 [Id] WindowsPlayer(2,Home-PC) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] MyDroneA" 
+
+Player connection [34380]  * "[IP] 10.6.7.1 [Port] 55000 [Flags] 2 [Guid] 3915590549 [EditorId] 1337524287 [Version] 1048832 [Id] WindowsPlayer(2,Home-PC) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] MyDroneA" 
+
+Player connection [34380] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.3.28f1 (8f082d2fe476)
+[Subsystems] Discovering subsystems at path C:/WorkProject/WarDroneB/TestBuild04/MyDroneA_Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3090 (ID=0x2204)
+    Vendor:   NVIDIA
+    VRAM:     24326 MB
+    Driver:   32.0.15.8108
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.196 seconds
+- Finished resetting the current domain, in  0.004 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+<RI> Initializing input.
+
+Using Windows.Gaming.Input
+<RI> Input initialized.
+
+The file 'C:/WorkProject/WarDroneB/TestBuild04/MyDroneA_Data/level0' is corrupted! Remove it and launch unity again!
+[Position out of bounds!]
+Crash!!!
+SymInit: Symbol-SearchPath: '.;C:\WorkProject\WarDroneB\TestBuild04;C:/WorkProject/WarDroneB/TestBuild04/MyDroneA_Data/Plugins\x86_64;C:/WorkProject/WarDroneB/TestBuild04/MyDroneA_Data/Plugins;C:\WorkProject\WarDroneB\TestBuild04;C:\Windows;C:\Windows\system32;', symOptions: 534, UserName: 'KirikDK'
+OS-Version: 10.0.0
+C:\WorkProject\WarDroneB\TestBuild04\MyDroneA.exe:MyDroneA.exe (00007FF7F40E0000), size: 679936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6000.3.28.2093
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FF867030000), size: 2064384 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FF865080000), size: 774144 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1889
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FF864860000), size: 2957312 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\WorkProject\WarDroneB\TestBuild04\UnityPlayer.dll:UnityPlayer.dll (00007FFF8AE50000), size: 92422144 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6000.3.28.2093
+C:\Windows\System32\USER32.dll:USER32.dll (00007FF8657A0000), size: 1691648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\win32u.dll:win32u.dll (00007FF864FA0000), size: 139264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FF8652C0000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FF864D90000), size: 1110016 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FF864730000), size: 643072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.789
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FF864EA0000), size: 1048576 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.789
+C:\Windows\System32\ole32.dll:ole32.dll (00007FF865B80000), size: 1220608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FF865410000), size: 1200128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1806
+C:\Windows\System32\combase.dll:combase.dll (00007FF865E20000), size: 3489792 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FF85E580000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FF865140000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.546
+C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (00007FF865B20000), size: 348160 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\System32\SETUPAPI.dll:SETUPAPI.dll (00007FF866230000), size: 4620288 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\cfgmgr32.dll:cfgmgr32.dll (00007FF864BB0000), size: 319488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1620
+C:\Windows\System32\bcrypt.dll:bcrypt.dll (00007FF864D60000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1023
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FF866180000), size: 712704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\sechost.dll:sechost.dll (00007FF865220000), size: 638976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FF866820000), size: 7614464 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (00007FF866750000), size: 839680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.985
+C:\Windows\System32\IMM32.dll:IMM32.dll (00007FF8651E0000), size: 204800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FF8174C0000), size: 1200128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FF8552A0000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FF864C00000), size: 1400832 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1889
+C:\Windows\System32\WS2_32.dll:WS2_32.dll (00007FF865730000), size: 438272 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FF863B30000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FF85D2A0000), size: 1097728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\HID.DLL:HID.DLL (00007FF862AB0000), size: 53248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\d3d11.dll:d3d11.dll (00007FF8627F0000), size: 2502656 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\dxgi.dll:dxgi.dll (00007FF862B10000), size: 995328 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FF818AB0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\UIAutomationCore.DLL:UIAutomationCore.DLL (00007FF8113E0000), size: 3100672 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.2.19041.1741
+C:\Windows\SYSTEM32\Secur32.dll:Secur32.dll (00007FF84A270000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FF861040000), size: 192512 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.746
+C:\Windows\SYSTEM32\PROPSYS.dll:PROPSYS.dll (00007FF85E9F0000), size: 1007616 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.1741
+C:\Windows\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FF864620000), size: 204800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpcrypt.dll:cpcrypt.dll (00007FF864200000), size: 135168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.16728.0
+C:\Windows\system32\apphelp.dll:apphelp.dll (00007FF860C70000), size: 593920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FF862AC0000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FF8647D0000), size: 532480 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1415
+C:\Windows\system32\uxtheme.dll:uxtheme.dll (00007FF860D70000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\shcore.dll:shcore.dll (00007FF865D70000), size: 708608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\System32\clbcatq.dll:clbcatq.dll (00007FF8666A0000), size: 716800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2001.12.10941.16384
+C:\Windows\system32\wbem\wbemprox.dll:wbemprox.dll (00007FF84B4D0000), size: 69632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1320
+C:\Windows\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FF84B0D0000), size: 589824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1566
+C:\Windows\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FF84A350000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1320
+C:\Windows\system32\wbem\fastprox.dll:fastprox.dll (00007FF84A440000), size: 1093632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\amsi.dll:amsi.dll (00007FF849910000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\WorkProject\WarDroneB\TestBuild04\WinPixEventRuntime.dll:WinPixEventRuntime.dll (00007FF85E830000), size: 57344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.0.2403.8001
+C:\Windows\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FF847190000), size: 643072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FF847260000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FF847230000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FF861510000), size: 7933952 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\Wldp.dll:Wldp.dll (00007FF864160000), size: 196608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\profapi.dll:profapi.dll (00007FF864670000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.844
+C:\WorkProject\WarDroneB\TestBuild04\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00007FFF8A400000), size: 10756096 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\system32\mswsock.dll:mswsock.dll (00007FF863E90000), size: 434176 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\NSI.dll:NSI.dll (00007FF865960000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.610
+C:\Windows\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FF85E590000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FF85E4F0000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FF863B70000), size: 827392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\system32\napinsp.dll:napinsp.dll (00007FF83A9E0000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\system32\pnrpnsp.dll:pnrpnsp.dll (00007FF83A9C0000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\system32\wshbth.dll:wshbth.dll (00007FF83A9A0000), size: 86016 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\system32\NLAapi.dll:NLAapi.dll (00007FF85FA30000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\winrnr.dll:winrnr.dll (00007FF83A980000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Program Files\Bonjour\mdnsNSP.dll:mdnsNSP.dll (00000000632E0000), size: 155648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.0.0.10
+C:\Windows\System32\MSCTF.dll:MSCTF.dll (00007FF8652F0000), size: 1134592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvldumdx.dll:nvldumdx.dll (00007FF85AFD0000), size: 802816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\SYSTEM32\msasn1.dll:msasn1.dll (00007FF864320000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\cryptnet.dll:cryptnet.dll (00007FF85E540000), size: 200704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.906
+C:\Windows\SYSTEM32\cryptbase.dll:cryptbase.dll (00007FF8640D0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\drvstore.dll:drvstore.dll (00007FF85DEF0000), size: 1343488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1949
+C:\Windows\SYSTEM32\devobj.dll:devobj.dll (00007FF8644E0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1620
+C:\Windows\System32\wintrust.dll:wintrust.dll (000002B35A0A0000), size: 434176 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\imagehlp.dll:imagehlp.dll (00007FF865940000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1415
+C:\Windows\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FF8640B0000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpadvai.dll:cpadvai.dll (00007FF864090000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.16639.0
+C:\Program Files\Crypto Pro\CSP\cpcsp.dll:cpcsp.dll (00007FF8634A0000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.14960.0
+C:\Program Files\Crypto Pro\CSP\cpcspi.dll:cpcspi.dll (00007FF863280000), size: 2187264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.18680.0
+C:\Program Files\Crypto Pro\CSP\cpsuprt.dll:cpsuprt.dll (00007FF8631E0000), size: 634880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.15962.0
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvgpucomp64.dll:nvgpucomp64.dll (00007FF8558C0000), size: 64565248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\NvMemMapStoragex.dll:NvMemMapStoragex.dll (00007FF8552D0000), size: 909312 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\SYSTEM32\POWRPROF.dll:POWRPROF.dll (00007FF863C50000), size: 307200 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FF863B10000), size: 73728 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvwgf2umx.dll:nvwgf2umx.dll (00007FF84DF90000), size: 92487680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\system32\nvspcap64.dll:nvspcap64.dll (00007FF81A2E0000), size: 1339392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.5.420
+C:\Windows\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FF863860000), size: 208896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\dxcore.dll:dxcore.dll (00007FF85B520000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvppex.dll:nvppex.dll (00007FFFF4690000), size: 1798144 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\System32\MMDevApi.dll:MMDevApi.dll (00007FF85D150000), size: 544768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1503
+C:\Windows\SYSTEM32\AUDIOSES.DLL:AUDIOSES.DLL (00007FF8220A0000), size: 1581056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\resourcepolicyclient.dll:resourcepolicyclient.dll (00007FF860F40000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\Windows.Gaming.Input.dll:Windows.Gaming.Input.dll (00007FF85C990000), size: 864256 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1566
+C:\Windows\SYSTEM32\inputhost.dll:inputhost.dll (00007FF85B170000), size: 1384448 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1741
+C:\Windows\System32\CoreMessaging.dll:CoreMessaging.dll (00007FF860A40000), size: 991232 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\CoreUIComponents.dll:CoreUIComponents.dll (00007FF860360000), size: 3530752 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\wintypes.dll:wintypes.dll (00007FF85FBA0000), size: 1392640 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\twinapi.appcore.dll:twinapi.appcore.dll (00007FF85DC80000), size: 2097152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\System32\Windows.Gaming.UI.GameBar.dll:Windows.Gaming.UI.GameBar.dll (00007FFF963A0000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.746
+C:\Windows\System32\WININET.dll:WININET.dll (00007FF83A250000), size: 5083136 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.19041.2193
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpwinet.dll:cpwinet.dll (00007FF8388E0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.15621.0
+C:\Windows\System32\appresolver.dll:appresolver.dll (00007FF8204B0000), size: 589824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1620
+C:\Windows\System32\Bcp47Langs.dll:Bcp47Langs.dll (00007FF85B660000), size: 372736 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1566
+C:\Windows\System32\USERENV.dll:USERENV.dll (00007FF8645F0000), size: 188416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.572
+C:\Windows\System32\SLC.dll:SLC.dll (00007FF862D90000), size: 167936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1682
+C:\Windows\System32\sppc.dll:sppc.dll (00007FF862D60000), size: 151552 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1682
+C:\Windows\SYSTEM32\xinput1_3.dll:xinput1_3.dll (0000000000400000), size: 122880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 9.18.944.0
+C:\Windows\SYSTEM32\dcomp.dll:dcomp.dll (00007FF860170000), size: 1978368 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\textinputframework.dll:textinputframework.dll (00007FF85B2D0000), size: 1019904 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FF862600000), size: 1982464 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.867
+
+========== OUTPUTTING STACK TRACE ==================
+
+0x00007FFF8D0B573D (UnityPlayer) UnityMain
+0x00007FFF8D0B4B59 (UnityPlayer) UnityMain
+SymInit: Symbol-SearchPath: '.;C:\WorkProject\WarDroneB\TestBuild04;C:/WorkProject/WarDroneB/TestBuild04/MyDroneA_Data/Plugins\x86_64;C:/WorkProject/WarDroneB/TestBuild04/MyDroneA_Data/Plugins;C:\WorkProject\WarDroneB\TestBuild04;C:\Windows;C:\Windows\system32;', symOptions: 534, UserName: 'KirikDK'
+OS-Version: 10.0.0
+C:\WorkProject\WarDroneB\TestBuild04\MyDroneA.exe:MyDroneA.exe (00007FF7F40E0000), size: 679936 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild04\MyDroneA.exe', fileVersion: 6000.3.28.2093
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FF867030000), size: 2064384 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\ntdll.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FF865080000), size: 774144 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\KERNEL32.DLL', fileVersion: 10.0.19041.1889
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FF864860000), size: 2957312 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\KERNELBASE.dll', fileVersion: 10.0.19041.2193
+C:\WorkProject\WarDroneB\TestBuild04\UnityPlayer.dll:UnityPlayer.dll (00007FFF8AE50000), size: 92422144 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild04\UnityPlayer.dll', fileVersion: 6000.3.28.2093
+C:\Windows\System32\USER32.dll:USER32.dll (00007FF8657A0000), size: 1691648 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\USER32.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\win32u.dll:win32u.dll (00007FF864FA0000), size: 139264 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\win32u.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FF8652C0000), size: 176128 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\GDI32.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FF864D90000), size: 1110016 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\gdi32full.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FF864730000), size: 643072 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\msvcp_win.dll', fileVersion: 10.0.19041.789
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FF864EA0000), size: 1048576 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ucrtbase.dll', fileVersion: 10.0.19041.789
+C:\Windows\System32\ole32.dll:ole32.dll (00007FF865B80000), size: 1220608 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ole32.dll', fileVersion: 10.0.19041.1202
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FF865410000), size: 1200128 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\RPCRT4.dll', fileVersion: 10.0.19041.1806
+C:\Windows\System32\combase.dll:combase.dll (00007FF865E20000), size: 3489792 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\combase.dll', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FF85E580000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\VERSION.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FF865140000), size: 647168 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\msvcrt.dll', fileVersion: 7.0.19041.546
+C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (00007FF865B20000), size: 348160 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SHLWAPI.dll', fileVersion: 10.0.19041.2075
+C:\Windows\System32\SETUPAPI.dll:SETUPAPI.dll (00007FF866230000), size: 4620288 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SETUPAPI.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\cfgmgr32.dll:cfgmgr32.dll (00007FF864BB0000), size: 319488 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\cfgmgr32.dll', fileVersion: 10.0.19041.1620
+C:\Windows\System32\bcrypt.dll:bcrypt.dll (00007FF864D60000), size: 159744 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\bcrypt.dll', fileVersion: 10.0.19041.1023
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FF866180000), size: 712704 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ADVAPI32.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\sechost.dll:sechost.dll (00007FF865220000), size: 638976 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\sechost.dll', fileVersion: 10.0.19041.1865
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FF866820000), size: 7614464 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SHELL32.dll', fileVersion: 10.0.19041.2075
+C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (00007FF866750000), size: 839680 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\OLEAUT32.dll', fileVersion: 10.0.19041.985
+C:\Windows\System32\IMM32.dll:IMM32.dll (00007FF8651E0000), size: 204800 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\IMM32.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FF8174C0000), size: 1200128 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\OPENGL32.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FF8552A0000), size: 159744 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\WINMM.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FF864C00000), size: 1400832 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\CRYPT32.dll', fileVersion: 10.0.19041.1889
+C:\Windows\System32\WS2_32.dll:WS2_32.dll (00007FF865730000), size: 438272 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\WS2_32.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FF863B30000), size: 241664 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\IPHLPAPI.DLL', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FF85D2A0000), size: 1097728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\WINHTTP.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\HID.DLL:HID.DLL (00007FF862AB0000), size: 53248 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\HID.DLL', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\d3d11.dll:d3d11.dll (00007FF8627F0000), size: 2502656 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\d3d11.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\dxgi.dll:dxgi.dll (00007FF862B10000), size: 995328 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dxgi.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FF818AB0000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\GLU32.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\UIAutomationCore.DLL:UIAutomationCore.DLL (00007FF8113E0000), size: 3100672 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\UIAutomationCore.DLL', fileVersion: 7.2.19041.1741
+C:\Windows\SYSTEM32\Secur32.dll:Secur32.dll (00007FF84A270000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\Secur32.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FF861040000), size: 192512 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dwmapi.dll', fileVersion: 10.0.19041.746
+C:\Windows\SYSTEM32\PROPSYS.dll:PROPSYS.dll (00007FF85E9F0000), size: 1007616 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\PROPSYS.dll', fileVersion: 7.0.19041.1741
+C:\Windows\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FF864620000), size: 204800 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\SSPICLI.DLL', fileVersion: 10.0.19041.2130
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpcrypt.dll:cpcrypt.dll (00007FF864200000), size: 135168 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Common Files\Crypto Pro\AppCompat\cpcrypt.dll', fileVersion: 5.0.16728.0
+C:\Windows\system32\apphelp.dll:apphelp.dll (00007FF860C70000), size: 593920 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\apphelp.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FF862AC0000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\kernel.appcore.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FF8647D0000), size: 532480 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\bcryptPrimitives.dll', fileVersion: 10.0.19041.1415
+C:\Windows\system32\uxtheme.dll:uxtheme.dll (00007FF860D70000), size: 647168 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\uxtheme.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\shcore.dll:shcore.dll (00007FF865D70000), size: 708608 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\shcore.dll', fileVersion: 10.0.19041.1865
+C:\Windows\System32\clbcatq.dll:clbcatq.dll (00007FF8666A0000), size: 716800 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\clbcatq.dll', fileVersion: 2001.12.10941.16384
+C:\Windows\system32\wbem\wbemprox.dll:wbemprox.dll (00007FF84B4D0000), size: 69632 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wbem\wbemprox.dll', fileVersion: 10.0.19041.1320
+C:\Windows\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FF84B0D0000), size: 589824 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\wbemcomn.dll', fileVersion: 10.0.19041.1566
+C:\Windows\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FF84A350000), size: 81920 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wbem\wbemsvc.dll', fileVersion: 10.0.19041.1320
+C:\Windows\system32\wbem\fastprox.dll:fastprox.dll (00007FF84A440000), size: 1093632 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wbem\fastprox.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\amsi.dll:amsi.dll (00007FF849910000), size: 126976 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\amsi.dll', fileVersion: 10.0.19041.2075
+C:\WorkProject\WarDroneB\TestBuild04\WinPixEventRuntime.dll:WinPixEventRuntime.dll (00007FF85E830000), size: 57344 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild04\WinPixEventRuntime.dll', fileVersion: 1.0.2403.8001
+C:\Windows\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FF847190000), size: 643072 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\MSVCP140.dll', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FF847260000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\VCRUNTIME140_1.dll', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FF847230000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\VCRUNTIME140.dll', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FF861510000), size: 7933952 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\windows.storage.dll', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\Wldp.dll:Wldp.dll (00007FF864160000), size: 196608 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\Wldp.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\profapi.dll:profapi.dll (00007FF864670000), size: 126976 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\SYSTEM32\profapi.dll', fileVersion: 10.0.19041.844
+C:\WorkProject\WarDroneB\TestBuild04\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00007FFF8A400000), size: 10756096 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild04\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll'
+C:\Windows\system32\mswsock.dll:mswsock.dll (00007FF863E90000), size: 434176 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\mswsock.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\NSI.dll:NSI.dll (00007FF865960000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\NSI.dll', fileVersion: 10.0.19041.610
+C:\Windows\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FF85E590000), size: 94208 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dhcpcsvc6.DLL', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FF85E4F0000), size: 118784 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dhcpcsvc.DLL', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FF863B70000), size: 827392 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\DNSAPI.dll', fileVersion: 10.0.19041.1865
+C:\Windows\system32\napinsp.dll:napinsp.dll (00007FF83A9E0000), size: 94208 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\napinsp.dll', fileVersion: 10.0.19041.546
+C:\Windows\system32\pnrpnsp.dll:pnrpnsp.dll (00007FF83A9C0000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\pnrpnsp.dll', fileVersion: 10.0.19041.546
+C:\Windows\system32\wshbth.dll:wshbth.dll (00007FF83A9A0000), size: 86016 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wshbth.dll', fileVersion: 10.0.19041.546
+C:\Windows\system32\NLAapi.dll:NLAapi.dll (00007FF85FA30000), size: 118784 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\NLAapi.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\winrnr.dll:winrnr.dll (00007FF83A980000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\winrnr.dll', fileVersion: 10.0.19041.546
+C:\Program Files\Bonjour\mdnsNSP.dll:mdnsNSP.dll (00000000632E0000), size: 155648 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Bonjour\mdnsNSP.dll', fileVersion: 3.0.0.10
+C:\Windows\System32\MSCTF.dll:MSCTF.dll (00007FF8652F0000), size: 1134592 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\MSCTF.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvldumdx.dll:nvldumdx.dll (00007FF85AFD0000), size: 802816 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvldumdx.dll', fileVersion: 32.0.15.8108
+C:\Windows\SYSTEM32\msasn1.dll:msasn1.dll (00007FF864320000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\msasn1.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\cryptnet.dll:cryptnet.dll (00007FF85E540000), size: 200704 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\cryptnet.dll', fileVersion: 10.0.19041.906
+C:\Windows\SYSTEM32\cryptbase.dll:cryptbase.dll (00007FF8640D0000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\cryptbase.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\drvstore.dll:drvstore.dll (00007FF85DEF0000), size: 1343488 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\drvstore.dll', fileVersion: 10.0.19041.1949
+C:\Windows\SYSTEM32\devobj.dll:devobj.dll (00007FF8644E0000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\devobj.dll', fileVersion: 10.0.19041.1620
+C:\Windows\System32\wintrust.dll:wintrust.dll (000002B35A0A0000), size: 434176 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\wintrust.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\imagehlp.dll:imagehlp.dll (00007FF865940000), size: 118784 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\imagehlp.dll', fileVersion: 10.0.19041.1415
+C:\Windows\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FF8640B0000), size: 98304 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\CRYPTSP.dll', fileVersion: 10.0.19041.546
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpadvai.dll:cpadvai.dll (00007FF864090000), size: 94208 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Common Files\Crypto Pro\AppCompat\cpadvai.dll', fileVersion: 5.0.16639.0
+C:\Program Files\Crypto Pro\CSP\cpcsp.dll:cpcsp.dll (00007FF8634A0000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Crypto Pro\CSP\cpcsp.dll', fileVersion: 5.0.14960.0
+C:\Program Files\Crypto Pro\CSP\cpcspi.dll:cpcspi.dll (00007FF863280000), size: 2187264 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Crypto Pro\CSP\cpcspi.dll', fileVersion: 5.0.18680.0
+C:\Program Files\Crypto Pro\CSP\cpsuprt.dll:cpsuprt.dll (00007FF8631E0000), size: 634880 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Crypto Pro\CSP\cpsuprt.dll', fileVersion: 5.0.15962.0
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvgpucomp64.dll:nvgpucomp64.dll (00007FF8558C0000), size: 64565248 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvgpucomp64.dll', fileVersion: 32.0.15.8108
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\NvMemMapStoragex.dll:NvMemMapStoragex.dll (00007FF8552D0000), size: 909312 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\NvMemMapStoragex.dll'
+C:\Windows\SYSTEM32\POWRPROF.dll:POWRPROF.dll (00007FF863C50000), size: 307200 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\POWRPROF.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FF863B10000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\UMPDC.dll'
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvwgf2umx.dll:nvwgf2umx.dll (00007FF84DF90000), size: 92487680 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvwgf2umx.dll', fileVersion: 32.0.15.8108
+C:\Windows\system32\nvspcap64.dll:nvspcap64.dll (00007FF81A2E0000), size: 1339392 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\nvspcap64.dll', fileVersion: 11.0.5.420
+C:\Windows\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FF863860000), size: 208896 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\ntmarta.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\dxcore.dll:dxcore.dll (00007FF85B520000), size: 241664 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dxcore.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvppex.dll:nvppex.dll (00007FFFF4690000), size: 1798144 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvppex.dll', fileVersion: 32.0.15.8108
+C:\Windows\System32\MMDevApi.dll:MMDevApi.dll (00007FF85D150000), size: 544768 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\MMDevApi.dll', fileVersion: 10.0.19041.1503
+C:\Windows\SYSTEM32\AUDIOSES.DLL:AUDIOSES.DLL (00007FF8220A0000), size: 1581056 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\AUDIOSES.DLL', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\resourcepolicyclient.dll:resourcepolicyclient.dll (00007FF860F40000), size: 81920 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\resourcepolicyclient.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\Windows.Gaming.Input.dll:Windows.Gaming.Input.dll (00007FF85C990000), size: 864256 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\Windows.Gaming.Input.dll', fileVersion: 10.0.19041.1566
+C:\Windows\SYSTEM32\inputhost.dll:inputhost.dll (00007FF85B170000), size: 1384448 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\inputhost.dll', fileVersion: 10.0.19041.1741
+C:\Windows\System32\CoreMessaging.dll:CoreMessaging.dll (00007FF860A40000), size: 991232 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\CoreMessaging.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\CoreUIComponents.dll:CoreUIComponents.dll (00007FF860360000), size: 3530752 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\CoreUIComponents.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\wintypes.dll:wintypes.dll (00007FF85FBA0000), size: 1392640 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\wintypes.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\twinapi.appcore.dll:twinapi.appcore.dll (00007FF85DC80000), size: 2097152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\twinapi.appcore.dll', fileVersion: 10.0.19041.1865
+C:\Windows\System32\Windows.Gaming.UI.GameBar.dll:Windows.Gaming.UI.GameBar.dll (00007FFF963A0000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\Windows.Gaming.UI.GameBar.dll', fileVersion: 10.0.19041.746
+C:\Windows\System32\WININET.dll:WININET.dll (00007FF83A250000), size: 5083136 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\WININET.dll', fileVersion: 11.0.19041.2193
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpwinet.dll:cpwinet.dll (00007FF8388E0000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Common Files\Crypto Pro\AppCompat\cpwinet.dll', fileVersion: 5.0.15621.0
+C:\Windows\System32\appresolver.dll:appresolver.dll (00007FF8204B0000), size: 589824 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\appresolver.dll', fileVersion: 10.0.19041.1620
+C:\Windows\System32\Bcp47Langs.dll:Bcp47Langs.dll (00007FF85B660000), size: 372736 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\Bcp47Langs.dll', fileVersion: 10.0.19041.1566
+C:\Windows\System32\USERENV.dll:USERENV.dll (00007FF8645F0000), size: 188416 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\USERENV.dll', fileVersion: 10.0.19041.572
+C:\Windows\System32\SLC.dll:SLC.dll (00007FF862D90000), size: 167936 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SLC.dll', fileVersion: 10.0.19041.1682
+C:\Windows\System32\sppc.dll:sppc.dll (00007FF862D60000), size: 151552 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\sppc.dll', fileVersion: 10.0.19041.1682
+C:\Windows\SYSTEM32\xinput1_3.dll:xinput1_3.dll (0000000000400000), size: 122880 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\xinput1_3.dll', fileVersion: 9.18.944.0
+C:\Windows\SYSTEM32\dcomp.dll:dcomp.dll (00007FF860170000), size: 1978368 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dcomp.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\textinputframework.dll:textinputframework.dll (00007FF85B2D0000), size: 1019904 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\textinputframework.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FF862600000), size: 1982464 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dbghelp.dll', fileVersion: 10.0.19041.867
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BADA6EF)
+0x00007FFF8BADA6EF (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BADD615)
+0x00007FFF8BADD615 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8B2D515A)
+0x00007FFF8B2D515A (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BF4BED7)
+0x00007FFF8BF4BED7 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BF5F37E)
+0x00007FFF8BF5F37E (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BF3D558)
+0x00007FFF8BF3D558 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BF51B7F)
+0x00007FFF8BF51B7F (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BF51C12)
+0x00007FFF8BF51C12 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BF73304)
+0x00007FFF8BF73304 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BF76007)
+0x00007FFF8BF76007 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BF11356)
+0x00007FFF8BF11356 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BFA2D42)
+0x00007FFF8BFA2D42 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BFA0976)
+0x00007FFF8BFA0976 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BF9D5A8)
+0x00007FFF8BF9D5A8 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BA3AEE3)
+0x00007FFF8BA3AEE3 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BA35E06)
+0x00007FFF8BA35E06 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BA363E1)
+0x00007FFF8BA363E1 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BA3645A)
+0x00007FFF8BA3645A (UnityPlayer) (function-name not available)
+0x00007FFF8CD76B9F (UnityPlayer) UnityMain
+0x00007FF865097034 (KERNEL32) BaseThreadInitThunk
+0x00007FF8670826A1 (ntdll) RtlUserThreadStart
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/Users/KirikDK/AppData/Local/Temp/WarDrone/MyDroneA/Crashes
+
+
+### ASSISTANT
+Лог сузил круг очень сильно. Смотри, что **исключено**:
+
+- `Mono path[0]` + `mono-2.0-bdwgc.dll` → сборка на **Mono**, стриппинг IL2CPP ни при чём.
+- `Direct3D 11.0` + `kGfxThreadingModeThreaded` → **D3D11, Graphics Jobs выключены**, видеоподсистема ни при чём.
+- Ошибка возникает **сразу после `<RI> Input initialized.`**, до загрузки геометрии и до `Awake` любого нашего скрипта.
+
+Остаётся одно: **движок не может прочитать файл сцены `level0`**. Это данные, а не код. Причём раз ошибка одинаковая на Mono/IL2CPP и D3D11/D3D12 — файл либо физически битый, либо в сцене есть объект, который ломает сериализацию при билде.
+
+Дальше нужно **локализовать** это, а не перебирать настройки наугад.
+
+---
+
+## Шаг 1. Два замера (30 секунд, дай мне эти цифры)
+
+1. Размер файла `C:\WorkProject\WarDroneB\TestBuild04\MyDroneA_Data\level0` — **в байтах/КБ**.
+   - 0 КБ или подозрительно мало (десятки КБ при тяжёлой сцене) → файл **обрезан при записи**.
+   - Сотни МБ → сцена упирается в лимиты.
+2. Открой **Console ▸ ⋮ ▸ Open Editor Log** сразу после билда и найди поиском: `level0`, `error`, `Exception`, `serializ`. Часто настоящая причина пишется именно там, в логе редактора во время сборки, а не в логе плеера.
+
+---
+
+## Шаг 2. Лестница изоляции (это точно найдёт виновника)
+
+Делай по порядку, каждый раз — **Clean Build в новую папку**.
+
+### Тест A — пустая сцена
+1. `File ▸ New Scene` (Empty), добавь только Camera и Directional Light, сохрани как `Assets/TestEmpty.unity`.
+2. В Build Profiles оставь **только эту сцену**.
+3. Build → запуск.
+
+- **Падает так же** → проблема в окружении (Unity/антивирус/диск), переходи к шагу 3.
+- **Запустилось** → проблема в содержимом сцены, переходи к тесту B.
+
+### Тест B — чистая сцена дрона с нуля
+1. `File ▸ New Scene` (Basic), сохрани как `Assets/DroneClean.unity`.
+2. Создай пустой GameObject `Simulator`, повесь `SimBootstrap`.
+3. `Tools ▸ Drone Sim ▸ Build Demo Scene` — наш генератор соберёт всё заново.
+4. Ctrl+S, в Build Profiles только эта сцена, Build → запуск.
+
+- **Запустилось** → старая сцена повреждена/содержит проблемный ассет. Город (`extrudeFront`, `FonBuildings`) — главный подозреваемый, переходи к шагу 4.
+- **Падает** → проблема в наших объектах; удаляй по половине (сначала HUD + SimTelemetryPanel, потом DroneBreakup, потом город) и повторяй, пока не найдёшь компонент.
+
+### Тест C — старая сцена без города
+Открой свою рабочую сцену, `File ▸ Save As` → `Assets/DroneNoCity.unity`, удали весь фон/город/террейн, оставь дрон + землю + камеру + HUD. Build → запуск.
+
+---
+
+## Шаг 3. Окружение — если падает даже пустая сцена
+
+В твоём логе в процесс внедрены **CryptoPro** (`cpcrypt.dll`, `cpadvai.dll`, `cpwinet.dll`) и **NVIDIA capture** (`nvspcap64.dll`). CryptoPro ставит глобальный хук через `AppInit_DLLs` и лезет в файловые операции — это реальный кандидат на порчу файла при записи билда.
+
+1. **Отключи внедрение AppInit_DLLs** (нужен админ):
+   `Win+R` → `regedit` →
+   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows`
+   параметр **`LoadAppInit_DLLs` = 0**. Перезагрузка. (После теста можно вернуть 1.)
+2. Отключи оверлей NVIDIA (GeForce Experience / NVIDIA App ▸ Overlay off).
+3. Собери **на другой диск/папку**, например `D:\Builds\Test05` — исключит проблемы с правами и антивирусом на `C:\WorkProject`.
+4. Проверь свободное место на диске (билд тяжёлой сцены может требовать десятки ГБ временных файлов).
+5. Запусти exe **от имени администратора** один раз.
+6. Если ничего — **другая версия Unity**: у тебя `6000.3.28f1`. Поставь рядом **6000.0 LTS** через Hub и собери тот же проект в ней. Если в LTS билд работает — это регрессия 6.3, и это уже конкретный баг-репорт.
+
+---
+
+## Шаг 4. Ремонт сцены — если виноват контент
+
+1. **Пересохрани сцену под новым именем** (`File ▸ Save As`) — это перезаписывает YAML и лечит подпорченный файл сцены.
+2. **Проверь missing-скрипты и огромные коллайдеры** — добавь в `Assets/Editor/` этот инструмент:
+
+```csharp
+#if UNITY_EDITOR
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public static class SceneHealthCheck
+{
+    [MenuItem("Tools/Drone Sim/Check Scene Health")]
+    public static void Check()
+    {
+        int missing = 0, objects = 0, bigColliders = 0;
+        for (int s = 0; s < SceneManager.sceneCount; s++)
+        {
+            var scene = SceneManager.GetSceneAt(s);
+            foreach (var root in scene.GetRootGameObjects())
+                Scan(root.transform, ref missing, ref objects, ref bigColliders);
+        }
+        Debug.Log($"[SceneCheck] объектов: {objects}, missing-скриптов: {missing}, гигантских MeshCollider: {bigColliders}");
+    }
+
+    static void Scan(Transform t, ref int missing, ref int objects, ref int big)
+    {
+        objects++;
+        var comps = t.GetComponents<Component>();
+        foreach (var c in comps)
+            if (c == null) { missing++; Debug.LogWarning("[Missing script] " + Path(t), t.gameObject); }
+
+        var mc = t.GetComponent<MeshCollider>();
+        if (mc != null && mc.sharedMesh != null)
+        {
+            Vector3 size = Vector3.Scale(mc.sharedMesh.bounds.size, t.lossyScale);
+            if (Mathf.Max(size.x, Mathf.Max(size.y, size.z)) > 500f)
+            {
+                big++;
+                Debug.LogWarning($"[Огромный MeshCollider] {Path(t)}  размер {size}  вершин {mc.sharedMesh.vertexCount}", t.gameObject);
+            }
+        }
+        foreach (Transform c in t) Scan(c, ref missing, ref objects, ref big);
+    }
+
+    static string Path(Transform t)
+    {
+        string p = t.name;
+        while (t.parent != null) { t = t.parent; p = t.name + "/" + p; }
+        return p;
+    }
+}
+#endif
+```
+
+Запусти `Tools ▸ Drone Sim ▸ Check Scene Health` и пришли вывод.
+
+3. Для фона (`extrudeFront`, `FonBuildings`): **удали MeshCollider**, у мешей в импорте выключи **Read/Write Enabled**, поставь **Mesh Compression = Medium**, у текстур **Max Size 2048**. Затем `Assets ▸ Reimport` на папку с городом.
+4. Если сцена содержит **Terrain** с потерянным TerrainData — удали или переназначь данные.
+
+---
+
+## Что мне прислать, чтобы добить точно
+
+1. **Размер `level0`** в байтах.
+2. Результат **теста A** (пустая сцена) и **теста B** (чистая сцена дрона).
+3. Строки из **Editor.log** сразу после билда, где встречается `level0` / `error` / `Exception`.
+4. Вывод **Check Scene Health**.
+
+По этим четырём пунктам проблема определяется однозначно: битая запись файла (окружение) или конкретный объект в сцене. Гадать дальше по логу плеера бессмысленно — он показывает только следствие («не могу прочитать сцену»), а причина пишется на этапе сборки.
+
+### USER
+Провел тесты по инструции результаты.
+Тест A — пустая сцена с камерой: бидится и запускается прекрасно все работает
+Тест B — чистая сцена дрона с нуля добавил галочки  Development Build + Script Debugging и билд падает , вот получившийся лог:
+Mono path[0] = 'C:/WorkProject/WarDroneB/TestBuild07/MyDroneA_Data/Managed'
+Mono config path = 'C:/WorkProject/WarDroneB/TestBuild07/MonoBleedingEdge/etc'
+Starting managed debugger on port 56967
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=0.0.0.0:56967
+Found 3 interfaces on host : 0) 192.168.0.103 1) 172.24.228.220 2) 10.6.7.1
+Player connection [29204]  Target information:
+
+Player connection [29204]  * "[IP] 192.168.0.103 [Port] 55000 [Flags] 2 [Guid] 3787070967 [EditorId] 1337524287 [Version] 1048832 [Id] WindowsPlayer(2,Home-PC) [Debug] 1 [PackageName] WindowsPlayer [ProjectName] MyDroneA" 
+
+Player connection [29204]  * "[IP] 172.24.228.220 [Port] 55000 [Flags] 2 [Guid] 3787070967 [EditorId] 1337524287 [Version] 1048832 [Id] WindowsPlayer(2,Home-PC) [Debug] 1 [PackageName] WindowsPlayer [ProjectName] MyDroneA" 
+
+Player connection [29204]  * "[IP] 10.6.7.1 [Port] 55000 [Flags] 2 [Guid] 3787070967 [EditorId] 1337524287 [Version] 1048832 [Id] WindowsPlayer(2,Home-PC) [Debug] 1 [PackageName] WindowsPlayer [ProjectName] MyDroneA" 
+
+Player connection [29204] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.3.28f1 (8f082d2fe476)
+[Subsystems] Discovering subsystems at path C:/WorkProject/WarDroneB/TestBuild07/MyDroneA_Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3090 (ID=0x2204)
+    Vendor:   NVIDIA
+    VRAM:     24326 MB
+    Driver:   32.0.15.8108
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.206 seconds
+- Finished resetting the current domain, in  0.005 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+<RI> Initializing input.
+
+Using Windows.Gaming.Input
+<RI> Input initialized.
+
+The file 'C:/WorkProject/WarDroneB/TestBuild07/MyDroneA_Data/level0' is corrupted! Remove it and launch unity again!
+[Position out of bounds!]
+Crash!!!
+SymInit: Symbol-SearchPath: '.;C:\WorkProject\WarDroneB\TestBuild07;C:/WorkProject/WarDroneB/TestBuild07/MyDroneA_Data/Plugins\x86_64;C:/WorkProject/WarDroneB/TestBuild07/MyDroneA_Data/Plugins;C:\WorkProject\WarDroneB\TestBuild07;C:\Windows;C:\Windows\system32;', symOptions: 534, UserName: 'KirikDK'
+OS-Version: 10.0.0
+C:\WorkProject\WarDroneB\TestBuild07\MyDroneA.exe:MyDroneA.exe (00007FF70A200000), size: 679936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6000.3.28.2093
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FF867030000), size: 2064384 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FF865080000), size: 774144 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1889
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FF864860000), size: 2957312 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\WorkProject\WarDroneB\TestBuild07\UnityPlayer.dll:UnityPlayer.dll (00007FFF8BB50000), size: 92422144 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6000.3.28.2093
+C:\Windows\System32\USER32.dll:USER32.dll (00007FF8657A0000), size: 1691648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\win32u.dll:win32u.dll (00007FF864FA0000), size: 139264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FF8652C0000), size: 176128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FF864D90000), size: 1110016 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FF864730000), size: 643072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.789
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FF864EA0000), size: 1048576 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.789
+C:\Windows\System32\ole32.dll:ole32.dll (00007FF865B80000), size: 1220608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1202
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FF865410000), size: 1200128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1806
+C:\Windows\System32\combase.dll:combase.dll (00007FF865E20000), size: 3489792 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FF85E580000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (00007FF865B20000), size: 348160 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FF865140000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.546
+C:\Windows\System32\SETUPAPI.dll:SETUPAPI.dll (00007FF866230000), size: 4620288 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\cfgmgr32.dll:cfgmgr32.dll (00007FF864BB0000), size: 319488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1620
+C:\Windows\System32\bcrypt.dll:bcrypt.dll (00007FF864D60000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1023
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FF866180000), size: 712704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\sechost.dll:sechost.dll (00007FF865220000), size: 638976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FF866820000), size: 7614464 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (00007FF866750000), size: 839680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.985
+C:\Windows\System32\IMM32.dll:IMM32.dll (00007FF8651E0000), size: 204800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FF8174C0000), size: 1200128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FF8552A0000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FF864C00000), size: 1400832 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1889
+C:\Windows\System32\WS2_32.dll:WS2_32.dll (00007FF865730000), size: 438272 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FF863B30000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\HID.DLL:HID.DLL (00007FF862AB0000), size: 53248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FF85D2A0000), size: 1097728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\d3d11.dll:d3d11.dll (00007FF8627F0000), size: 2502656 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\dxgi.dll:dxgi.dll (00007FF862B10000), size: 995328 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\UIAutomationCore.DLL:UIAutomationCore.DLL (00007FF8113E0000), size: 3100672 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.2.19041.1741
+C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FF818AB0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\Secur32.dll:Secur32.dll (00007FF84A270000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FF861040000), size: 192512 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.746
+C:\Windows\SYSTEM32\PROPSYS.dll:PROPSYS.dll (00007FF85E9F0000), size: 1007616 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.1741
+C:\Windows\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FF864620000), size: 204800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpcrypt.dll:cpcrypt.dll (00007FF864200000), size: 135168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.16728.0
+C:\Windows\system32\apphelp.dll:apphelp.dll (00007FF860C70000), size: 593920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FF862AC0000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FF8647D0000), size: 532480 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1415
+C:\Windows\system32\uxtheme.dll:uxtheme.dll (00007FF860D70000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\shcore.dll:shcore.dll (00007FF865D70000), size: 708608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\System32\clbcatq.dll:clbcatq.dll (00007FF8666A0000), size: 716800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2001.12.10941.16384
+C:\Windows\system32\wbem\wbemprox.dll:wbemprox.dll (00007FF84B4D0000), size: 69632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1320
+C:\Windows\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FF84B0D0000), size: 589824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1566
+C:\Windows\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FF84A350000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1320
+C:\Windows\system32\wbem\fastprox.dll:fastprox.dll (00007FF84A440000), size: 1093632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\amsi.dll:amsi.dll (00007FF849910000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\WorkProject\WarDroneB\TestBuild07\WinPixEventRuntime.dll:WinPixEventRuntime.dll (00007FF848B60000), size: 57344 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.0.2403.8001
+C:\Windows\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FF847190000), size: 643072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FF847260000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FF847230000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FF861510000), size: 7933952 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\Wldp.dll:Wldp.dll (00007FF864160000), size: 196608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\profapi.dll:profapi.dll (00007FF864670000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.844
+C:\WorkProject\WarDroneB\TestBuild07\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00007FFF8B100000), size: 10756096 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\system32\mswsock.dll:mswsock.dll (00007FF863E90000), size: 434176 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\NSI.dll:NSI.dll (00007FF865960000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.610
+C:\Windows\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FF85E590000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FF85E4F0000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FF863B70000), size: 827392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\system32\napinsp.dll:napinsp.dll (00007FF83A9E0000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\system32\pnrpnsp.dll:pnrpnsp.dll (00007FF83A9C0000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\system32\wshbth.dll:wshbth.dll (00007FF83A9A0000), size: 86016 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\system32\NLAapi.dll:NLAapi.dll (00007FF85FA30000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\winrnr.dll:winrnr.dll (00007FF83A980000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Program Files\Bonjour\mdnsNSP.dll:mdnsNSP.dll (00000000632E0000), size: 155648 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.0.0.10
+C:\Windows\System32\MSCTF.dll:MSCTF.dll (00007FF8652F0000), size: 1134592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvldumdx.dll:nvldumdx.dll (00007FF85AFD0000), size: 802816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\SYSTEM32\msasn1.dll:msasn1.dll (00007FF864320000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\cryptnet.dll:cryptnet.dll (00007FF85E540000), size: 200704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.906
+C:\Windows\SYSTEM32\cryptbase.dll:cryptbase.dll (00007FF8640D0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\drvstore.dll:drvstore.dll (00007FF85DEF0000), size: 1343488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1949
+C:\Windows\SYSTEM32\devobj.dll:devobj.dll (00007FF8644E0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1620
+C:\Windows\System32\wintrust.dll:wintrust.dll (000001F74CE90000), size: 434176 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\imagehlp.dll:imagehlp.dll (00007FF865940000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1415
+C:\Windows\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FF8640B0000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpadvai.dll:cpadvai.dll (00007FF864090000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.16639.0
+C:\Program Files\Crypto Pro\CSP\cpcsp.dll:cpcsp.dll (00007FF8634A0000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.14960.0
+C:\Program Files\Crypto Pro\CSP\cpcspi.dll:cpcspi.dll (00007FF863280000), size: 2187264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.18680.0
+C:\Program Files\Crypto Pro\CSP\cpsuprt.dll:cpsuprt.dll (00007FF8631E0000), size: 634880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.15962.0
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvgpucomp64.dll:nvgpucomp64.dll (00007FF8558C0000), size: 64565248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\NvMemMapStoragex.dll:NvMemMapStoragex.dll (00007FF8552D0000), size: 909312 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\SYSTEM32\POWRPROF.dll:POWRPROF.dll (00007FF863C50000), size: 307200 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FF863B10000), size: 73728 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvwgf2umx.dll:nvwgf2umx.dll (00007FF84DF90000), size: 92487680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\system32\nvspcap64.dll:nvspcap64.dll (00007FF81A2E0000), size: 1339392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.5.420
+C:\Windows\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FF863860000), size: 208896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\dxcore.dll:dxcore.dll (00007FF85B520000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvppex.dll:nvppex.dll (00007FFFF4690000), size: 1798144 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 32.0.15.8108
+C:\Windows\System32\MMDevApi.dll:MMDevApi.dll (00007FF85D150000), size: 544768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1503
+C:\Windows\SYSTEM32\AUDIOSES.DLL:AUDIOSES.DLL (00007FF8220A0000), size: 1581056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\resourcepolicyclient.dll:resourcepolicyclient.dll (00007FF860F40000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\Windows.Gaming.Input.dll:Windows.Gaming.Input.dll (00007FF85C990000), size: 864256 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1566
+C:\Windows\SYSTEM32\inputhost.dll:inputhost.dll (00007FF85B170000), size: 1384448 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1741
+C:\Windows\SYSTEM32\wintypes.dll:wintypes.dll (00007FF85FBA0000), size: 1392640 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2130
+C:\Windows\System32\CoreMessaging.dll:CoreMessaging.dll (00007FF860A40000), size: 991232 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2193
+C:\Windows\System32\CoreUIComponents.dll:CoreUIComponents.dll (00007FF860360000), size: 3530752 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.546
+C:\Windows\System32\twinapi.appcore.dll:twinapi.appcore.dll (00007FF85DC80000), size: 2097152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1865
+C:\Windows\System32\Windows.Gaming.UI.GameBar.dll:Windows.Gaming.UI.GameBar.dll (00007FFF963A0000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.746
+C:\Windows\System32\WININET.dll:WININET.dll (00007FF83A250000), size: 5083136 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.19041.2193
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpwinet.dll:cpwinet.dll (00007FF8388E0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 5.0.15621.0
+C:\Windows\System32\appresolver.dll:appresolver.dll (00007FF8204B0000), size: 589824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1620
+C:\Windows\System32\SLC.dll:SLC.dll (00007FF862D90000), size: 167936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1682
+C:\Windows\System32\Bcp47Langs.dll:Bcp47Langs.dll (00007FF85B660000), size: 372736 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1566
+C:\Windows\System32\USERENV.dll:USERENV.dll (00007FF8645F0000), size: 188416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.572
+C:\Windows\System32\sppc.dll:sppc.dll (00007FF862D60000), size: 151552 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1682
+C:\Windows\SYSTEM32\xinput1_3.dll:xinput1_3.dll (0000000000400000), size: 122880 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 9.18.944.0
+C:\Windows\SYSTEM32\dcomp.dll:dcomp.dll (00007FF860170000), size: 1978368 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\textinputframework.dll:textinputframework.dll (00007FF85B2D0000), size: 1019904 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FF862600000), size: 1982464 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.867
+
+========== OUTPUTTING STACK TRACE ==================
+
+0x00007FFF8DDB573D (UnityPlayer) UnityMain
+0x00007FFF8DDB4B59 (UnityPlayer) UnityMain
+SymInit: Symbol-SearchPath: '.;C:\WorkProject\WarDroneB\TestBuild07;C:/WorkProject/WarDroneB/TestBuild07/MyDroneA_Data/Plugins\x86_64;C:/WorkProject/WarDroneB/TestBuild07/MyDroneA_Data/Plugins;C:\WorkProject\WarDroneB\TestBuild07;C:\Windows;C:\Windows\system32;', symOptions: 534, UserName: 'KirikDK'
+OS-Version: 10.0.0
+C:\WorkProject\WarDroneB\TestBuild07\MyDroneA.exe:MyDroneA.exe (00007FF70A200000), size: 679936 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild07\MyDroneA.exe', fileVersion: 6000.3.28.2093
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FF867030000), size: 2064384 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\ntdll.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FF865080000), size: 774144 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\KERNEL32.DLL', fileVersion: 10.0.19041.1889
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FF864860000), size: 2957312 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\KERNELBASE.dll', fileVersion: 10.0.19041.2193
+C:\WorkProject\WarDroneB\TestBuild07\UnityPlayer.dll:UnityPlayer.dll (00007FFF8BB50000), size: 92422144 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild07\UnityPlayer.dll', fileVersion: 6000.3.28.2093
+C:\Windows\System32\USER32.dll:USER32.dll (00007FF8657A0000), size: 1691648 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\USER32.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\win32u.dll:win32u.dll (00007FF864FA0000), size: 139264 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\win32u.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FF8652C0000), size: 176128 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\GDI32.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FF864D90000), size: 1110016 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\gdi32full.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FF864730000), size: 643072 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\msvcp_win.dll', fileVersion: 10.0.19041.789
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FF864EA0000), size: 1048576 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ucrtbase.dll', fileVersion: 10.0.19041.789
+C:\Windows\System32\ole32.dll:ole32.dll (00007FF865B80000), size: 1220608 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ole32.dll', fileVersion: 10.0.19041.1202
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FF865410000), size: 1200128 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\RPCRT4.dll', fileVersion: 10.0.19041.1806
+C:\Windows\System32\combase.dll:combase.dll (00007FF865E20000), size: 3489792 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\combase.dll', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FF85E580000), size: 40960 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\VERSION.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (00007FF865B20000), size: 348160 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SHLWAPI.dll', fileVersion: 10.0.19041.2075
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FF865140000), size: 647168 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\msvcrt.dll', fileVersion: 7.0.19041.546
+C:\Windows\System32\SETUPAPI.dll:SETUPAPI.dll (00007FF866230000), size: 4620288 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SETUPAPI.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\cfgmgr32.dll:cfgmgr32.dll (00007FF864BB0000), size: 319488 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\cfgmgr32.dll', fileVersion: 10.0.19041.1620
+C:\Windows\System32\bcrypt.dll:bcrypt.dll (00007FF864D60000), size: 159744 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\bcrypt.dll', fileVersion: 10.0.19041.1023
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FF866180000), size: 712704 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\ADVAPI32.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\sechost.dll:sechost.dll (00007FF865220000), size: 638976 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\sechost.dll', fileVersion: 10.0.19041.1865
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FF866820000), size: 7614464 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SHELL32.dll', fileVersion: 10.0.19041.2075
+C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (00007FF866750000), size: 839680 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\OLEAUT32.dll', fileVersion: 10.0.19041.985
+C:\Windows\System32\IMM32.dll:IMM32.dll (00007FF8651E0000), size: 204800 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\IMM32.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FF8174C0000), size: 1200128 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\OPENGL32.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FF8552A0000), size: 159744 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\WINMM.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FF864C00000), size: 1400832 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\CRYPT32.dll', fileVersion: 10.0.19041.1889
+C:\Windows\System32\WS2_32.dll:WS2_32.dll (00007FF865730000), size: 438272 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\WS2_32.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FF863B30000), size: 241664 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\IPHLPAPI.DLL', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\HID.DLL:HID.DLL (00007FF862AB0000), size: 53248 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\HID.DLL', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FF85D2A0000), size: 1097728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\WINHTTP.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\d3d11.dll:d3d11.dll (00007FF8627F0000), size: 2502656 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\d3d11.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\dxgi.dll:dxgi.dll (00007FF862B10000), size: 995328 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dxgi.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\UIAutomationCore.DLL:UIAutomationCore.DLL (00007FF8113E0000), size: 3100672 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\UIAutomationCore.DLL', fileVersion: 7.2.19041.1741
+C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FF818AB0000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\GLU32.dll', fileVersion: 10.0.19041.2193
+C:\Windows\SYSTEM32\Secur32.dll:Secur32.dll (00007FF84A270000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\Secur32.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\dwmapi.dll:dwmapi.dll (00007FF861040000), size: 192512 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dwmapi.dll', fileVersion: 10.0.19041.746
+C:\Windows\SYSTEM32\PROPSYS.dll:PROPSYS.dll (00007FF85E9F0000), size: 1007616 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\PROPSYS.dll', fileVersion: 7.0.19041.1741
+C:\Windows\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FF864620000), size: 204800 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\SSPICLI.DLL', fileVersion: 10.0.19041.2130
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpcrypt.dll:cpcrypt.dll (00007FF864200000), size: 135168 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Common Files\Crypto Pro\AppCompat\cpcrypt.dll', fileVersion: 5.0.16728.0
+C:\Windows\system32\apphelp.dll:apphelp.dll (00007FF860C70000), size: 593920 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\apphelp.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FF862AC0000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\kernel.appcore.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FF8647D0000), size: 532480 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\bcryptPrimitives.dll', fileVersion: 10.0.19041.1415
+C:\Windows\system32\uxtheme.dll:uxtheme.dll (00007FF860D70000), size: 647168 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\uxtheme.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\shcore.dll:shcore.dll (00007FF865D70000), size: 708608 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\shcore.dll', fileVersion: 10.0.19041.1865
+C:\Windows\System32\clbcatq.dll:clbcatq.dll (00007FF8666A0000), size: 716800 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\clbcatq.dll', fileVersion: 2001.12.10941.16384
+C:\Windows\system32\wbem\wbemprox.dll:wbemprox.dll (00007FF84B4D0000), size: 69632 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wbem\wbemprox.dll', fileVersion: 10.0.19041.1320
+C:\Windows\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FF84B0D0000), size: 589824 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\wbemcomn.dll', fileVersion: 10.0.19041.1566
+C:\Windows\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FF84A350000), size: 81920 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wbem\wbemsvc.dll', fileVersion: 10.0.19041.1320
+C:\Windows\system32\wbem\fastprox.dll:fastprox.dll (00007FF84A440000), size: 1093632 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wbem\fastprox.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\amsi.dll:amsi.dll (00007FF849910000), size: 126976 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\amsi.dll', fileVersion: 10.0.19041.2075
+C:\WorkProject\WarDroneB\TestBuild07\WinPixEventRuntime.dll:WinPixEventRuntime.dll (00007FF848B60000), size: 57344 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild07\WinPixEventRuntime.dll', fileVersion: 1.0.2403.8001
+C:\Windows\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FF847190000), size: 643072 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\MSVCP140.dll', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FF847260000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\VCRUNTIME140_1.dll', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FF847230000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\VCRUNTIME140.dll', fileVersion: 14.51.36247.0
+C:\Windows\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FF861510000), size: 7933952 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\windows.storage.dll', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\Wldp.dll:Wldp.dll (00007FF864160000), size: 196608 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\Wldp.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\profapi.dll:profapi.dll (00007FF864670000), size: 126976 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\SYSTEM32\profapi.dll', fileVersion: 10.0.19041.844
+C:\WorkProject\WarDroneB\TestBuild07\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00007FFF8B100000), size: 10756096 (result: 0), SymType: '-exported-', PDB: 'C:\WorkProject\WarDroneB\TestBuild07\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll'
+C:\Windows\system32\mswsock.dll:mswsock.dll (00007FF863E90000), size: 434176 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\mswsock.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\NSI.dll:NSI.dll (00007FF865960000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\NSI.dll', fileVersion: 10.0.19041.610
+C:\Windows\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FF85E590000), size: 94208 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dhcpcsvc6.DLL', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FF85E4F0000), size: 118784 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dhcpcsvc.DLL', fileVersion: 10.0.19041.2130
+C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FF863B70000), size: 827392 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\DNSAPI.dll', fileVersion: 10.0.19041.1865
+C:\Windows\system32\napinsp.dll:napinsp.dll (00007FF83A9E0000), size: 94208 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\napinsp.dll', fileVersion: 10.0.19041.546
+C:\Windows\system32\pnrpnsp.dll:pnrpnsp.dll (00007FF83A9C0000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\pnrpnsp.dll', fileVersion: 10.0.19041.546
+C:\Windows\system32\wshbth.dll:wshbth.dll (00007FF83A9A0000), size: 86016 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\wshbth.dll', fileVersion: 10.0.19041.546
+C:\Windows\system32\NLAapi.dll:NLAapi.dll (00007FF85FA30000), size: 118784 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\NLAapi.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\winrnr.dll:winrnr.dll (00007FF83A980000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\winrnr.dll', fileVersion: 10.0.19041.546
+C:\Program Files\Bonjour\mdnsNSP.dll:mdnsNSP.dll (00000000632E0000), size: 155648 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Bonjour\mdnsNSP.dll', fileVersion: 3.0.0.10
+C:\Windows\System32\MSCTF.dll:MSCTF.dll (00007FF8652F0000), size: 1134592 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\MSCTF.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvldumdx.dll:nvldumdx.dll (00007FF85AFD0000), size: 802816 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvldumdx.dll', fileVersion: 32.0.15.8108
+C:\Windows\SYSTEM32\msasn1.dll:msasn1.dll (00007FF864320000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\msasn1.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\cryptnet.dll:cryptnet.dll (00007FF85E540000), size: 200704 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\cryptnet.dll', fileVersion: 10.0.19041.906
+C:\Windows\SYSTEM32\cryptbase.dll:cryptbase.dll (00007FF8640D0000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\cryptbase.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\drvstore.dll:drvstore.dll (00007FF85DEF0000), size: 1343488 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\drvstore.dll', fileVersion: 10.0.19041.1949
+C:\Windows\SYSTEM32\devobj.dll:devobj.dll (00007FF8644E0000), size: 180224 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\devobj.dll', fileVersion: 10.0.19041.1620
+C:\Windows\System32\wintrust.dll:wintrust.dll (000001F74CE90000), size: 434176 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\wintrust.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\imagehlp.dll:imagehlp.dll (00007FF865940000), size: 118784 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\imagehlp.dll', fileVersion: 10.0.19041.1415
+C:\Windows\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FF8640B0000), size: 98304 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\CRYPTSP.dll', fileVersion: 10.0.19041.546
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpadvai.dll:cpadvai.dll (00007FF864090000), size: 94208 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Common Files\Crypto Pro\AppCompat\cpadvai.dll', fileVersion: 5.0.16639.0
+C:\Program Files\Crypto Pro\CSP\cpcsp.dll:cpcsp.dll (00007FF8634A0000), size: 32768 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Crypto Pro\CSP\cpcsp.dll', fileVersion: 5.0.14960.0
+C:\Program Files\Crypto Pro\CSP\cpcspi.dll:cpcspi.dll (00007FF863280000), size: 2187264 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Crypto Pro\CSP\cpcspi.dll', fileVersion: 5.0.18680.0
+C:\Program Files\Crypto Pro\CSP\cpsuprt.dll:cpsuprt.dll (00007FF8631E0000), size: 634880 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Crypto Pro\CSP\cpsuprt.dll', fileVersion: 5.0.15962.0
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvgpucomp64.dll:nvgpucomp64.dll (00007FF8558C0000), size: 64565248 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvgpucomp64.dll', fileVersion: 32.0.15.8108
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\NvMemMapStoragex.dll:NvMemMapStoragex.dll (00007FF8552D0000), size: 909312 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\NvMemMapStoragex.dll'
+C:\Windows\SYSTEM32\POWRPROF.dll:POWRPROF.dll (00007FF863C50000), size: 307200 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\POWRPROF.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\UMPDC.dll:UMPDC.dll (00007FF863B10000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\UMPDC.dll'
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvwgf2umx.dll:nvwgf2umx.dll (00007FF84DF90000), size: 92487680 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvwgf2umx.dll', fileVersion: 32.0.15.8108
+C:\Windows\system32\nvspcap64.dll:nvspcap64.dll (00007FF81A2E0000), size: 1339392 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\system32\nvspcap64.dll', fileVersion: 11.0.5.420
+C:\Windows\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FF863860000), size: 208896 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\ntmarta.dll', fileVersion: 10.0.19041.546
+C:\Windows\SYSTEM32\dxcore.dll:dxcore.dll (00007FF85B520000), size: 241664 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dxcore.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvppex.dll:nvppex.dll (00007FFFF4690000), size: 1798144 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_7621da800da0efae\nvppex.dll', fileVersion: 32.0.15.8108
+C:\Windows\System32\MMDevApi.dll:MMDevApi.dll (00007FF85D150000), size: 544768 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\MMDevApi.dll', fileVersion: 10.0.19041.1503
+C:\Windows\SYSTEM32\AUDIOSES.DLL:AUDIOSES.DLL (00007FF8220A0000), size: 1581056 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\AUDIOSES.DLL', fileVersion: 10.0.19041.1865
+C:\Windows\SYSTEM32\resourcepolicyclient.dll:resourcepolicyclient.dll (00007FF860F40000), size: 81920 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\resourcepolicyclient.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\Windows.Gaming.Input.dll:Windows.Gaming.Input.dll (00007FF85C990000), size: 864256 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\Windows.Gaming.Input.dll', fileVersion: 10.0.19041.1566
+C:\Windows\SYSTEM32\inputhost.dll:inputhost.dll (00007FF85B170000), size: 1384448 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\inputhost.dll', fileVersion: 10.0.19041.1741
+C:\Windows\SYSTEM32\wintypes.dll:wintypes.dll (00007FF85FBA0000), size: 1392640 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\wintypes.dll', fileVersion: 10.0.19041.2130
+C:\Windows\System32\CoreMessaging.dll:CoreMessaging.dll (00007FF860A40000), size: 991232 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\CoreMessaging.dll', fileVersion: 10.0.19041.2193
+C:\Windows\System32\CoreUIComponents.dll:CoreUIComponents.dll (00007FF860360000), size: 3530752 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\CoreUIComponents.dll', fileVersion: 10.0.19041.546
+C:\Windows\System32\twinapi.appcore.dll:twinapi.appcore.dll (00007FF85DC80000), size: 2097152 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\twinapi.appcore.dll', fileVersion: 10.0.19041.1865
+C:\Windows\System32\Windows.Gaming.UI.GameBar.dll:Windows.Gaming.UI.GameBar.dll (00007FFF963A0000), size: 110592 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\Windows.Gaming.UI.GameBar.dll', fileVersion: 10.0.19041.746
+C:\Windows\System32\WININET.dll:WININET.dll (00007FF83A250000), size: 5083136 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\WININET.dll', fileVersion: 11.0.19041.2193
+C:\Program Files\Common Files\Crypto Pro\AppCompat\cpwinet.dll:cpwinet.dll (00007FF8388E0000), size: 49152 (result: 0), SymType: '-exported-', PDB: 'C:\Program Files\Common Files\Crypto Pro\AppCompat\cpwinet.dll', fileVersion: 5.0.15621.0
+C:\Windows\System32\appresolver.dll:appresolver.dll (00007FF8204B0000), size: 589824 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\appresolver.dll', fileVersion: 10.0.19041.1620
+C:\Windows\System32\SLC.dll:SLC.dll (00007FF862D90000), size: 167936 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\SLC.dll', fileVersion: 10.0.19041.1682
+C:\Windows\System32\Bcp47Langs.dll:Bcp47Langs.dll (00007FF85B660000), size: 372736 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\Bcp47Langs.dll', fileVersion: 10.0.19041.1566
+C:\Windows\System32\USERENV.dll:USERENV.dll (00007FF8645F0000), size: 188416 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\USERENV.dll', fileVersion: 10.0.19041.572
+C:\Windows\System32\sppc.dll:sppc.dll (00007FF862D60000), size: 151552 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\sppc.dll', fileVersion: 10.0.19041.1682
+C:\Windows\SYSTEM32\xinput1_3.dll:xinput1_3.dll (0000000000400000), size: 122880 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\xinput1_3.dll', fileVersion: 9.18.944.0
+C:\Windows\SYSTEM32\dcomp.dll:dcomp.dll (00007FF860170000), size: 1978368 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dcomp.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\textinputframework.dll:textinputframework.dll (00007FF85B2D0000), size: 1019904 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\textinputframework.dll', fileVersion: 10.0.19041.2075
+C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FF862600000), size: 1982464 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\SYSTEM32\dbghelp.dll', fileVersion: 10.0.19041.867
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8C7DA6EF)
+0x00007FFF8C7DA6EF (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8C7DD615)
+0x00007FFF8C7DD615 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8BFD515A)
+0x00007FFF8BFD515A (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8CC4BED7)
+0x00007FFF8CC4BED7 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8CC5F37E)
+0x00007FFF8CC5F37E (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8CC3D558)
+0x00007FFF8CC3D558 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8CC51B7F)
+0x00007FFF8CC51B7F (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8CC51C12)
+0x00007FFF8CC51C12 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8CC73304)
+0x00007FFF8CC73304 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8CC76007)
+0x00007FFF8CC76007 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8CC11356)
+0x00007FFF8CC11356 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8CCA2D42)
+0x00007FFF8CCA2D42 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8CCA0976)
+0x00007FFF8CCA0976 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8CC9D5A8)
+0x00007FFF8CC9D5A8 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8C73AEE3)
+0x00007FFF8C73AEE3 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8C735E06)
+0x00007FFF8C735E06 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8C7363E1)
+0x00007FFF8C7363E1 (UnityPlayer) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFF8C73645A)
+0x00007FFF8C73645A (UnityPlayer) (function-name not available)
+0x00007FFF8DA76B9F (UnityPlayer) UnityMain
+0x00007FF865097034 (KERNEL32) BaseThreadInitThunk
+0x00007FF8670826A1 (ntdll) RtlUserThreadStart
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/Users/KirikDK/AppData/Local/Temp/WarDrone/MyDroneA/Crashes
+
+
+
+
+
+### ASSISTANT
+Отличные тесты — они закрыли почти всё. Раз **пустая сцена билдится и запускается**, а **чистая сцена дрона падает с той же ошибкой**, то:
+
+- окружение (антивирус, диск, CryptoPro, D3D, IL2CPP) — **ни при чём**;
+- город — **ни при чём**;
+- виновник — **что-то из нашего набора компонентов**, что ломает сериализацию сцены при билде.
+
+И у меня есть конкретный подозреваемый.
+
+---
+
+## Главный подозреваемый: `DronePresentation.cs`
+
+В этом файле лежат **три MonoBehaviour сразу**:
+
+```csharp
+public class ChaseCamera : MonoBehaviour { ... }
+public class PropVisual   : MonoBehaviour { ... }
+public class MotorSound   : MonoBehaviour { ... }
+```
+
+**Имя файла не совпадает ни с одним из классов.** Это нарушение базового правила Unity: класс MonoBehaviour должен лежать в файле с точно таким же именем. В редакторе Unity разруливает типы рефлексией, поэтому всё работает — а при билде ссылка `m_Script` на такой класс пишется некорректно, и плеер при чтении сцены вылетает с `Position out of bounds!`.
+
+Это моя ошибка при компоновке кода — я сложил три класса в один файл ради компактности. Разносим.
+
+### 1. Создай `Assets/Scripts/ChaseCamera.cs`
+
+```csharp
+using UnityEngine;
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
+
+public enum CamMode { Chase, Fpv, Orbit }
+
+public class ChaseCamera : MonoBehaviour
+{
+    [Header("Камеры")]
+    public Transform target;
+    public DroneInputManager input;
+    public CamMode mode = CamMode.Chase;
+
+    [Header("Chase")]
+    public float chaseDist = 4f;
+    public float chaseHeight = 1.6f;
+    public float chaseSmooth = 8f;
+
+    [Header("FPV")]
+    public Vector3 fpvMount = new Vector3(0, 0.04f, 0.1f);
+    [Range(0, 60)] public float fpvTiltBase = 15f;
+    [Range(0, 60)] public float fpvTiltAuxRange = 40f;
+    [Range(60, 130)] public float fpvFov = 100f;
+
+    [Header("Orbit")]
+    public float orbitDist = 6f;
+    public float orbitPitch = 25f;
+    public float orbitYaw = 0f;
+
+    Camera cam;
+    void Awake() { cam = GetComponent<Camera>(); }
+
+    void Update()
+    {
+        if (input != null && input.ConsumeCameraCycle())
+            mode = (CamMode)(((int)mode + 1) % 3);
+#if ENABLE_INPUT_SYSTEM
+        var m = Mouse.current;
+        if (m != null && mode == CamMode.Orbit)
+        {
+            orbitDist = Mathf.Clamp(orbitDist - m.scroll.ReadValue().y * 0.005f, 1.5f, 30f);
+            if (m.rightButton.isPressed)
+            {
+                orbitYaw += m.delta.x.ReadValue() * 0.2f;
+                orbitPitch = Mathf.Clamp(orbitPitch - m.delta.y.ReadValue() * 0.2f, -10f, 85f);
+            }
+        }
+#endif
+    }
+
+    void LateUpdate()
+    {
+        if (target == null) return;
+        float tilt = fpvTiltBase;
+        if (input != null && input.JoyConnected) tilt += (input.Sticks.aux1 + 1f) * 0.5f * fpvTiltAuxRange;
+
+        switch (mode)
+        {
+            case CamMode.Fpv:
+                transform.SetPositionAndRotation(target.TransformPoint(fpvMount), target.rotation * Quaternion.Euler(tilt, 0, 0));
+                if (cam) cam.fieldOfView = fpvFov;
+                break;
+            case CamMode.Chase:
+                Vector3 fwd = Quaternion.Euler(0, target.eulerAngles.y, 0) * Vector3.forward;
+                Vector3 want = target.position - fwd * chaseDist + Vector3.up * chaseHeight;
+                transform.position = Vector3.Lerp(transform.position, want, 1f - Mathf.Exp(-chaseSmooth * Time.deltaTime));
+                transform.LookAt(target.position + Vector3.up * 0.2f);
+                if (cam) cam.fieldOfView = 65f;
+                break;
+            case CamMode.Orbit:
+                Quaternion rot = Quaternion.Euler(orbitPitch, orbitYaw, 0);
+                transform.position = target.position + rot * (Vector3.back * orbitDist);
+                transform.LookAt(target.position);
+                if (cam) cam.fieldOfView = 60f;
+                break;
+        }
+    }
+}
+```
+
+### 2. Создай `Assets/Scripts/PropVisual.cs`
+
+```csharp
+using UnityEngine;
+
+public class PropVisual : MonoBehaviour
+{
+    public QuadPhysics physics;
+    public int motorIndex;
+    [Tooltip("Корень лопастей — скрывается целиком на высоких оборотах")]
+    public GameObject bladesRoot;
+    public Renderer blurDisc;
+    public Renderer blades;
+    [Tooltip("Обороты, выше которых лопасти скрываются в диск")]
+    public float blurRpm = 3500f;
+
+    float angle; Color discColor;
+
+    void Start() { if (blurDisc) discColor = blurDisc.material.color; }
+
+    void Update()
+    {
+        if (physics == null || motorIndex < 0 || motorIndex >= physics.motors.Length) return;
+        var m = physics.motors[motorIndex];
+        angle += -m.spinDir * m.rpm / 60f * 360f * Time.deltaTime;
+        transform.localRotation = Quaternion.Euler(0, angle % 360f, 0);
+
+        bool showBlades = m.rpm < blurRpm;
+        if (bladesRoot != null) { if (bladesRoot.activeSelf != showBlades) bladesRoot.SetActive(showBlades); }
+        else if (blades != null) blades.enabled = showBlades;
+
+        if (blurDisc)
+        {
+            bool showDisc = m.rpm > blurRpm * 0.5f;
+            if (blurDisc.enabled != showDisc) blurDisc.enabled = showDisc;
+            float t = Mathf.Clamp01((m.rpm - blurRpm * 0.5f) / blurRpm);
+            var c = discColor; c.a = t * 0.35f; blurDisc.material.color = c;
+        }
+    }
+}
+```
+
+### 3. Создай `Assets/Scripts/MotorSound.cs`
+
+```csharp
+using UnityEngine;
+
+public class MotorSound : MonoBehaviour
+{
+    public QuadPhysics physics;
+    [Range(0, 1)] public float volume = 0.35f;
+    AudioSource src;
+
+    void Start()
+    {
+        src = GetComponent<AudioSource>();
+        if (src == null) src = gameObject.AddComponent<AudioSource>();
+        src.loop = true; src.spatialBlend = 1f; src.minDistance = 2f; src.maxDistance = 40f;
+        src.playOnAwake = false;
+
+        const int n = 44100;
+        var data = new float[n];
+        var rnd = new System.Random(7);
+        for (int i = 0; i < n; i++)
+        {
+            float t = i / (float)n;
+            float saw = 2f * (t * 120f - Mathf.Floor(t * 120f + 0.5f));
+            float harm = Mathf.Sin(t * 2f * Mathf.PI * 240f) * 0.4f;
+            data[i] = (saw * 0.5f + harm + (float)(rnd.NextDouble() * 2 - 1) * 0.25f) * 0.5f;
+        }
+        var clip = AudioClip.Create("motors", n, 1, n, false);
+        clip.SetData(data, 0);
+        src.clip = clip;
+        src.Play();
+    }
+
+    void Update()
+    {
+        if (physics == null || src == null) return;
+        float rpm = 0f;
+        foreach (var m in physics.motors) rpm += m.rpm;
+        rpm /= 4f;
+        float norm = Mathf.Clamp01(rpm / Mathf.Max(1f, physics.maxRpm));
+        src.pitch = 0.4f + norm * 2.2f;
+        src.volume = volume * Mathf.Clamp01(norm * 3f);
+    }
+}
+```
+
+### 4. Удали `Assets/Scripts/DronePresentation.cs` (через окно Project, вместе с .meta)
+
+### 5. Пересоздай тестовую сцену
+
+Старые ссылки на скрипты в уже сохранённой сцене после разделения отвалятся, поэтому:
+новая пустая сцена → `Simulator` + `SimBootstrap` → `Tools ▸ Drone Sim ▸ Build Demo Scene` → Ctrl+S → Clean Build в новую папку.
+
+---
+
+## Заодно — мелкая страховка в `UdpLink.cs`
+
+Публичное поле-делегат Unity сериализовать не умеет; пометим его явно, чтобы исключить любые сюрпризы:
+
+```csharp
+    [System.NonSerialized] public System.Func<string> TelemetryJsonProvider;
+```
+
+(замени строку `public Func<string> TelemetryJsonProvider;`)
+
+---
+
+## Если после этого всё ещё падает — бисекция за 2–3 билда
+
+Сцена маленькая, делить быстро. Каждый раз Clean Build в новую папку.
+
+**B1.** В чистой сцене дрона удали целиком объект **Quadcopter** (останутся Environment, SimCamera, HUD, Simulator). Build.
+- **Запустилось** → виновник среди компонентов дрона (`PropVisual`, `MotorSound`, `QuadPhysics`, `FlightController`, `UdpLink`, `BatteryModel`, `DroneInputManager`, `DroneBreakup`).
+- **Падает** → виновник среди `ChaseCamera` / `SimHud` / `SimTelemetryPanel` / `SimBootstrap` / `WindSystem`.
+
+**B2.** Дальше удаляй по одному объекту/компоненту из оставшейся половины и повторяй. Обычно хватает 2–3 итераций.
+
+---
+
+## И самое важное — лог редактора
+
+Я прошу его третий раз, и он реально решит вопрос за минуту: **сразу после билда** открой `Console ▸ ⋮ ▸ Open Editor Log` и поищи:
+
+```
+script
+missing
+serializ
+Exception
+level0
+```
+
+Если проблема в скриптах, там будет что-то вроде *«The referenced script … is missing»* или ошибка сериализации с именем конкретного компонента — и мы попадём точно в цель без перебора.
+
+Пришли: результат после разделения файлов + эти строки из Editor.log. Дальше добьём за один шаг.
+
+### USER
+спасибо все заработало билд собрался! мне очень нравится вид окна с графиками телеметрии! А можно ли сделать его вдвое меньше и дизайн приблизить к другим окнам по стилю оно собой перекрывает большую часть пространства и добавить крестик закрытия окна как на обычных окнах windows?
+
+### ASSISTANT
+Готово — окно стало компактным (520×372 вместо 1010×660), полностью в стиле остальных панелей HUD, с крестиком, сворачиванием, перетаскиванием за заголовок и живым ресайзом за угол.
+
+## Полная замена `Assets/Scripts/SimTelemetryPanel.cs`
+
+```csharp
+using System.Collections.Generic;
+using UnityEngine;
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
+
+[DefaultExecutionOrder(110)]
+public class SimTelemetryPanel : MonoBehaviour
+{
+    [Header("Окно")]
+    [Tooltip("F7 — показать/скрыть. Крестик в заголовке закрывает, «–» сворачивает, двойной клик по заголовку тоже сворачивает")]
+    public bool show = true;
+    public Rect windowRect = new Rect(1380, 620, 520, 372);
+    public bool collapsed;
+
+    [Header("Запись")]
+    [Tooltip("Частота выборки телеметрии, Гц")] [Range(5, 60)] public int sampleRateHz = 20;
+    [Tooltip("Длина окна графиков, с")] [Range(10, 120)] public int windowSeconds = 30;
+    public bool paused;
+    [Tooltip("Окно скрыто или свёрнуто — полностью остановить запись, опрос событий и отрисовку")]
+    public bool pauseWhenHidden = true;
+
+    [Header("Графики")]
+    [Tooltip("Частота перерисовки графиков, Гц")] [Range(2, 30)] public int plotHz = 10;
+    [Range(28, 120)] public int graphHeight = 42;
+    [Tooltip("Ширина графиков подстраивается под ширину окна")] public bool autoFitWidth = true;
+    [Range(160, 1024)] public int graphWidth = 320;
+    public bool autoScale = true;
+
+    // ---------- метрики ----------
+    const float Pad = 7, TitleH = 22, TabsH = 20, ToolH = 18, HeadH = 18, ValH = 14, Gap = 6, ScrollW = 8;
+    const float MinW = 340, MinH = 176, CardH = 104;
+
+    // ---------- каналы ----------
+    const int ALT = 0, VS = 1, P = 2, Q = 3, R = 4, WX = 5, WZ = 6, GE = 7,
+              ROLL = 8, PITCH = 9, VBAT = 10, AMPS = 11, RPM0 = 12, DUTY0 = 16, CHANS = 20;
+
+    class Chan { public int id; public string name; public Color color; public float current; public string text = "0.00"; }
+    class Group
+    {
+        public string title; public bool open; public Chan[] chans;
+        public Texture2D tex; public Color32[] px;
+        public float min, max; public bool scaled; public string rangeText = "";
+    }
+    class RotorCard
+    {
+        public string title = "", status = "", rpm = "", l1 = "", l2 = "", l3 = "", l4 = "";
+        public Color statusColor; public float duty;
+    }
+    struct Evt { public string time; public string text; public Color c; }
+
+    float[][] buf; int cap, head, count;
+    readonly List<Evt> events = new List<Evt>();
+    readonly RotorCard[] cards = { new RotorCard(), new RotorCard(), new RotorCard(), new RotorCard() };
+    List<Group> groups;
+    int tab; float sampleTimer, plotTimer, savedHeight = 372;
+    Vector2 scrollTraces, scrollRotors, scrollLog;
+    string infoText = "", summary1 = "", summary2 = "";
+    float plotMs; bool resizing; int gripId = -1;
+    static readonly System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+
+    FlightController fc; QuadPhysics ph; BatteryModel bat; WindSystem wind; DroneBreakup breakup;
+    System.Action crashHandler; bool subscribed;
+
+    // ---------- палитра (общая с HUD) ----------
+    static readonly Color Bg = new Color(0.02f, 0.04f, 0.07f, 0.94f);
+    static readonly Color TitleBg = new Color(0.04f, 0.075f, 0.11f, 0.98f);
+    static readonly Color Surface = new Color(0.055f, 0.085f, 0.125f, 0.95f);
+    static readonly Color SurfaceHi = new Color(0.10f, 0.15f, 0.21f, 0.98f);
+    static readonly Color Track = new Color(1f, 1f, 1f, 0.07f);
+    static readonly Color Border = new Color(0.25f, 0.9f, 1f, 0.22f);
+    static readonly Color GraphBg = new Color(0.015f, 0.03f, 0.05f, 1f);
+    static readonly Color Acc = new Color(0.25f, 0.9f, 1f);
+    static readonly Color Ok = new Color(0.3f, 1f, 0.45f);
+    static readonly Color Warn = new Color(1f, 0.75f, 0.2f);
+    static readonly Color Err = new Color(1f, 0.3f, 0.3f);
+    static readonly Color Dim = new Color(0.72f, 0.78f, 0.84f);
+    static readonly Color Cp = new Color(1f, 0.35f, 0.7f);
+    static readonly Color Cb = new Color(0.4f, 0.6f, 1f);
+    static readonly Color Cv = new Color(0.7f, 0.5f, 1f);
+    static readonly Color Cy = new Color(1f, 0.85f, 0.2f);
+    static readonly Color Co = new Color(1f, 0.6f, 0.2f);
+
+    // ---------- стили ----------
+    bool styled;
+    Texture2D white;
+    readonly Dictionary<int, Texture2D> texCache = new Dictionary<int, Texture2D>();
+    readonly List<Texture2D> owned = new List<Texture2D>();
+    GUIStyle stWindow, stTabOn, stTabOff, stChipOn, stChipOff, stHeader, stClose, stMin;
+    GUIStyle stTitle, stTiny, stSmall, stBig, stTinyR, stTinyC, stSmallBold;
+    GUIStyle stVBar, stVThumb, stHBar, stHThumb;
+
+    bool lastArmed, lastCrashed, lastFs, lastLow, lastCrit, lastVrs, lastBroken;
+    FlightMode lastMode;
+
+    void Start()
+    {
+        fc = FindObjectOfType<FlightController>();
+        ph = FindObjectOfType<QuadPhysics>();
+        bat = FindObjectOfType<BatteryModel>();
+        wind = FindObjectOfType<WindSystem>();
+        breakup = FindObjectOfType<DroneBreakup>();
+        enabled = fc != null && ph != null;
+        if (!enabled) return;
+
+        savedHeight = windowRect.height;
+        lastMode = fc.Mode;
+        crashHandler = () => Log("CRASH — удар", Err);
+        ph.OnCrash += crashHandler;
+        subscribed = true;
+
+        groups = new List<Group>
+        {
+            new Group { title = "altitude (m) · climb rate (m/s)", open = true, chans = new[]
+            {
+                new Chan { id = ALT, name = "alt", color = Acc },
+                new Chan { id = VS,  name = "vs",  color = Cb }
+            }},
+            new Group { title = "body rates p/q/r (°/s)", open = true, chans = new[]
+            {
+                new Chan { id = P, name = "p", color = Cp },
+                new Chan { id = Q, name = "q", color = Ok },
+                new Chan { id = R, name = "r", color = Cb }
+            }},
+            new Group { title = "wind X/Z (m/s) · ground effect", open = false, chans = new[]
+            {
+                new Chan { id = WX, name = "wx", color = Cv },
+                new Chan { id = WZ, name = "wz", color = new Color(0.5f, 0.4f, 0.9f) },
+                new Chan { id = GE, name = "GE", color = Cy }
+            }},
+            new Group { title = "rotor rpm (об/мин)", open = true, chans = new[]
+            {
+                new Chan { id = RPM0 + 0, name = "M1", color = Acc },
+                new Chan { id = RPM0 + 1, name = "M2", color = Ok },
+                new Chan { id = RPM0 + 2, name = "M3", color = Cp },
+                new Chan { id = RPM0 + 3, name = "M4", color = Co }
+            }},
+            new Group { title = "motor duty (%)", open = false, chans = new[]
+            {
+                new Chan { id = DUTY0 + 0, name = "M1", color = Acc },
+                new Chan { id = DUTY0 + 1, name = "M2", color = Ok },
+                new Chan { id = DUTY0 + 2, name = "M3", color = Cp },
+                new Chan { id = DUTY0 + 3, name = "M4", color = Co }
+            }},
+            new Group { title = "battery V / A", open = false, chans = new[]
+            {
+                new Chan { id = VBAT, name = "V", color = Ok },
+                new Chan { id = AMPS, name = "A", color = Warn }
+            }},
+            new Group { title = "attitude roll/pitch (°)", open = false, chans = new[]
+            {
+                new Chan { id = ROLL,  name = "roll",  color = Acc },
+                new Chan { id = PITCH, name = "pitch", color = Cp }
+            }},
+        };
+        EnsureBuffer();
+        Log("панель телеметрии запущена", Dim);
+    }
+
+    void Update()
+    {
+        bool key = false;
+#if ENABLE_INPUT_SYSTEM
+        var kb = Keyboard.current; if (kb != null) key = kb.f7Key.wasPressedThisFrame;
+#elif ENABLE_LEGACY_INPUT_MANAGER
+        key = Input.GetKeyDown(KeyCode.F7);
+#endif
+        if (key) show = !show;
+
+        if (fc == null || ph == null || groups == null) return;
+        bool idle = !show || collapsed;
+        if (idle && pauseWhenHidden) return;
+
+        EnsureBuffer();
+        PollEvents();
+
+        sampleTimer -= Time.unscaledDeltaTime;
+        if (sampleTimer <= 0f)
+        {
+            sampleTimer = 1f / Mathf.Max(1, sampleRateHz);
+            if (!paused) Push();
+        }
+
+        plotTimer -= Time.unscaledDeltaTime;
+        if (plotTimer <= 0f)
+        {
+            plotTimer = 1f / Mathf.Max(1, plotHz);
+            if (!idle && tab == 0)
+            {
+                sw.Restart();
+                int gw = GraphW(), gh = Mathf.Max(20, graphHeight);
+                foreach (var g in groups) if (g.open) Plot(g, gw, gh);
+                sw.Stop();
+                plotMs = Mathf.Lerp(plotMs, (float)sw.Elapsed.TotalMilliseconds, 0.3f);
+            }
+            if (!idle && tab == 1) UpdateCards();
+            infoText = $"{count}/{cap} · {sampleRateHz}Гц · plot {plotMs:0.0}ms";
+        }
+    }
+
+    // ---------- буфер ----------
+    void EnsureBuffer()
+    {
+        int want = Mathf.Clamp(sampleRateHz * windowSeconds, 16, 4000);
+        if (buf != null && cap == want) return;
+        cap = want;
+        buf = new float[CHANS][];
+        for (int i = 0; i < CHANS; i++) buf[i] = new float[cap];
+        head = 0; count = 0;
+        if (groups != null) foreach (var g in groups) g.scaled = false;
+    }
+
+    void Push()
+    {
+        buf[ALT][head] = fc.AltAgl;
+        buf[VS][head] = fc.Vs;
+        buf[ROLL][head] = fc.AttRoll;
+        buf[PITCH][head] = fc.AttPitchUp;
+        buf[VBAT][head] = bat != null ? bat.Voltage : 0f;
+        buf[AMPS][head] = bat != null ? bat.Current : 0f;
+        buf[GE][head] = ph.GroundEffectFactor;
+        buf[WX][head] = wind != null ? wind.Current.x : 0f;
+        buf[WZ][head] = wind != null ? wind.Current.z : 0f;
+
+        Vector3 w = ph.Rb != null
+            ? ph.transform.InverseTransformDirection(ph.Rb.angularVelocity) * Mathf.Rad2Deg
+            : Vector3.zero;
+        buf[P][head] = -w.z; buf[Q][head] = w.x; buf[R][head] = w.y;
+
+        for (int i = 0; i < 4; i++)
+        {
+            buf[RPM0 + i][head] = ph.motors[i].rpm;
+            buf[DUTY0 + i][head] = ph.motors[i].cmd * 100f;
+        }
+        head++; if (head >= cap) head = 0;
+        if (count < cap) count++;
+    }
+
+    // ---------- графики ----------
+    int GraphW()
+    {
+        float avail = windowRect.width - Pad * 2 - ScrollW;
+        int w = autoFitWidth ? (int)avail : graphWidth;
+        w = Mathf.Clamp((w / 8) * 8, 96, 1024);
+        return w;
+    }
+
+    void EnsureTex(Group g, int w, int h)
+    {
+        if (g.tex != null && g.tex.width == w && g.tex.height == h) return;
+        if (g.tex != null) Destroy(g.tex);
+        g.tex = new Texture2D(w, h, TextureFormat.RGBA32, false)
+        { filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp, hideFlags = HideFlags.HideAndDontSave };
+        g.px = new Color32[w * h];
+    }
+
+    void Plot(Group g, int W, int H)
+    {
+        EnsureTex(g, W, H);
+        var px = g.px;
+        Color32 bg = new Color32(4, 8, 13, 255);
+        for (int i = 0; i < px.Length; i++) px[i] = bg;
+        Color32 grid = new Color32(20, 30, 40, 255);
+        for (int gy = 1; gy < 4; gy++) { int y = H * gy / 4; for (int x = 0; x < W; x++) px[y * W + x] = grid; }
+        for (int gx = 1; gx < 6; gx++) { int x = W * gx / 6; for (int y = 0; y < H; y++) px[y * W + x] = grid; }
+
+        if (count < 2) { g.tex.SetPixels32(px); g.tex.Apply(false); return; }
+        int start = head - count; if (start < 0) start += cap;
+
+        float tmin = float.MaxValue, tmax = float.MinValue;
+        for (int c = 0; c < g.chans.Length; c++)
+        {
+            var arr = buf[g.chans[c].id];
+            int idx = start;
+            for (int i = 0; i < count; i++)
+            {
+                float v = arr[idx];
+                if (v < tmin) tmin = v;
+                if (v > tmax) tmax = v;
+                idx++; if (idx >= cap) idx = 0;
+            }
+        }
+        if (tmin > tmax) { tmin = 0; tmax = 1; }
+        float pad = (tmax - tmin) * 0.15f + 0.001f;
+        tmin -= pad; tmax += pad;
+        if (autoScale)
+        {
+            if (!g.scaled) { g.min = tmin; g.max = tmax; g.scaled = true; }
+            else { g.min = Mathf.Lerp(g.min, tmin, 0.25f); g.max = Mathf.Lerp(g.max, tmax, 0.25f); }
+        }
+        else if (!g.scaled) { g.min = tmin; g.max = tmax; g.scaled = true; }
+        g.rangeText = $"{g.min:0.0} … {g.max:0.0}";
+
+        float range = Mathf.Max(1e-4f, g.max - g.min);
+        int denom = Mathf.Max(1, cap - 1);
+        for (int c = 0; c < g.chans.Length; c++)
+        {
+            var ch = g.chans[c];
+            var arr = buf[ch.id];
+            Color32 col = ch.color;
+            int idx = start, px0 = 0, py0 = 0;
+            float last = 0f;
+            for (int i = 0; i < count; i++)
+            {
+                float v = arr[idx];
+                int x = i * (W - 1) / denom;
+                int y = Mathf.Clamp((int)((v - g.min) / range * (H - 1) + 0.5f), 0, H - 1);
+                if (i > 0) Line(px, W, H, px0, py0, x, y, col);
+                px0 = x; py0 = y; last = v;
+                idx++; if (idx >= cap) idx = 0;
+            }
+            ch.current = last;
+            ch.text = last.ToString("0.00");
+        }
+        g.tex.SetPixels32(px);
+        g.tex.Apply(false);
+    }
+
+    static void Line(Color32[] px, int W, int H, int x0, int y0, int x1, int y1, Color32 c)
+    {
+        int dx = Mathf.Abs(x1 - x0), sx = x0 < x1 ? 1 : -1;
+        int dy = -Mathf.Abs(y1 - y0), sy = y0 < y1 ? 1 : -1;
+        int err = dx + dy;
+        while (true)
+        {
+            if (x0 >= 0 && x0 < W && y0 >= 0 && y0 < H) px[y0 * W + x0] = c;
+            if (x0 == x1 && y0 == y1) break;
+            int e2 = 2 * err;
+            if (e2 >= dy) { err += dy; x0 += sx; }
+            if (e2 <= dx) { err += dx; y0 += sy; }
+        }
+    }
+
+    // ---------- карточки ----------
+    void UpdateCards()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            var m = ph.motors[i];
+            var cd = cards[i];
+            cd.title = "M" + (i + 1) + " · " + (m.spinDir > 0 ? "CW" : "CCW");
+            if (m.cmd > 0.97f) { cd.status = "SATURATED"; cd.statusColor = Warn; }
+            else if (m.vrs) { cd.status = "VRS"; cd.statusColor = Warn; }
+            else if (m.rpm < 100f) { cd.status = "OFF"; cd.statusColor = Dim; }
+            else { cd.status = "RUN"; cd.statusColor = Ok; }
+            cd.rpm = m.rpm.ToString("N0");
+            cd.duty = m.cmd;
+
+            float eff = ph.gramsPerWatt * (1.15f - 0.5f * m.cmd);
+            float power = (m.thrustN / 0.00981f) / Mathf.Max(1f, eff);
+            float amps = bat != null ? power / Mathf.Max(1f, bat.Voltage) : 0f;
+            cd.l1 = $"T {m.thrustN:0.00} N    Q {m.torqueNm:0.0000}";
+            cd.l2 = $"I {amps:0.0} A     DUTY {m.cmd * 100f:0}%";
+            cd.l3 = $"IGE {Ige(m):0.000}   VRS {(m.vrs ? "1.00" : "0.00")}";
+            cd.l4 = $"h {m.groundH:0.00} m   ω {m.rpm * 0.10472f:0} rad/s";
+        }
+        summary1 = $"Тяга {ph.TotalThrustN:0.0} Н ({ph.TotalThrustN / 0.00981f:0} г)   Мощность {ph.PowerW:0} Вт";
+        summary2 = bat != null
+            ? $"Батарея {bat.Voltage:0.00} В  {bat.Current:0.0} А  {bat.Soc * 100f:0}%   GE x{ph.GroundEffectFactor:0.000}   AS {ph.Airspeed:0.0} м/с"
+            : $"GE x{ph.GroundEffectFactor:0.000}   AS {ph.Airspeed:0.0} м/с";
+    }
+
+    float Ige(MotorUnit m)
+    {
+        if (!ph.groundEffect) return 1f;
+        float R = ph.propRadius;
+        if (m.groundH >= 4f * R) return 1f;
+        float h = Mathf.Max(m.groundH, R * 0.35f);
+        float r = R / (4f * h);
+        return Mathf.Clamp(1f / (1f - r * r), 1f, ph.groundEffectMax);
+    }
+
+    // ---------- журнал ----------
+    void Log(string text, Color c)
+    {
+        events.Add(new Evt { time = Time.time.ToString("0.0") + "s", text = text, c = c });
+        while (events.Count > 300) events.RemoveAt(0);
+    }
+
+    void PollEvents()
+    {
+        if (fc.Armed != lastArmed) { lastArmed = fc.Armed; Log(fc.Armed ? "ARM" : "DISARM", fc.Armed ? Ok : Dim); }
+        if (fc.Mode != lastMode) { lastMode = fc.Mode; Log("MODE → " + fc.Mode, Acc); }
+        if (ph.Crashed != lastCrashed) { lastCrashed = ph.Crashed; Log(ph.Crashed ? "CRASHED" : "REPAIRED / RESET", ph.Crashed ? Err : Ok); }
+        if (fc.Failsafe != lastFs) { lastFs = fc.Failsafe; Log(fc.Failsafe ? "FAILSAFE ON" : "FAILSAFE OFF", fc.Failsafe ? Err : Ok); }
+        if (bat != null)
+        {
+            if (bat.IsLow != lastLow) { lastLow = bat.IsLow; if (bat.IsLow) Log("LOW BATTERY", Warn); }
+            if (bat.IsCritical != lastCrit) { lastCrit = bat.IsCritical; if (bat.IsCritical) Log("BATTERY CRITICAL", Err); }
+        }
+        if (ph.VrsActive != lastVrs) { lastVrs = ph.VrsActive; if (ph.VrsActive) Log("VORTEX RING STATE", Warn); }
+        if (breakup != null && breakup.IsBroken != lastBroken)
+        { lastBroken = breakup.IsBroken; Log(lastBroken ? "BREAKUP — дрон разобран" : "REASSEMBLED", lastBroken ? Err : Ok); }
+    }
+
+    // ---------- стили ----------
+    Texture2D Solid(Color c)
+    {
+        int key = ((int)(c.r * 255f) << 24) | ((int)(c.g * 255f) << 16) | ((int)(c.b * 255f) << 8) | (int)(c.a * 255f);
+        if (texCache.TryGetValue(key, out var t) && t != null) return t;
+        t = new Texture2D(1, 1, TextureFormat.RGBA32, false) { hideFlags = HideFlags.HideAndDontSave };
+        t.SetPixel(0, 0, c); t.Apply(false);
+        texCache[key] = t; owned.Add(t);
+        return t;
+    }
+
+    GUIStyle Btn(Color n, Color h, Color a, Color textN, Color textH, int size, TextAnchor anchor, int padL)
+    {
+        var s = new GUIStyle
+        {
+            fontSize = size,
+            fontStyle = FontStyle.Bold,
+            alignment = anchor,
+            padding = new RectOffset(padL, padL, 0, 0),
+            margin = new RectOffset(0, 0, 0, 0),
+            border = new RectOffset(0, 0, 0, 0)
+        };
+        s.normal.background = Solid(n); s.normal.textColor = textN;
+        s.hover.background = Solid(h); s.hover.textColor = textH;
+        s.active.background = Solid(a); s.active.textColor = textH;
+        s.focused.background = Solid(n); s.focused.textColor = textN;
+        return s;
+    }
+
+    GUIStyle Lbl(int size, TextAnchor anchor, FontStyle fs)
+    {
+        var s = new GUIStyle
+        {
+            fontSize = size,
+            alignment = anchor,
+            fontStyle = fs,
+            clipping = TextClipping.Clip,
+            padding = new RectOffset(0, 0, 0, 0),
+            margin = new RectOffset(0, 0, 0, 0)
+        };
+        s.normal.textColor = Color.white;
+        return s;
+    }
+
+    void EnsureStyles()
+    {
+        if (styled) return;
+        styled = true;
+
+        white = new Texture2D(1, 1, TextureFormat.RGBA32, false) { hideFlags = HideFlags.HideAndDontSave };
+        white.SetPixel(0, 0, Color.white); white.Apply(false);
+        owned.Add(white);
+
+        stWindow = new GUIStyle { padding = new RectOffset(0, 0, 0, 0), margin = new RectOffset(0, 0, 0, 0) };
+        stWindow.normal.background = null;
+
+        Color tabOn = new Color(0.10f, 0.28f, 0.34f, 0.98f);
+        Color tabOnHi = new Color(0.14f, 0.36f, 0.44f, 1f);
+        stTabOn = Btn(tabOn, tabOnHi, tabOnHi, Acc, Color.white, 10, TextAnchor.MiddleCenter, 4);
+        stTabOff = Btn(Surface, SurfaceHi, SurfaceHi, Dim, Color.white, 10, TextAnchor.MiddleCenter, 4);
+        stChipOn = Btn(tabOn, tabOnHi, tabOnHi, Acc, Color.white, 9, TextAnchor.MiddleCenter, 3);
+        stChipOff = Btn(Surface, SurfaceHi, SurfaceHi, Dim, Color.white, 9, TextAnchor.MiddleCenter, 3);
+        stHeader = Btn(new Color(0.05f, 0.085f, 0.125f, 0.96f), SurfaceHi, SurfaceHi,
+                       Acc, Color.white, 10, TextAnchor.MiddleLeft, 8);
+        stClose = Btn(new Color(0, 0, 0, 0), new Color(0.85f, 0.20f, 0.20f, 0.95f), new Color(1f, 0.32f, 0.32f, 1f),
+                      Dim, Color.white, 14, TextAnchor.MiddleCenter, 0);
+        stMin = Btn(new Color(0, 0, 0, 0), new Color(0.14f, 0.36f, 0.44f, 0.95f), new Color(0.18f, 0.46f, 0.56f, 1f),
+                    Dim, Color.white, 13, TextAnchor.MiddleCenter, 0);
+
+        stTitle = Lbl(12, TextAnchor.MiddleLeft, FontStyle.Bold);
+        stTiny = Lbl(9, TextAnchor.MiddleLeft, FontStyle.Normal);
+        stTinyR = Lbl(9, TextAnchor.MiddleRight, FontStyle.Normal);
+        stTinyC = Lbl(9, TextAnchor.MiddleCenter, FontStyle.Bold);
+        stSmall = Lbl(10, TextAnchor.MiddleLeft, FontStyle.Normal);
+        stSmallBold = Lbl(10, TextAnchor.MiddleLeft, FontStyle.Bold);
+        stBig = Lbl(22, TextAnchor.MiddleLeft, FontStyle.Bold);
+
+        stVThumb = new GUIStyle
+        {
+            fixedWidth = ScrollW,
+            margin = new RectOffset(0, 0, 0, 0),
+            padding = new RectOffset(0, 0, 0, 0),
+            border = new RectOffset(0, 0, 0, 0),
+            stretchHeight = true
+        };
+        stVThumb.normal.background = Solid(new Color(Acc.r, Acc.g, Acc.b, 0.42f));
+        stVThumb.hover.background = Solid(new Color(Acc.r, Acc.g, Acc.b, 0.72f));
+        stVThumb.active.background = Solid(Acc);
+
+        stVBar = new GUIStyle
+        {
+            fixedWidth = ScrollW,
+            margin = new RectOffset(0, 0, 0, 0),
+            padding = new RectOffset(0, 0, 0, 0),
+            border = new RectOffset(0, 0, 0, 0),
+            stretchHeight = true,
+            thumb = stVThumb
+        };
+        stVBar.normal.background = Solid(new Color(1f, 1f, 1f, 0.05f));
+        stVBar.hover.background = Solid(new Color(1f, 1f, 1f, 0.08f));
+
+        stHThumb = new GUIStyle
+        {
+            fixedHeight = ScrollW,
+            margin = new RectOffset(0, 0, 0, 0),
+            padding = new RectOffset(0, 0, 0, 0),
+            border = new RectOffset(0, 0, 0, 0),
+            stretchWidth = true
+        };
+        stHThumb.normal.background = Solid(new Color(Acc.r, Acc.g, Acc.b, 0.42f));
+        stHThumb.hover.background = Solid(new Color(Acc.r, Acc.g, Acc.b, 0.72f));
+        stHThumb.active.background = Solid(Acc);
+
+        stHBar = new GUIStyle
+        {
+            fixedHeight = ScrollW,
+            margin = new RectOffset(0, 0, 0, 0),
+            padding = new RectOffset(0, 0, 0, 0),
+            border = new RectOffset(0, 0, 0, 0),
+            stretchWidth = true,
+            thumb = stHThumb
+        };
+        stHBar.normal.background = Solid(new Color(1f, 1f, 1f, 0.05f));
+    }
+
+    // ---------- примитивы отрисовки ----------
+    void Fill(Rect r, Color c)
+    {
+        if (r.width <= 0 || r.height <= 0) return;
+        var old = GUI.color; GUI.color = c;
+        GUI.DrawTexture(r, white);
+        GUI.color = old;
+    }
+    void Txt(Rect r, string s, GUIStyle st, Color c)
+    {
+        var old = GUI.color; GUI.color = c;
+        GUI.Label(r, s, st);
+        GUI.color = old;
+    }
+    void Frame(Rect r, Color c)
+    {
+        Fill(new Rect(r.x, r.y, r.width, 1), c);
+        Fill(new Rect(r.x, r.yMax - 1, r.width, 1), c);
+        Fill(new Rect(r.x, r.y, 1, r.height), c);
+        Fill(new Rect(r.xMax - 1, r.y, 1, r.height), c);
+    }
+    void Bar(Rect r, float v, Color c)
+    {
+        Fill(r, Track);
+        Fill(new Rect(r.x, r.y, r.width * Mathf.Clamp01(v), r.height), c);
+    }
+
+    // ---------- GUI ----------
+    void OnGUI()
+    {
+        if (!show || fc == null || groups == null) return;
+        EnsureStyles();
+
+        var saved = GUI.matrix;
+        var savedColor = GUI.color;
+        float scale = Screen.height / 1080f;
+        GUI.matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, new Vector3(scale, scale, 1));
+        float W = Screen.width / scale, H = 1080f;
+
+        windowRect.width = Mathf.Clamp(windowRect.width, MinW, W);
+        windowRect.height = collapsed ? TitleH : Mathf.Clamp(windowRect.height, MinH, H);
+        windowRect.x = Mathf.Clamp(windowRect.x, 0, Mathf.Max(0, W - windowRect.width));
+        windowRect.y = Mathf.Clamp(windowRect.y, 0, Mathf.Max(0, H - windowRect.height));
+
+        try { windowRect = GUI.Window(77, windowRect, DrawWindow, GUIContent.none, stWindow); }
+        catch (System.Exception e) { show = false; UnityEngine.Debug.LogError("[Telemetry] " + e); }
+
+        GUI.color = savedColor;
+        GUI.matrix = saved;
+    }
+
+    void ToggleCollapse()
+    {
+        if (!collapsed) { savedHeight = windowRect.height; windowRect.height = TitleH; collapsed = true; }
+        else { windowRect.height = Mathf.Max(MinH, savedHeight); collapsed = false; }
+    }
+
+    void DrawWindow(int id)
+    {
+        float w = windowRect.width, h = windowRect.height;
+        Fill(new Rect(0, 0, w, h), Bg);
+
+        // ---- заголовок ----
+        Rect tr = new Rect(0, 0, w, TitleH);
+        Fill(tr, TitleBg);
+        Fill(new Rect(0, 0, w, 1), new Color(Acc.r, Acc.g, Acc.b, 0.75f));
+        Fill(new Rect(0, TitleH - 1, w, 1), new Color(Acc.r, Acc.g, Acc.b, 0.20f));
+        Fill(new Rect(Pad, TitleH * 0.5f - 3, 6, 6), paused ? Warn : Ok);
+        Txt(new Rect(Pad + 12, 0, 150, TitleH), "ТЕЛЕМЕТРИЯ", stTitle, Acc);
+        Txt(new Rect(Pad + 104, 0, 60, TitleH), "[F7]", stTiny, Dim);
+
+        Rect bClose = new Rect(w - Pad - 16, 4, 16, TitleH - 8);
+        Rect bMin = new Rect(bClose.x - 19, 4, 16, TitleH - 8);
+        if (GUI.Button(bMin, collapsed ? "+" : "–", stMin)) ToggleCollapse();
+        if (GUI.Button(bClose, "×", stClose)) { show = false; return; }
+
+        var ev = Event.current;
+        Rect dragArea = new Rect(0, 0, Mathf.Max(0, bMin.x - 4), TitleH);
+        if (ev.type == EventType.MouseDown && ev.button == 0 && ev.clickCount == 2 && dragArea.Contains(ev.mousePosition))
+        { ToggleCollapse(); ev.Use(); return; }
+
+        if (!collapsed)
+        {
+            float cx = Pad, cw = w - Pad * 2;
+
+            // ---- вкладки ----
+            float ty = TitleH + 2;
+            string[] tabs = { "LIVE TRACES", "ROTOR BENCH", "EVENT LOG" };
+            float tw = (cw - 8) / 3f;
+            for (int i = 0; i < 3; i++)
+                if (GUI.Button(new Rect(cx + i * (tw + 4), ty, tw, TabsH - 4), tabs[i], tab == i ? stTabOn : stTabOff)) tab = i;
+
+            // ---- панель инструментов ----
+            float by = ty + TabsH;
+            float bx = cx;
+            int[] secs = { 10, 30, 60 };
+            foreach (var s in secs)
+            {
+                if (GUI.Button(new Rect(bx, by, 32, ToolH - 4), s + "с", windowSeconds == s ? stChipOn : stChipOff)) windowSeconds = s;
+                bx += 34;
+            }
+            bx += 4;
+            if (GUI.Button(new Rect(bx, by, 74, ToolH - 4), "AUTOSCALE", autoScale ? stChipOn : stChipOff)) autoScale = !autoScale;
+            bx += 78;
+            if (GUI.Button(new Rect(bx, by, 52, ToolH - 4), paused ? "● REC" : "PAUSE", paused ? stChipOn : stChipOff)) paused = !paused;
+            bx += 56;
+            if (GUI.Button(new Rect(bx, by, 48, ToolH - 4), "CLEAR", stChipOff))
+            { head = 0; count = 0; events.Clear(); foreach (var g in groups) g.scaled = false; }
+            bx += 54;
+            float infoW = Mathf.Max(0, cx + cw - bx);
+            if (infoW > 40) Txt(new Rect(bx, by, infoW, ToolH - 4), infoText, stTinyR, Dim);
+
+            // ---- содержимое ----
+            float top = by + ToolH + 2;
+            Rect view = new Rect(cx, top, cw, Mathf.Max(20, h - top - Pad));
+            Fill(view, new Color(0.015f, 0.03f, 0.05f, 0.55f));
+            if (tab == 0) DrawTraces(view);
+            else if (tab == 1) DrawRotors(view);
+            else DrawLog(view);
+
+            // ---- уголок ресайза ----
+            Rect grip = new Rect(w - 13, h - 13, 13, 13);
+            for (int i = 0; i < 3; i++)
+                Fill(new Rect(grip.x + 3 + i * 3, grip.yMax - 4 - i * 3, 2 + i * 0, 2), new Color(Acc.r, Acc.g, Acc.b, 0.55f));
+            for (int i = 0; i < 3; i++)
+                Fill(new Rect(grip.xMax - 4 - i * 3, grip.y + 4 + i * 3, 2, 2), new Color(Acc.r, Acc.g, Acc.b, 0.30f));
+
+            if (gripId < 0) gripId = GUIUtility.GetControlID(FocusType.Passive);
+            else GUIUtility.GetControlID(FocusType.Passive);
+
+            if (ev.type == EventType.MouseDown && ev.button == 0 && grip.Contains(ev.mousePosition))
+            { resizing = true; GUIUtility.hotControl = gripId; ev.Use(); }
+            else if (ev.type == EventType.MouseDrag && resizing && GUIUtility.hotControl == gripId)
+            {
+                windowRect.width = Mathf.Max(MinW, windowRect.width + ev.delta.x);
+                windowRect.height = Mathf.Max(MinH, windowRect.height + ev.delta.y);
+                ev.Use();
+            }
+            else if (ev.type == EventType.MouseUp && resizing && GUIUtility.hotControl == gripId)
+            { resizing = false; GUIUtility.hotControl = 0; ev.Use(); }
+        }
+
+        Frame(new Rect(0, 0, w, h), Border);
+        GUI.DragWindow(dragArea);
+    }
+
+    void DrawTraces(Rect view)
+    {
+        float cw = view.width - ScrollW;
+        float total = 0;
+        foreach (var g in groups) { total += HeadH; if (g.open) total += ValH + graphHeight + Gap; }
+        Rect content = new Rect(0, 0, cw, Mathf.Max(total, view.height));
+        scrollTraces = GUI.BeginScrollView(view, scrollTraces, content, false, true, stHBar, stVBar, GUIStyle.none);
+
+        float y = 0;
+        int gw = GraphW(), gh = Mathf.Max(20, graphHeight);
+        foreach (var g in groups)
+        {
+            Rect hr = new Rect(0, y, cw, HeadH - 3);
+            if (GUI.Button(hr, (g.open ? "▼  " : "►  ") + g.title, stHeader)) { g.open = !g.open; g.scaled = false; }
+            Fill(new Rect(hr.x, hr.y, 2, hr.height), new Color(Acc.r, Acc.g, Acc.b, 0.8f));
+            y += HeadH;
+            if (!g.open) continue;
+
+            float vw = Mathf.Min(94f, (cw - 96f) / Mathf.Max(1, g.chans.Length));
+            for (int i = 0; i < g.chans.Length; i++)
+                Txt(new Rect(2 + i * vw, y, vw - 3, ValH), g.chans[i].text + " " + g.chans[i].name, stTiny, g.chans[i].color);
+            Txt(new Rect(cw - 94, y, 92, ValH), g.rangeText, stTinyR, Dim);
+            y += ValH;
+
+            Rect gr = new Rect(0, y, Mathf.Min(gw, cw), gh);
+            Fill(gr, GraphBg);
+            if (g.tex != null) GUI.DrawTexture(gr, g.tex);
+            Frame(gr, new Color(Acc.r, Acc.g, Acc.b, 0.16f));
+            y += gh + Gap;
+        }
+        GUI.EndScrollView();
+    }
+
+    void DrawRotors(Rect view)
+    {
+        float cw = view.width - ScrollW;
+        int cols = Mathf.Clamp((int)(cw / 196f), 1, 4);
+        int rows = Mathf.CeilToInt(4f / cols);
+        float cardW = (cw - (cols - 1) * Gap) / cols;
+        float total = rows * (CardH + Gap) + 34;
+        Rect content = new Rect(0, 0, cw, Mathf.Max(total, view.height));
+        scrollRotors = GUI.BeginScrollView(view, scrollRotors, content, false, true, stHBar, stVBar, GUIStyle.none);
+
+        for (int i = 0; i < 4; i++)
+        {
+            int col = i % cols, row = i / cols;
+            DrawCard(new Rect(col * (cardW + Gap), row * (CardH + Gap), cardW, CardH), cards[i]);
+        }
+        float sy = rows * (CardH + Gap) + 2;
+        Txt(new Rect(2, sy, cw - 4, 14), summary1, stSmall, Acc);
+        Txt(new Rect(2, sy + 15, cw - 4, 14), summary2, stSmall, Dim);
+        GUI.EndScrollView();
+    }
+
+    void DrawCard(Rect r, RotorCard cd)
+    {
+        Fill(r, Surface);
+        Fill(new Rect(r.x, r.y, r.width, 1), new Color(Acc.r, Acc.g, Acc.b, 0.5f));
+        Frame(r, new Color(Acc.r, Acc.g, Acc.b, 0.12f));
+
+        Txt(new Rect(r.x + 6, r.y + 4, r.width - 78, 13), cd.title, stSmallBold, Dim);
+        Rect chip = new Rect(r.xMax - 70, r.y + 4, 64, 13);
+        Fill(chip, new Color(cd.statusColor.r, cd.statusColor.g, cd.statusColor.b, 0.16f));
+        Txt(chip, cd.status, stTinyC, cd.statusColor);
+
+        Txt(new Rect(r.x + 6, r.y + 17, r.width - 46, 26), cd.rpm, stBig, Acc);
+        Txt(new Rect(r.xMax - 40, r.y + 30, 34, 12), "RPM", stTiny, Dim);
+
+        Bar(new Rect(r.x + 6, r.y + 46, r.width - 12, 4), cd.duty, cd.duty > 0.97f ? Warn : Ok);
+
+        Txt(new Rect(r.x + 6, r.y + 54, r.width - 12, 12), cd.l1, stTiny, Dim);
+        Txt(new Rect(r.x + 6, r.y + 66, r.width - 12, 12), cd.l2, stTiny, Dim);
+        Txt(new Rect(r.x + 6, r.y + 78, r.width - 12, 12), cd.l3, stTiny, Dim);
+        Txt(new Rect(r.x + 6, r.y + 90, r.width - 12, 12), cd.l4, stTiny, new Color(Dim.r, Dim.g, Dim.b, 0.7f));
+    }
+
+    void DrawLog(Rect view)
+    {
+        float cw = view.width - ScrollW;
+        const float rowH = 15;
+        Rect content = new Rect(0, 0, cw, Mathf.Max(events.Count * rowH, view.height));
+        scrollLog = GUI.BeginScrollView(view, scrollLog, content, false, true, stHBar, stVBar, GUIStyle.none);
+        for (int i = 0; i < events.Count; i++)
+        {
+            var e = events[events.Count - 1 - i];
+            Rect r = new Rect(0, i * rowH, cw, rowH - 1);
+            if ((i & 1) == 0) Fill(r, new Color(1f, 1f, 1f, 0.022f));
+            Txt(new Rect(4, r.y, 46, r.height), e.time, stTiny, Dim);
+            Fill(new Rect(52, r.y + 3, 2, r.height - 6), new Color(e.c.r, e.c.g, e.c.b, 0.7f));
+            Txt(new Rect(60, r.y, cw - 64, r.height), e.text, stSmall, e.c);
+        }
+        GUI.EndScrollView();
+    }
+
+    void OnDestroy()
+    {
+        if (subscribed && ph != null && crashHandler != null) ph.OnCrash -= crashHandler;
+        subscribed = false;
+        if (groups != null) foreach (var g in groups) if (g.tex != null) Destroy(g.tex);
+        foreach (var t in owned) if (t != null) Destroy(t);
+        owned.Clear(); texCache.Clear();
+    }
+}
+```
+
+**Управление окном:** `F7` — показать/скрыть · `×` — закрыть · `–` / двойной клик по заголовку — свернуть в заголовок · тянуть за заголовок — переместить · тянуть за правый нижний угол — изменить размер (графики и карточки моторов перестраиваются под новую ширину автоматически).
+
+### USER
+я заменил скрипт SimTelemetryPanel.cs но возникли такие ошибки помоги их исправить, вот сами ошибки: 
+Assets\Scripts\SimTelemetryPanel.cs(492,13): error CS0117: 'GUIStyle' does not contain a definition for 'thumb'
+
+Assets\Scripts\SimTelemetryPanel.cs(516,13): error CS0117: 'GUIStyle' does not contain a definition for 'thumb'
+
+Assets\Scripts\SimTelemetryPanel.cs(673,28): error CS1501: No overload for method 'BeginScrollView' takes 8 arguments
+
+Assets\Scripts\SimTelemetryPanel.cs(708,28): error CS1501: No overload for method 'BeginScrollView' takes 8 arguments
+
+Assets\Scripts\SimTelemetryPanel.cs(748,25): error CS1501: No overload for method 'BeginScrollView' takes 8 arguments
+
+
+
+### ASSISTANT
+Обе ошибки — мои промахи в API:
+
+- **`GUIStyle.thumb` не существует.** Стиль бегунка скроллбара берётся не из стиля дорожки, а из `GUISkin.verticalScrollbarThumb` / `horizontalScrollbarThumb`.
+- **`GUI.BeginScrollView`** (в отличие от `GUILayout.BeginScrollView`) имеет максимум **7 параметров** — версии с `background` у него нет.
+
+Ниже 6 точечных правок.
+
+---
+
+## 1. Поле для копии скина
+
+Найди строку `bool styled;` и замени на:
+
+```csharp
+    bool styled;
+    GUISkin skinCopy;
+```
+
+## 2. Блок `stVBar` в `EnsureStyles()`
+
+Найди блок от `stVBar = new GUIStyle` до двух строк `.background` и замени целиком на:
+
+```csharp
+        stVBar = new GUIStyle
+        {
+            fixedWidth = ScrollW,
+            margin = new RectOffset(0, 0, 0, 0),
+            padding = new RectOffset(0, 0, 0, 0),
+            border = new RectOffset(0, 0, 0, 0),
+            stretchHeight = true
+        };
+        stVBar.normal.background = Solid(new Color(1f, 1f, 1f, 0.05f));
+        stVBar.hover.background = Solid(new Color(1f, 1f, 1f, 0.08f));
+```
+
+## 3. Блок `stHBar` (конец `EnsureStyles()`)
+
+Найди блок от `stHBar = new GUIStyle` до конца метода и замени целиком на:
+
+```csharp
+        stHBar = new GUIStyle
+        {
+            fixedHeight = ScrollW,
+            margin = new RectOffset(0, 0, 0, 0),
+            padding = new RectOffset(0, 0, 0, 0),
+            border = new RectOffset(0, 0, 0, 0),
+            stretchWidth = true
+        };
+        stHBar.normal.background = Solid(new Color(1f, 1f, 1f, 0.05f));
+
+        // собственный скин: бегунки скроллбаров Unity берёт именно отсюда
+        skinCopy = Instantiate(GUI.skin);
+        skinCopy.hideFlags = HideFlags.HideAndDontSave;
+        skinCopy.verticalScrollbar = stVBar;
+        skinCopy.verticalScrollbarThumb = stVThumb;
+        skinCopy.horizontalScrollbar = stHBar;
+        skinCopy.horizontalScrollbarThumb = stHThumb;
+    }
+```
+
+## 4. Метод `OnGUI()` целиком
+
+```csharp
+    void OnGUI()
+    {
+        if (!show || fc == null || groups == null) return;
+        EnsureStyles();
+
+        var saved = GUI.matrix;
+        var savedColor = GUI.color;
+        var oldSkin = GUI.skin;
+
+        float scale = Screen.height / 1080f;
+        GUI.matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, new Vector3(scale, scale, 1));
+        float W = Screen.width / scale, H = 1080f;
+
+        windowRect.width = Mathf.Clamp(windowRect.width, MinW, W);
+        windowRect.height = collapsed ? TitleH : Mathf.Clamp(windowRect.height, MinH, H);
+        windowRect.x = Mathf.Clamp(windowRect.x, 0, Mathf.Max(0, W - windowRect.width));
+        windowRect.y = Mathf.Clamp(windowRect.y, 0, Mathf.Max(0, H - windowRect.height));
+
+        if (skinCopy != null) GUI.skin = skinCopy;
+        try { windowRect = GUI.Window(77, windowRect, DrawWindow, GUIContent.none, stWindow); }
+        catch (System.Exception e) { show = false; UnityEngine.Debug.LogError("[Telemetry] " + e); }
+        finally
+        {
+            GUI.skin = oldSkin;
+            GUI.color = savedColor;
+            GUI.matrix = saved;
+        }
+    }
+```
+
+## 5. Три вызова `BeginScrollView` — убрать последний аргумент
+
+В `DrawTraces`:
+
+```csharp
+        scrollTraces = GUI.BeginScrollView(view, scrollTraces, content, false, true, stHBar, stVBar);
+```
+
+В `DrawRotors`:
+
+```csharp
+        scrollRotors = GUI.BeginScrollView(view, scrollRotors, content, false, true, stHBar, stVBar);
+```
+
+В `DrawLog`:
+
+```csharp
+        scrollLog = GUI.BeginScrollView(view, scrollLog, content, false, true, stHBar, stVBar);
+```
+
+## 6. `OnDestroy()` — освободить скин
+
+```csharp
+    void OnDestroy()
+    {
+        if (subscribed && ph != null && crashHandler != null) ph.OnCrash -= crashHandler;
+        subscribed = false;
+        if (groups != null) foreach (var g in groups) if (g.tex != null) Destroy(g.tex);
+        foreach (var t in owned) if (t != null) Destroy(t);
+        owned.Clear(); texCache.Clear();
+        if (skinCopy != null) Destroy(skinCopy);
+    }
+```
+
+---
+
+Скин подменяется только на время отрисовки этого окна и возвращается в `finally`, поэтому остальной HUD (`SimHud`) остаётся со своим оформлением, а бегунки телеметрии будут cyan-овые в общей палитре. После этих правок всё скомпилируется.
+
+### USER
+все отлично работает но авиагоризонт отображается, странно можно ли это поправить чтобы было похоже на настоящий авиагоризонт в симуляторах
+
+### ASSISTANT
+## Новый файл `Assets/Scripts/AttitudeIndicator.cs`
+
+```csharp
+using UnityEngine;
+
+// Круговой авиагоризонт: рендерится в текстуру с собственным круговым клиппингом,
+// поэтому небо/земля/шкалы никогда не выходят за прибор при любом крене.
+public sealed class AttitudeIndicator : System.IDisposable
+{
+    [Header("Внешний вид")]
+    public int Size = 320;
+    public float UpdateHz = 40f;
+    public float PixelsPerDegree = 3.5f;
+    public int MajorStep = 10;
+    public int MinorStep = 5;
+    public bool SlipBall = true;
+    public bool GlassSheen = true;
+    public bool RollScale = true;
+    public Color SkyTop = new Color(0.055f, 0.30f, 0.62f);
+    public Color SkyHorizon = new Color(0.33f, 0.63f, 0.90f);
+    public Color GroundHorizon = new Color(0.55f, 0.40f, 0.21f);
+    public Color GroundBottom = new Color(0.20f, 0.13f, 0.06f);
+    public Color Ink = new Color(0.96f, 0.98f, 1f);
+    public Color Symbol = new Color(1f, 0.84f, 0.08f);
+    public Color Accent = new Color(0.25f, 0.9f, 1f);
+
+    Texture2D tex; Color32[] px; int size;
+    readonly Color32[] sky = new Color32[256], gnd = new Color32[256];
+    readonly float[] vign = new float[256];
+    bool lutBuilt; Color cST, cSH, cGH, cGB;
+    float lastT = -1f, lastRoll = 999f, lastPitch = 999f, lastSlip = 999f;
+    float c, R, R2, Ro2, sinR, cosR;
+
+    static readonly byte[][] Glyph;
+    static AttitudeIndicator()
+    {
+        string[] src =
+        {
+            "01110,10001,10011,10101,11001,10001,01110",
+            "00100,01100,00100,00100,00100,00100,01110",
+            "01110,10001,00001,00010,00100,01000,11111",
+            "11111,00010,00100,00010,00001,10001,01110",
+            "00010,00110,01010,10010,11111,00010,00010",
+            "11111,10000,11110,00001,00001,10001,01110",
+            "00110,01000,10000,11110,10001,10001,01110",
+            "11111,00001,00010,00100,01000,01000,01000",
+            "01110,10001,10001,01110,10001,10001,01110",
+            "01110,10001,10001,01111,00001,00010,01100"
+        };
+        Glyph = new byte[10][];
+        for (int i = 0; i < 10; i++)
+        {
+            var rows = src[i].Split(',');
+            Glyph[i] = new byte[7];
+            for (int r = 0; r < 7; r++)
+            {
+                byte b = 0;
+                for (int k = 0; k < 5; k++) if (rows[r][k] == '1') b |= (byte)(1 << (4 - k));
+                Glyph[i][r] = b;
+            }
+        }
+    }
+
+    public void Draw(Rect rect, float roll, float pitch, float slip)
+    {
+        if (Event.current == null || Event.current.type == EventType.Repaint) Ensure(roll, pitch, slip);
+        if (tex == null) return;
+        var old = GUI.color; GUI.color = Color.white;
+        GUI.DrawTexture(rect, tex, ScaleMode.StretchToFill, true);
+        GUI.color = old;
+    }
+
+    void Alloc()
+    {
+        size = Mathf.Clamp(Size, 128, 640);
+        if (tex != null) Object.Destroy(tex);
+        tex = new Texture2D(size, size, TextureFormat.RGBA32, false)
+        { filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp, hideFlags = HideFlags.HideAndDontSave };
+        px = new Color32[size * size];
+        lastT = -1f;
+    }
+
+    void BuildLut()
+    {
+        for (int i = 0; i < 256; i++)
+        {
+            float t = i / 255f;
+            sky[i] = Color.Lerp(SkyHorizon, SkyTop, Mathf.Pow(t, 0.75f));
+            gnd[i] = Color.Lerp(GroundHorizon, GroundBottom, Mathf.Pow(t, 0.75f));
+            vign[i] = 1f - 0.34f * Mathf.Pow(t, 1.6f);
+        }
+        cST = SkyTop; cSH = SkyHorizon; cGH = GroundHorizon; cGB = GroundBottom;
+        lutBuilt = true;
+    }
+
+    void Ensure(float roll, float pitch, float slip)
+    {
+        if (tex == null || size != Mathf.Clamp(Size, 128, 640)) Alloc();
+        if (!lutBuilt || cST != SkyTop || cSH != SkyHorizon || cGH != GroundHorizon || cGB != GroundBottom) BuildLut();
+
+        float now = Time.realtimeSinceStartup;
+        float interval = 1f / Mathf.Max(5f, UpdateHz);
+        bool changed = Mathf.Abs(roll - lastRoll) > 0.02f || Mathf.Abs(pitch - lastPitch) > 0.02f || Mathf.Abs(slip - lastSlip) > 0.01f;
+        if (lastT >= 0f && now - lastT < interval) return;
+        if (lastT >= 0f && !changed && now - lastT < 0.4f) return;
+        lastT = now; lastRoll = roll; lastPitch = pitch; lastSlip = slip;
+
+        c = (size - 1) * 0.5f;
+        float Ro = size * 0.5f - 0.5f;
+        R = Ro - Mathf.Max(3f, size * 0.013f);
+        R2 = R * R; Ro2 = Ro * Ro;
+        sinR = Mathf.Sin(roll * Mathf.Deg2Rad); cosR = Mathf.Cos(roll * Mathf.Deg2Rad);
+        float pOff = pitch * PixelsPerDegree;
+        float gradK = 255f / (R * 1.1f), invR2 = 1f / R2, invR = 1f / R;
+
+        Color32 clear = new Color32(0, 0, 0, 0);
+        Color32 hor = Ink;
+        Color32 bezel = new Color(0.055f, 0.085f, 0.12f);
+        Color32 ring = new Color(Accent.r * 0.55f, Accent.g * 0.55f, Accent.b * 0.55f);
+        float band = (R + 1.3f) * (R + 1.3f);
+
+        for (int y = 0; y < size; y++)
+        {
+            float dy = c - y, dy2 = dy * dy;
+            float v = c * sinR + dy * cosR + pOff;
+            float dx = -c, dx2 = c * c;
+            int row = y * size;
+            for (int x = 0; x < size; x++)
+            {
+                float r2 = dx2 + dy2;
+                if (r2 > Ro2) px[row + x] = clear;
+                else if (r2 > R2)
+                {
+                    float shade = 0.70f + 0.45f * (dy / Ro);
+                    Color32 bz = r2 < band ? ring : bezel;
+                    px[row + x] = new Color32((byte)(bz.r * shade), (byte)(bz.g * shade), (byte)(bz.b * shade), 255);
+                }
+                else
+                {
+                    float av = v < 0 ? -v : v;
+                    int vi = (int)(av * gradK); if (vi > 255) vi = 255;
+                    Color32 col = v >= 0 ? sky[vi] : gnd[vi];
+                    if (v > -1.15f && v < 1.15f) col = hor;
+                    float sh = vign[(int)(r2 * invR2 * 255f)];
+                    if (GlassSheen)
+                    {
+                        float s = (-dx * 0.45f + dy * 0.85f) * invR;
+                        if (s > 0.35f) sh += (s - 0.35f) * 0.24f;
+                    }
+                    float rr = col.r * sh, gg = col.g * sh, bb = col.b * sh;
+                    px[row + x] = new Color32((byte)(rr > 255 ? 255 : rr), (byte)(gg > 255 ? 255 : gg), (byte)(bb > 255 ? 255 : bb), 255);
+                }
+                v -= sinR; dx2 += 2f * dx + 1f; dx += 1f;
+            }
+        }
+
+        DrawLadder(pitch);
+        if (RollScale) DrawRollScale(roll, slip);
+        DrawSymbol();
+
+        tex.SetPixels32(px);
+        tex.Apply(false);
+    }
+
+    // ---------- растр ----------
+    void Blend(int x, int y, Color32 col, float a)
+    {
+        int i = y * size + x; var d = px[i];
+        px[i] = new Color32((byte)(d.r + (col.r - d.r) * a), (byte)(d.g + (col.g - d.g) * a), (byte)(d.b + (col.b - d.b) * a), 255);
+    }
+
+    void Stamp(float ix, float iy, float rad, Color32 col, float a)
+    {
+        float px0 = c + ix, py0 = c - iy;
+        int x0 = Mathf.FloorToInt(px0 - rad - 1), x1 = Mathf.CeilToInt(px0 + rad + 1);
+        int y0 = Mathf.FloorToInt(py0 - rad - 1), y1 = Mathf.CeilToInt(py0 + rad + 1);
+        for (int y = y0; y <= y1; y++)
+        {
+            if (y < 0 || y >= size) continue;
+            for (int x = x0; x <= x1; x++)
+            {
+                if (x < 0 || x >= size) continue;
+                float dx = x - c, dy = c - y;
+                if (dx * dx + dy * dy > R2) continue;
+                float ex = x - px0, ey = y - py0;
+                float cov = rad + 0.5f - Mathf.Sqrt(ex * ex + ey * ey);
+                if (cov <= 0f) continue;
+                Blend(x, y, col, (cov > 1f ? 1f : cov) * a);
+            }
+        }
+    }
+
+    void SegI(float x0, float y0, float x1, float y1, float w, Color32 col, bool dash)
+    {
+        float dx = x1 - x0, dy = y1 - y0;
+        float len = Mathf.Sqrt(dx * dx + dy * dy);
+        int n = Mathf.Max(1, Mathf.CeilToInt(len * 1.5f));
+        float rad = w * 0.5f;
+        for (int i = 0; i <= n; i++)
+        {
+            if (dash && (i / 3) % 2 == 1) continue;
+            float t = (float)i / n;
+            Stamp(x0 + dx * t, y0 + dy * t, rad, col, 1f);
+        }
+    }
+
+    void SegA(float u0, float v0, float u1, float v1, float w, Color32 col, bool dash)
+    {
+        SegI(u0 * cosR - v0 * sinR, u0 * sinR + v0 * cosR,
+             u1 * cosR - v1 * sinR, u1 * sinR + v1 * cosR, w, col, dash);
+    }
+
+    void TriI(float ax, float ay, float bx, float by, float cx2, float cy2, Color32 col)
+    {
+        float pax = c + ax, pay = c - ay, pbx = c + bx, pby = c - by, pcx = c + cx2, pcy = c - cy2;
+        int minX = Mathf.Max(0, Mathf.FloorToInt(Mathf.Min(pax, Mathf.Min(pbx, pcx))));
+        int maxX = Mathf.Min(size - 1, Mathf.CeilToInt(Mathf.Max(pax, Mathf.Max(pbx, pcx))));
+        int minY = Mathf.Max(0, Mathf.FloorToInt(Mathf.Min(pay, Mathf.Min(pby, pcy))));
+        int maxY = Mathf.Min(size - 1, Mathf.CeilToInt(Mathf.Max(pay, Mathf.Max(pby, pcy))));
+        float den = (pby - pcy) * (pax - pcx) + (pcx - pbx) * (pay - pcy);
+        if (Mathf.Abs(den) < 1e-4f) return;
+        for (int y = minY; y <= maxY; y++)
+            for (int x = minX; x <= maxX; x++)
+            {
+                float dx = x - c, dy = c - y;
+                if (dx * dx + dy * dy > R2) continue;
+                float l1 = ((pby - pcy) * (x - pcx) + (pcx - pbx) * (y - pcy)) / den;
+                float l2 = ((pcy - pay) * (x - pcx) + (pax - pcx) * (y - pcy)) / den;
+                float l3 = 1f - l1 - l2;
+                if (l1 < -0.06f || l2 < -0.06f || l3 < -0.06f) continue;
+                float a = Mathf.Clamp01(Mathf.Min(l1, Mathf.Min(l2, l3)) * 6f + 0.5f);
+                Blend(x, y, col, a);
+            }
+    }
+
+    void TextA(string s, float u, float v, float sc, Color32 col, bool rightAlign)
+    {
+        float w = s.Length * 6f * sc - sc;
+        float u0 = rightAlign ? u - w : u;
+        float vTop = v + 3.5f * sc;
+        for (int gi = 0; gi < s.Length; gi++)
+        {
+            char ch = s[gi];
+            if (ch >= '0' && ch <= '9')
+            {
+                var g = Glyph[ch - '0'];
+                for (int r = 0; r < 7; r++)
+                {
+                    byte bits = g[r];
+                    if (bits == 0) continue;
+                    for (int k = 0; k < 5; k++)
+                    {
+                        if ((bits & (1 << (4 - k))) == 0) continue;
+                        float gu = u0 + k * sc, gv = vTop - r * sc;
+                        Stamp(gu * cosR - gv * sinR, gu * sinR + gv * cosR, sc * 0.56f, col, 1f);
+                    }
+                }
+            }
+            u0 += 6f * sc;
+        }
+    }
+
+    // ---------- элементы прибора ----------
+    void DrawLadder(float pitch)
+    {
+        Color32 ink = Ink;
+        float ppd = PixelsPerDegree;
+        int minor = Mathf.Max(1, MinorStep), major = Mathf.Max(minor, MajorStep);
+        for (int p = -90; p <= 90; p += minor)
+        {
+            if (p == 0) continue;
+            float v = (p - pitch) * ppd;
+            if (v > R + 30f || v < -R - 30f) continue;
+            bool isMajor = p % major == 0;
+            float hw = isMajor ? R * 0.27f : R * 0.12f;
+            SegA(-hw, v, hw, v, isMajor ? 2.2f : 1.5f, ink, p < 0);
+            if (!isMajor) continue;
+            float cap = p > 0 ? -6f : 6f;
+            SegA(-hw, v, -hw, v + cap, 2f, ink, false);
+            SegA(hw, v, hw, v + cap, 2f, ink, false);
+            if (Mathf.Abs(v) < R - 6f)
+            {
+                string t = Mathf.Abs(p).ToString();
+                TextA(t, -hw - 6f, v, 2f, ink, true);
+                TextA(t, hw + 6f, v, 2f, ink, false);
+            }
+        }
+    }
+
+    void DrawRollScale(float roll, float slip)
+    {
+        Color32 ink = Ink;
+        int[] angs = { 10, -10, 20, -20, 30, -30, 45, -45, 60, -60 };
+        foreach (int a in angs)
+        {
+            float rad = a * Mathf.Deg2Rad;
+            float sx = Mathf.Sin(rad), cy = Mathf.Cos(rad);
+            bool big = Mathf.Abs(a) == 30 || Mathf.Abs(a) == 60;
+            float len = big ? 13f : (Mathf.Abs(a) == 45 ? 11f : 7f);
+            SegI(sx * (R - 2f), cy * (R - 2f), sx * (R - 2f - len), cy * (R - 2f - len),
+                 Mathf.Abs(a) == 45 ? 3.2f : 2f, ink, false);
+        }
+
+        TriI(0f, R - 15f, -6.5f, R - 2.5f, 6.5f, R - 2.5f, ink);
+
+        float pr = roll * Mathf.Deg2Rad;
+        float sx2 = Mathf.Sin(pr), cy2 = Mathf.Cos(pr);
+        float tx = cy2, ty = -sx2;
+        float rTip = R - 16f, rBase = R - 26f;
+        TriI(sx2 * rTip, cy2 * rTip,
+             sx2 * rBase + tx * 6.5f, cy2 * rBase + ty * 6.5f,
+             sx2 * rBase - tx * 6.5f, cy2 * rBase - ty * 6.5f, Symbol);
+
+        if (!SlipBall) return;
+        float rb = R - 33f;
+        SegI(sx2 * (rb + 4f) + tx * 5.5f, cy2 * (rb + 4f) + ty * 5.5f,
+             sx2 * (rb - 4f) + tx * 5.5f, cy2 * (rb - 4f) + ty * 5.5f, 1.8f, ink, false);
+        SegI(sx2 * (rb + 4f) - tx * 5.5f, cy2 * (rb + 4f) - ty * 5.5f,
+             sx2 * (rb - 4f) - tx * 5.5f, cy2 * (rb - 4f) - ty * 5.5f, 1.8f, ink, false);
+        float off = Mathf.Clamp(slip, -1f, 1f) * 9f;
+        Stamp(sx2 * rb + tx * off, cy2 * rb + ty * off, 3.4f, Symbol, 1f);
+    }
+
+    void DrawSymbol()
+    {
+        Color32 shadow = new Color32(12, 16, 20, 255);
+        Color32 sym = Symbol;
+        float w = R * 0.36f, inner = R * 0.13f;
+        SegI(-w, 0, -inner, 0, 5.5f, shadow, false);
+        SegI(-inner, 0, -inner, -7f, 5.5f, shadow, false);
+        SegI(inner, 0, w, 0, 5.5f, shadow, false);
+        SegI(inner, 0, inner, -7f, 5.5f, shadow, false);
+        SegI(-w, 0, -inner, 0, 3.4f, sym, false);
+        SegI(-inner, 0, -inner, -7f, 3.4f, sym, false);
+        SegI(inner, 0, w, 0, 3.4f, sym, false);
+        SegI(inner, 0, inner, -7f, 3.4f, sym, false);
+        Stamp(0, 0, 3.6f, shadow, 1f);
+        Stamp(0, 0, 2.4f, sym, 1f);
+    }
+
+    public void Dispose()
+    {
+        if (tex != null) Object.Destroy(tex);
+        tex = null; px = null;
+    }
+}
+```
+
+---
+
+## Патчи `SimHud.cs`
+
+### 1. Поля — добавь сразу после `public ChaseCamera cam;`
+
+```csharp
+    [Header("Авиагоризонт (ADI)")]
+    [Tooltip("Разрешение текстуры прибора")] [Range(160, 512)] public int adiResolution = 320;
+    [Tooltip("Частота перерисовки прибора, Гц")] [Range(10, 60)] public int adiUpdateHz = 40;
+    [Tooltip("Пикселей на градус тангажа")] [Range(2f, 6f)] public float adiPixelsPerDegree = 3.5f;
+    public bool adiSlipBall = true;
+    public bool adiGlass = true;
+    public bool adiRollScale = true;
+    public Color adiSkyTop = new Color(0.055f, 0.30f, 0.62f);
+    public Color adiSkyHorizon = new Color(0.33f, 0.63f, 0.90f);
+    public Color adiGroundHorizon = new Color(0.55f, 0.40f, 0.21f);
+    public Color adiGroundBottom = new Color(0.20f, 0.13f, 0.06f);
+    public Color adiSymbol = new Color(1f, 0.84f, 0.08f);
+
+    AttitudeIndicator adi;
+    Vector3 prevVel; bool velInit; float slipSmooth;
+```
+
+### 2. Метод `Start()` целиком
+
+```csharp
+    void Start()
+    {
+        if (fc == null) fc = FindObjectOfType<FlightController>();
+        if (ph == null) ph = FindObjectOfType<QuadPhysics>();
+        if (bat == null) bat = FindObjectOfType<BatteryModel>();
+        if (wind == null) wind = FindObjectOfType<WindSystem>();
+        if (inp == null) inp = FindObjectOfType<DroneInputManager>();
+        if (udp == null) udp = FindObjectOfType<UdpLink>();
+        if (cam == null) cam = FindObjectOfType<ChaseCamera>();
+
+        white = new Texture2D(1, 1); white.SetPixel(0, 0, Color.white); white.Apply();
+        adi = new AttitudeIndicator();
+        enabled = fc != null;
+    }
+```
+
+### 3. Метод `Update()` целиком
+
+```csharp
+    void Update()
+    {
+        fps = Mathf.Lerp(fps, 1f / Mathf.Max(0.0001f, Time.unscaledDeltaTime), 0.05f);
+        if (Hotkeys.Down(SimKey.Help)) wHelp = !wHelp;
+        if (Hotkeys.Down(SimKey.Calib)) { wCal = !wCal; if (wCal && inp != null && inp.Wizard == CalWizardState.Off) inp.BeginCal(); }
+        if (Hotkeys.Down(SimKey.Env)) wEnv = !wEnv;
+        if (Hotkeys.Down(SimKey.Inputs)) wInp = !wInp;
+        if (Hotkeys.Down(SimKey.Tune)) wTune = !wTune;
+        if (Hotkeys.Down(SimKey.HudToggle)) showHud = !showHud;
+
+        // скольжение для шарика указателя скольжения (боковая перегрузка)
+        if (ph != null && ph.Rb != null)
+        {
+            Vector3 v = ph.Rb.velocity;
+            float dt = Time.deltaTime;
+            if (velInit && dt > 0.0001f)
+            {
+                Vector3 acc = (v - prevVel) / dt - Physics.gravity;
+                float lat = Vector3.Dot(acc, ph.transform.right) / Mathf.Max(1f, Mathf.Abs(Physics.gravity.y));
+                slipSmooth = Mathf.Lerp(slipSmooth, Mathf.Clamp(lat, -1f, 1f), 1f - Mathf.Exp(-6f * dt));
+            }
+            prevVel = v; velInit = true;
+        }
+    }
+```
+
+### 4. Метод `DrawADI(Rect r)` целиком + новый `DrawCompassTape`
+
+```csharp
+    void DrawADI(Rect r)
+    {
+        Panel(new Rect(r.x - 4, r.y - 44, r.width + 8, r.height + 66), null);
+        DrawCompassTape(new Rect(r.x + 4, r.y - 38, r.width - 8, 26));
+
+        if (adi == null) adi = new AttitudeIndicator();
+        adi.Size = adiResolution;
+        adi.UpdateHz = adiUpdateHz;
+        adi.PixelsPerDegree = adiPixelsPerDegree;
+        adi.SlipBall = adiSlipBall;
+        adi.GlassSheen = adiGlass;
+        adi.RollScale = adiRollScale;
+        adi.SkyTop = adiSkyTop;
+        adi.SkyHorizon = adiSkyHorizon;
+        adi.GroundHorizon = adiGroundHorizon;
+        adi.GroundBottom = adiGroundBottom;
+        adi.Symbol = adiSymbol;
+        adi.Accent = Cacc;
+        adi.Draw(r, fc.AttRoll, fc.AttPitchUp, slipSmooth);
+
+        // цифровые读出 в свободных углах квадратной подложки
+        Rect lr = new Rect(r.x + 4, r.yMax - 26, 84, 20);
+        Rect rr = new Rect(r.xMax - 88, r.yMax - 26, 84, 20);
+        Fill(lr, new Color(0f, 0f, 0f, 0.45f));
+        Fill(rr, new Color(0f, 0f, 0f, 0.45f));
+        Txt(lr, $"R {fc.AttRoll:+0;-0;0}°", 13, Color.white, TextAnchor.MiddleCenter, true);
+        Txt(rr, $"P {fc.AttPitchUp:+0;-0;0}°", 13, Color.white, TextAnchor.MiddleCenter, true);
+
+        // дом
+        float hy = r.yMax + 4;
+        Txt(new Rect(r.x, hy, r.width, 18), $"HOME {fc.HomeDist:0} m", 13, Cacc, TextAnchor.MiddleCenter, true);
+        Vector2 piv = new Vector2(r.x + r.width * 0.5f + 58, hy + 9);
+        var m = GUI.matrix;
+        GUIUtility.RotateAroundPivot(fc.HomeBearing - fc.Heading, piv);
+        Fill(new Rect(piv.x - 1.5f, piv.y - 7, 3, 9), Cacc);
+        Fill(new Rect(piv.x - 5, piv.y - 3, 10, 3), Cacc);
+        GUI.matrix = m;
+    }
+
+    void DrawCompassTape(Rect cr)
+    {
+        Fill(cr, new Color(0f, 0f, 0f, 0.42f));
+        Fill(new Rect(cr.x, cr.y, cr.width, 1), new Color(Cacc.r, Cacc.g, Cacc.b, 0.35f));
+        GUI.BeginGroup(cr);
+        float hdg = fc.Heading;
+        int baseDeg = Mathf.RoundToInt(hdg / 15f) * 15;
+        for (int d = -75; d <= 75; d += 15)
+        {
+            int deg = baseDeg + d;
+            float x = cr.width * 0.5f + (deg - hdg) * 3.1f;
+            if (x < 8 || x > cr.width - 8) continue;
+            int mark = ((deg % 360) + 360) % 360;
+            bool cardinal = mark % 90 == 0;
+            Fill(new Rect(x - 1, cr.height - 8, 2, cardinal ? 8 : 5), cardinal ? Cacc : Cdim);
+            string s = mark == 0 ? "N" : mark == 90 ? "E" : mark == 180 ? "S" : mark == 270 ? "W" : mark.ToString();
+            Txt(new Rect(x - 20, 1, 40, 15), s, cardinal ? 13 : 11, cardinal ? Cacc : Cdim, TextAnchor.MiddleCenter, cardinal);
+        }
+        Fill(new Rect(cr.width * 0.5f - 1, cr.height - 11, 2, 11), Cacc);
+        GUI.EndGroup();
+
+        Rect box = new Rect(cr.x + cr.width * 0.5f - 26, cr.y - 17, 52, 17);
+        Fill(box, Cbg);
+        Frame(box, new Color(Cacc.r, Cacc.g, Cacc.b, 0.5f));
+        Txt(box, $"{Mathf.Repeat(hdg, 360f):000}°", 12, Cacc, TextAnchor.MiddleCenter, true);
+    }
+
+    void Frame(Rect r, Color c)
+    {
+        Fill(new Rect(r.x, r.y, r.width, 1), c);
+        Fill(new Rect(r.x, r.yMax - 1, r.width, 1), c);
+        Fill(new Rect(r.x, r.y, 1, r.height), c);
+        Fill(new Rect(r.xMax - 1, r.y, 1, r.height), c);
+    }
+```
+
+### 5. Метод `DrawTapes(Rect adi)` целиком
+
+```csharp
+    void DrawTapes(Rect a)
+    {
+        // ---- скорость слева ----
+        Rect sp = new Rect(a.x - 58, a.y + 14, 52, a.height - 28);
+        Panel(sp, null);
+        Txt(new Rect(sp.x, sp.y + 3, sp.width, 15), "GS", 11, Cdim, TextAnchor.MiddleCenter, true);
+        Rect sg = new Rect(sp.x, sp.y + 19, sp.width, sp.height - 22);
+        GUI.BeginGroup(sg);
+        float gs = fc.Gs;
+        for (int v = Mathf.FloorToInt(gs) - 10; v <= gs + 10; v++)
+        {
+            if (v < 0 || v % 2 != 0) continue;
+            float y = sg.height * 0.5f - (v - gs) * 13f;
+            if (y < 4 || y > sg.height - 4) continue;
+            Fill(new Rect(sg.width - 9, y, 7, 1), Cdim);
+            Txt(new Rect(0, y - 8, sg.width - 12, 16), v.ToString(), 10, Cdim, TextAnchor.MiddleRight);
+        }
+        GUI.EndGroup();
+        Rect sv = new Rect(sp.x - 2, sp.y + sp.height * 0.5f - 11, sp.width + 4, 22);
+        Fill(sv, Cbg); Frame(sv, new Color(Cacc.r, Cacc.g, Cacc.b, 0.55f));
+        Txt(sv, gs.ToString("0.0"), 14, Cacc, TextAnchor.MiddleCenter, true);
+        Txt(new Rect(sp.x - 4, sp.yMax + 4, sp.width + 24, 16), $"AS {ph.Airspeed:0.0}", 11, Cdim);
+
+        // ---- высота справа ----
+        Rect al = new Rect(a.xMax + 6, a.y + 14, 58, a.height - 28);
+        Panel(al, null);
+        Txt(new Rect(al.x, al.y + 3, al.width, 15), "ALT", 11, Cdim, TextAnchor.MiddleCenter, true);
+        Rect ag = new Rect(al.x, al.y + 19, al.width, al.height - 22);
+        GUI.BeginGroup(ag);
+        float alt = fc.AltAgl;
+        for (int v = Mathf.FloorToInt(alt) - 14; v <= alt + 14; v++)
+        {
+            if (v < 0 || v % 5 != 0) continue;
+            float y = ag.height * 0.5f - (v - alt) * 5.5f;
+            if (y < 4 || y > ag.height - 4) continue;
+            Fill(new Rect(2, y, 7, 1), Cdim);
+            Txt(new Rect(11, y - 8, al.width - 12, 16), v.ToString(), 10, Cdim);
+        }
+        GUI.EndGroup();
+        Rect av = new Rect(al.x - 2, al.y + al.height * 0.5f - 11, al.width + 4, 22);
+        Fill(av, Cbg); Frame(av, new Color(Cacc.r, Cacc.g, Cacc.b, 0.55f));
+        Txt(av, alt.ToString("0.0"), 14, Cacc, TextAnchor.MiddleCenter, true);
+
+        // ---- вертикальная скорость ----
+        Rect vb = new Rect(al.xMax + 5, al.y + 10, 9, al.height - 20);
+        Fill(vb, new Color(1f, 1f, 1f, 0.06f));
+        Fill(new Rect(vb.x, vb.y + vb.height * 0.5f - 1, vb.width, 2), new Color(1f, 1f, 1f, 0.25f));
+        float vs = Mathf.Clamp(fc.Vs, -6f, 6f);
+        float h = Mathf.Abs(vs) / 6f * (vb.height * 0.5f);
+        Color vc = Mathf.Abs(fc.Vs) > 4f ? Cwarn : Cok;
+        Fill(vs >= 0 ? new Rect(vb.x + 1, vb.y + vb.height * 0.5f - h, vb.width - 2, h)
+                     : new Rect(vb.x + 1, vb.y + vb.height * 0.5f, vb.width - 2, h), vc);
+        Txt(new Rect(al.x - 4, al.yMax + 4, al.width + 22, 16), $"VS {fc.Vs:+0.0;-0.0;0.0}", 11, vc);
+    }
+```
+
+### 6. Добавь метод `OnDestroy()` в класс
+
+```csharp
+    void OnDestroy()
+    {
+        if (adi != null) adi.Dispose();
+        if (white != null) Destroy(white);
+    }
+```
+
+### USER
+я все сделал но возникла ошибки помоги исправить:
+
+Assets\Scripts\AttitudeIndicator.cs(74,26): error CS0104: 'Object' is an ambiguous reference between 'UnityEngine.Object' and 'object'
+
+Assets\Scripts\AttitudeIndicator.cs(341,26): error CS0104: 'Object' is an ambiguous reference between 'UnityEngine.Object' and 'object'
+
+
+
+### ASSISTANT
+Тот же конфликт имён, что и раньше: IDE добавила в файл `using System;`, и `Object` стал неоднозначным (`UnityEngine.Object` vs `System.Object`). В файле два вызова `Object.Destroy(tex)` — в `Alloc()` и в `Dispose()`.
+
+## Исправление (шапка файла)
+
+Приведи начало `Assets/Scripts/AttitudeIndicator.cs` к такому виду:
+
+```csharp
+using UnityEngine;
+using Object = UnityEngine.Object;   // снимает конфликт UnityEngine.Object / System.Object
+using Debug = UnityEngine.Debug;
+using Random = UnityEngine.Random;
+```
+
+Alias имеет приоритет над обычными `using`, поэтому даже если `using System;` останется в файле — ошибки уйдут. Больше ничего менять не нужно.
+
+## Альтернатива
+
+В этом файле `using System;` вообще не нужен — `System.IDisposable` уже написан полностью квалифицированно. Так что можно просто **удалить строку `using System;`** из шапки. Но вариант с alias надёжнее: IDE не сломает файл повторным автоимпортом.
+
+## Если хочешь точечно, без правки шапки
+
+Замени обе строки (74 и 341):
+
+```csharp
+        if (tex != null) Object.Destroy(tex);
+```
+
+на:
+
+```csharp
+        if (tex != null) UnityEngine.Object.Destroy(tex);
+```
+
+Любой из трёх вариантов закрывает обе ошибки — прибор нарисуется круговым, с корректной шкалой тангажа, шкалой крена и шариком скольжения.
+
+### USER
+Ура все отлично работает но можно ли перевернуть цвета в авиагоризонте получилось что небо снизу а земля сверху хотя квадрокоптер просто горизонтально стоит на стартовом столе посмотри скриншет чтобы понять
+
+### ASSISTANT

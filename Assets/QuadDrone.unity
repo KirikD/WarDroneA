@@ -1632,7 +1632,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.6, z: 0}
-  m_LocalScale: {x: 400, y: 1, z: 400}
+  m_LocalScale: {x: 14000, y: 1, z: 14000}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 273955173}
@@ -3438,6 +3438,17 @@ MonoBehaviour:
   inp: {fileID: 1744254997}
   udp: {fileID: 1744254993}
   cam: {fileID: 1234519077}
+  adiResolution: 320
+  adiUpdateHz: 40
+  adiPixelsPerDegree: 3.5
+  adiSlipBall: 1
+  adiGlass: 1
+  adiRollScale: 1
+  adiSkyTop: {r: 0.055, g: 0.3, b: 0.62, a: 1}
+  adiSkyHorizon: {r: 0.33, g: 0.63, b: 0.9, a: 1}
+  adiGroundHorizon: {r: 0.55, g: 0.4, b: 0.21, a: 1}
+  adiGroundBottom: {r: 0.2, g: 0.13, b: 0.06, a: 1}
+  adiSymbol: {r: 1, g: 0.84, b: 0.08, a: 1}
 --- !u!114 &1558532351
 MonoBehaviour:
   m_ObjectHideFlags: 0
