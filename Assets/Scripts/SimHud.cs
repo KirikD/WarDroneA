@@ -13,6 +13,22 @@ public class SimHud : MonoBehaviour
     public UdpLink udp;
     public ChaseCamera cam;
 
+    [Header("Авиагоризонт (ADI)")]
+    [Tooltip("Разрешение текстуры прибора")] [Range(160, 512)] public int adiResolution = 320;
+    [Tooltip("Частота перерисовки прибора, Гц")] [Range(10, 60)] public int adiUpdateHz = 40;
+    [Tooltip("Пикселей на градус тангажа")] [Range(2f, 6f)] public float adiPixelsPerDegree = 3.5f;
+    public bool adiSlipBall = true;
+    public bool adiGlass = true;
+    public bool adiRollScale = true;
+    public Color adiSkyTop = new Color(0.055f, 0.30f, 0.62f);
+    public Color adiSkyHorizon = new Color(0.33f, 0.63f, 0.90f);
+    public Color adiGroundHorizon = new Color(0.55f, 0.40f, 0.21f);
+    public Color adiGroundBottom = new Color(0.20f, 0.13f, 0.06f);
+    public Color adiSymbol = new Color(1f, 0.84f, 0.08f);
+
+    AttitudeIndicator adi;
+    Vector3 prevVel; bool velInit; float slipSmooth;
+
     Texture2D white;
     readonly Dictionary<int, GUIStyle> labels = new Dictionary<int, GUIStyle>();
     GUIStyle winStyle;
@@ -35,7 +51,7 @@ public class SimHud : MonoBehaviour
     static readonly Color Sky = new Color(0.22f, 0.5f, 0.78f);
     static readonly Color Ground = new Color(0.45f, 0.34f, 0.2f);
     
-    void Start()
+        void Start()
     {
         if (fc == null) fc = FindObjectOfType<FlightController>();
         if (ph == null) ph = FindObjectOfType<QuadPhysics>();
@@ -46,10 +62,11 @@ public class SimHud : MonoBehaviour
         if (cam == null) cam = FindObjectOfType<ChaseCamera>();
 
         white = new Texture2D(1, 1); white.SetPixel(0, 0, Color.white); white.Apply();
+        adi = new AttitudeIndicator();
         enabled = fc != null;
     }
 
-    void Update()
+        void Update()
     {
         fps = Mathf.Lerp(fps, 1f / Mathf.Max(0.0001f, Time.unscaledDeltaTime), 0.05f);
         if (Hotkeys.Down(SimKey.Help)) wHelp = !wHelp;
@@ -58,6 +75,20 @@ public class SimHud : MonoBehaviour
         if (Hotkeys.Down(SimKey.Inputs)) wInp = !wInp;
         if (Hotkeys.Down(SimKey.Tune)) wTune = !wTune;
         if (Hotkeys.Down(SimKey.HudToggle)) showHud = !showHud;
+
+        // скольжение для шарика указателя скольжения (боковая перегрузка)
+        if (ph != null && ph.Rb != null)
+        {
+            Vector3 v = ph.Rb.linearVelocity;
+            float dt = Time.deltaTime;
+            if (velInit && dt > 0.0001f)
+            {
+                Vector3 acc = (v - prevVel) / dt - Physics.gravity;
+                float lat = Vector3.Dot(acc, ph.transform.right) / Mathf.Max(1f, Mathf.Abs(Physics.gravity.y));
+                slipSmooth = Mathf.Lerp(slipSmooth, Mathf.Clamp(lat, -1f, 1f), 1f - Mathf.Exp(-6f * dt));
+            }
+            prevVel = v; velInit = true;
+        }
     }
 
     // ---------- helpers ----------
@@ -168,120 +199,140 @@ public class SimHud : MonoBehaviour
             Txt(new Rect(x, 8, 380, 36), $"WIND {wind.Current.magnitude:0.0} m/s", 18, wind.Current.magnitude > 10 ? Cwarn : Cdim);
     }
 
-    void DrawADI(Rect r)
+    
+        void DrawADI(Rect r)
     {
-        Panel(new Rect(r.x - 8, r.y - 46, r.width + 16, r.height + 62), null);
-        // компас сверху
-        Rect cr = new Rect(r.x, r.y - 40, r.width, 30);
+        Panel(new Rect(r.x - 4, r.y - 44, r.width + 8, r.height + 66), null);
+        DrawCompassTape(new Rect(r.x + 4, r.y - 38, r.width - 8, 26));
+
+        if (adi == null) adi = new AttitudeIndicator();
+        adi.Size = adiResolution;
+        adi.UpdateHz = adiUpdateHz;
+        adi.PixelsPerDegree = adiPixelsPerDegree;
+        adi.SlipBall = adiSlipBall;
+        adi.GlassSheen = adiGlass;
+        adi.RollScale = adiRollScale;
+        adi.SkyTop = adiSkyTop;
+        adi.SkyHorizon = adiSkyHorizon;
+        adi.GroundHorizon = adiGroundHorizon;
+        adi.GroundBottom = adiGroundBottom;
+        adi.Symbol = adiSymbol;
+        adi.Accent = Cacc;
+        adi.Draw(r, fc.AttRoll, fc.AttPitchUp, slipSmooth);
+
+        // цифровые读出 в свободных углах квадратной подложки
+        Rect lr = new Rect(r.x + 4, r.yMax - 26, 84, 20);
+        Rect rr = new Rect(r.xMax - 88, r.yMax - 26, 84, 20);
+        Fill(lr, new Color(0f, 0f, 0f, 0.45f));
+        Fill(rr, new Color(0f, 0f, 0f, 0.45f));
+        Txt(lr, $"R {fc.AttRoll:+0;-0;0}°", 13, Color.white, TextAnchor.MiddleCenter, true);
+        Txt(rr, $"P {fc.AttPitchUp:+0;-0;0}°", 13, Color.white, TextAnchor.MiddleCenter, true);
+
+        // дом
+        float hy = r.yMax + 4;
+        Txt(new Rect(r.x, hy, r.width, 18), $"HOME {fc.HomeDist:0} m", 13, Cacc, TextAnchor.MiddleCenter, true);
+        Vector2 piv = new Vector2(r.x + r.width * 0.5f + 58, hy + 9);
+        var m = GUI.matrix;
+        GUIUtility.RotateAroundPivot(fc.HomeBearing - fc.Heading, piv);
+        Fill(new Rect(piv.x - 1.5f, piv.y - 7, 3, 9), Cacc);
+        Fill(new Rect(piv.x - 5, piv.y - 3, 10, 3), Cacc);
+        GUI.matrix = m;
+    }
+
+    void DrawCompassTape(Rect cr)
+    {
+        Fill(cr, new Color(0f, 0f, 0f, 0.42f));
+        Fill(new Rect(cr.x, cr.y, cr.width, 1), new Color(Cacc.r, Cacc.g, Cacc.b, 0.35f));
         GUI.BeginGroup(cr);
         float hdg = fc.Heading;
-        for (int d = -60; d <= 60; d += 15)
+        int baseDeg = Mathf.RoundToInt(hdg / 15f) * 15;
+        for (int d = -75; d <= 75; d += 15)
         {
-            int mark = ((Mathf.RoundToInt(hdg / 15f) * 15 + d) % 360 + 360) % 360;
-            float x = cr.width / 2 + (Mathf.RoundToInt(hdg / 15f) * 15 + d - hdg) * 3f;
-            if (x < 0 || x > cr.width) continue;
-            Fill(new Rect(x - 1, 18, 2, 8), Cdim);
-            string s = mark switch { 0 => "N", 90 => "E", 180 => "S", 270 => "W", _ => mark.ToString() };
-            Txt(new Rect(x - 20, 0, 40, 18), s, 13, Cdim, TextAnchor.MiddleCenter);
+            int deg = baseDeg + d;
+            float x = cr.width * 0.5f + (deg - hdg) * 3.1f;
+            if (x < 8 || x > cr.width - 8) continue;
+            int mark = ((deg % 360) + 360) % 360;
+            bool cardinal = mark % 90 == 0;
+            Fill(new Rect(x - 1, cr.height - 8, 2, cardinal ? 8 : 5), cardinal ? Cacc : Cdim);
+            string s = mark == 0 ? "N" : mark == 90 ? "E" : mark == 180 ? "S" : mark == 270 ? "W" : mark.ToString();
+            Txt(new Rect(x - 20, 1, 40, 15), s, cardinal ? 13 : 11, cardinal ? Cacc : Cdim, TextAnchor.MiddleCenter, cardinal);
         }
-        Fill(new Rect(cr.width / 2 - 1, 24, 2, 6), Cacc);
+        Fill(new Rect(cr.width * 0.5f - 1, cr.height - 11, 2, 11), Cacc);
         GUI.EndGroup();
 
-        float roll = fc.AttRoll, pitch = fc.AttPitchUp;
-        GUI.BeginGroup(r);
-        Rect inner = new Rect(0, 0, r.width, r.height);
-        GUI.BeginGroup(inner);
-        Vector2 piv = new Vector2(r.width / 2, r.height / 2);
-        var mat = GUI.matrix;
-        GUIUtility.RotateAroundPivot(-roll, piv);
-        float ppd = 4f, hy = piv.y + pitch * ppd;
-        Fill(new Rect(-600, hy - 1600, 1500, 1600), Sky);
-        Fill(new Rect(-600, hy, 1500, 1600), Ground);
-        Fill(new Rect(-600, hy - 1, 1500, 2), Color.white);
-        for (int p = -90; p <= 90; p += 5)
-        {
-            if (p == 0) continue;
-            float y = hy - p * ppd;
-            bool major = p % 10 == 0;
-            float w = major ? 70 : 34;
-            Fill(new Rect(piv.x - w / 2, y - 1, w, 2), new Color(1, 1, 1, 0.85f));
-            if (major)
-            {
-                Txt(new Rect(piv.x - w / 2 - 34, y - 9, 30, 18), Mathf.Abs(p).ToString(), 12, Color.white, TextAnchor.MiddleRight);
-                Txt(new Rect(piv.x + w / 2 + 4, y - 9, 30, 18), Mathf.Abs(p).ToString(), 12, Color.white);
-            }
-        }
-        GUI.matrix = mat;
-        // шкала крена
-        for (int a = -60; a <= 60; a += 15)
-        {
-            var m2 = GUI.matrix;
-            GUIUtility.RotateAroundPivot(-roll + a, piv);
-            Fill(new Rect(piv.x - 1, 8, 2, a % 30 == 0 ? 14 : 8), Color.white);
-            GUI.matrix = m2;
-        }
-        GUIUtility.RotateAroundPivot(-roll, piv);
-        GUI.matrix = mat;
-        // символ самолёта
-        Fill(new Rect(piv.x - 60, piv.y - 2, 40, 4), Color.yellow);
-        Fill(new Rect(piv.x + 20, piv.y - 2, 40, 4), Color.yellow);
-        Fill(new Rect(piv.x - 3, piv.y - 3, 6, 6), Color.yellow);
-        GUI.EndGroup();
-        Txt(new Rect(4, r.height - 24, 120, 20), $"R {roll:+0;-0}°", 14, Color.white);
-        Txt(new Rect(r.width - 124, r.height - 24, 120, 20), $"P {pitch:+0;-0}°", 14, Color.white, TextAnchor.MiddleRight);
-        GUI.EndGroup();
-        // стрелка домой
-        float rel = fc.HomeBearing - fc.Heading;
-        Txt(new Rect(r.x, r.y + r.height + 4, r.width, 18), $"HOME {fc.HomeDist:0} m", 13, Cacc, TextAnchor.MiddleCenter);
-        var mm = GUI.matrix;
-        GUIUtility.RotateAroundPivot(rel, new Vector2(r.x + r.width / 2 + 60, r.y + r.height + 13));
-        Txt(new Rect(r.x + r.width / 2 + 52, r.y + r.height + 4, 16, 18), "^", 14, Cacc, TextAnchor.MiddleCenter);
-        GUI.matrix = mm;
+        Rect box = new Rect(cr.x + cr.width * 0.5f - 26, cr.y - 17, 52, 17);
+        Fill(box, Cbg);
+        Frame(box, new Color(Cacc.r, Cacc.g, Cacc.b, 0.5f));
+        Txt(box, $"{Mathf.Repeat(hdg, 360f):000}°", 12, Cacc, TextAnchor.MiddleCenter, true);
     }
 
-    void DrawTapes(Rect adi)
+    void Frame(Rect r, Color c)
     {
-        // скорость слева
-        Rect sp = new Rect(adi.x - 58, adi.y, 50, adi.height);
+        Fill(new Rect(r.x, r.y, r.width, 1), c);
+        Fill(new Rect(r.x, r.yMax - 1, r.width, 1), c);
+        Fill(new Rect(r.x, r.y, 1, r.height), c);
+        Fill(new Rect(r.xMax - 1, r.y, 1, r.height), c);
+    }
+
+        void DrawTapes(Rect a)
+    {
+        // ---- скорость слева ----
+        Rect sp = new Rect(a.x - 58, a.y + 14, 52, a.height - 28);
         Panel(sp, null);
-        Txt(new Rect(sp.x, sp.y + 4, sp.width, 18), "GS", 12, Cdim, TextAnchor.MiddleCenter);
-        GUI.BeginGroup(sp);
+        Txt(new Rect(sp.x, sp.y + 3, sp.width, 15), "GS", 11, Cdim, TextAnchor.MiddleCenter, true);
+        Rect sg = new Rect(sp.x, sp.y + 19, sp.width, sp.height - 22);
+        GUI.BeginGroup(sg);
         float gs = fc.Gs;
-        for (int v = Mathf.FloorToInt(gs) - 8; v <= gs + 8; v++)
+        for (int v = Mathf.FloorToInt(gs) - 10; v <= gs + 10; v++)
         {
             if (v < 0 || v % 2 != 0) continue;
-            float y = sp.height / 2 - (v - gs) * 14f;
-            if (y < 24 || y > sp.height - 8) continue;
-            Fill(new Rect(sp.width - 10, y, 8, 1), Cdim);
-            Txt(new Rect(0, y - 8, sp.width - 12, 16), v.ToString(), 11, Cdim, TextAnchor.MiddleRight);
+            float y = sg.height * 0.5f - (v - gs) * 13f;
+            if (y < 4 || y > sg.height - 4) continue;
+            Fill(new Rect(sg.width - 9, y, 7, 1), Cdim);
+            Txt(new Rect(0, y - 8, sg.width - 12, 16), v.ToString(), 10, Cdim, TextAnchor.MiddleRight);
         }
         GUI.EndGroup();
-        Fill(new Rect(sp.x, sp.y + sp.height / 2 - 12, sp.width, 24), Cbg);
-        Txt(new Rect(sp.x, sp.y + sp.height / 2 - 12, sp.width, 24), gs.ToString("0.0"), 15, Cacc, TextAnchor.MiddleCenter, true);
+        Rect sv = new Rect(sp.x - 2, sp.y + sp.height * 0.5f - 11, sp.width + 4, 22);
+        Fill(sv, Cbg); Frame(sv, new Color(Cacc.r, Cacc.g, Cacc.b, 0.55f));
+        Txt(sv, gs.ToString("0.0"), 14, Cacc, TextAnchor.MiddleCenter, true);
+        Txt(new Rect(sp.x - 4, sp.yMax + 4, sp.width + 24, 16), $"AS {ph.Airspeed:0.0}", 11, Cdim);
 
-        // высота справа
-        Rect al = new Rect(adi.xMax + 8, adi.y, 58, adi.height);
+        // ---- высота справа ----
+        Rect al = new Rect(a.xMax + 6, a.y + 14, 58, a.height - 28);
         Panel(al, null);
-        Txt(new Rect(al.x, al.y + 4, al.width, 18), "ALT", 12, Cdim, TextAnchor.MiddleCenter);
-        GUI.BeginGroup(al);
+        Txt(new Rect(al.x, al.y + 3, al.width, 15), "ALT", 11, Cdim, TextAnchor.MiddleCenter, true);
+        Rect ag = new Rect(al.x, al.y + 19, al.width, al.height - 22);
+        GUI.BeginGroup(ag);
         float alt = fc.AltAgl;
-        for (int v = Mathf.FloorToInt(alt) - 12; v <= alt + 12; v++)
+        for (int v = Mathf.FloorToInt(alt) - 14; v <= alt + 14; v++)
         {
             if (v < 0 || v % 5 != 0) continue;
-            float y = al.height / 2 - (v - alt) * 6f;
-            if (y < 24 || y > al.height - 8) continue;
-            Fill(new Rect(2, y, 8, 1), Cdim);
-            Txt(new Rect(12, y - 8, al.width - 12, 16), v.ToString(), 11, Cdim);
+            float y = ag.height * 0.5f - (v - alt) * 5.5f;
+            if (y < 4 || y > ag.height - 4) continue;
+            Fill(new Rect(2, y, 7, 1), Cdim);
+            Txt(new Rect(11, y - 8, al.width - 12, 16), v.ToString(), 10, Cdim);
         }
         GUI.EndGroup();
-        Fill(new Rect(al.x, al.y + al.height / 2 - 12, al.width, 24), Cbg);
-        Txt(new Rect(al.x, al.y + al.height / 2 - 12, al.width, 24), alt.ToString("0.0"), 15, Cacc, TextAnchor.MiddleCenter, true);
-        // VS
-        float vs = fc.Vs;
-        Txt(new Rect(al.x, al.yMax + 4, al.width + 40, 20), $"VS {vs:+0.0;-0.0}", 13, Mathf.Abs(vs) > 4 ? Cwarn : Cdim);
-        Txt(new Rect(sp.x - 10, sp.yMax + 4, 100, 20), $"AS {ph.Airspeed:0.0}", 13, Cdim);
-    }
+        Rect av = new Rect(al.x - 2, al.y + al.height * 0.5f - 11, al.width + 4, 22);
+        Fill(av, Cbg); Frame(av, new Color(Cacc.r, Cacc.g, Cacc.b, 0.55f));
+        Txt(av, alt.ToString("0.0"), 14, Cacc, TextAnchor.MiddleCenter, true);
 
+        // ---- вертикальная скорость ----
+        Rect vb = new Rect(al.xMax + 5, al.y + 10, 9, al.height - 20);
+        Fill(vb, new Color(1f, 1f, 1f, 0.06f));
+        Fill(new Rect(vb.x, vb.y + vb.height * 0.5f - 1, vb.width, 2), new Color(1f, 1f, 1f, 0.25f));
+        float vs = Mathf.Clamp(fc.Vs, -6f, 6f);
+        float h = Mathf.Abs(vs) / 6f * (vb.height * 0.5f);
+        Color vc = Mathf.Abs(fc.Vs) > 4f ? Cwarn : Cok;
+        Fill(vs >= 0 ? new Rect(vb.x + 1, vb.y + vb.height * 0.5f - h, vb.width - 2, h)
+                     : new Rect(vb.x + 1, vb.y + vb.height * 0.5f, vb.width - 2, h), vc);
+        Txt(new Rect(al.x - 4, al.yMax + 4, al.width + 22, 16), $"VS {fc.Vs:+0.0;-0.0;0.0}", 11, vc);
+    }
+    void OnDestroy()
+    {
+        if (adi != null) adi.Dispose();
+        if (white != null) Destroy(white);
+    }
     void DrawRightPanel(float W)
     {
         Rect p = new Rect(W - 320, 90, 300, 470);
